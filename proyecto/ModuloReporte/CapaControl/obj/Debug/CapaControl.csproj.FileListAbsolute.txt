@@ -1,0 +1,9 @@
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\bin\Debug\CapaControl.dll
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\bin\Debug\CapaControl.pdb
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\bin\Debug\capaDato.dll
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\bin\Debug\capaDato.pdb
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.csprojAssemblyReference.cache
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CoreCompileInputs.cache
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CopyComplete
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.dll
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.pdb

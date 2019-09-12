@@ -1,0 +1,6 @@
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\bin\Debug\capaDato.dll
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\bin\Debug\capaDato.pdb
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\obj\Debug\capaDato.csproj.CoreCompileInputs.cache
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\obj\Debug\capaDato.dll
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\obj\Debug\capaDato.pdb
+C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\obj\Debug\CapaDato.csprojAssemblyReference.cache
