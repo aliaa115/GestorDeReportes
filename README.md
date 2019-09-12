@@ -1,2 +1,0 @@
-# GestorDeReportes
-Gestor de Reportes
