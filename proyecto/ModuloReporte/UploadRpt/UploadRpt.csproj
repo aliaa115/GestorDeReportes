@@ -103,6 +103,10 @@
       <Project>{0eae89fd-467e-4270-8ae7-7a0d7f43abca}</Project>
       <Name>CapaDiseno</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ManejoArchivo\ManejoArchivo.csproj">
+      <Project>{6e68d095-94c0-43de-9c0f-578b871788ee}</Project>
+      <Name>ManejoArchivo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

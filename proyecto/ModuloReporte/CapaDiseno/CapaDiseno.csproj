@@ -135,16 +135,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaControl\CapaControl.csproj">
-      <Project>{3d6bc2ff-ae19-4a40-9de3-f7571777a063}</Project>
-      <Name>CapaControl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\capaDato\CapaDato.csproj">
-      <Project>{ebc9fe30-64a2-45bc-991a-3d6ef8b6c4a9}</Project>
-      <Name>CapaDato</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\add-file.png" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +157,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaControl\CapaControl.csproj">
+      <Project>{3d6bc2ff-ae19-4a40-9de3-f7571777a063}</Project>
+      <Name>CapaControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaDato\CapaDato.csproj">
+      <Project>{ebc9fe30-64a2-45bc-991a-3d6ef8b6c4a9}</Project>
+      <Name>CapaDato</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManejoArchivo\ManejoArchivo.csproj">
+      <Project>{6e68d095-94c0-43de-9c0f-578b871788ee}</Project>
+      <Name>ManejoArchivo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

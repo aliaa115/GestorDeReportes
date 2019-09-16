@@ -15,9 +15,9 @@ namespace CapaControl.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', {3}, '{4}'); ",
-                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.ESTADO.ToString(), 
-                    reporte.FILENAME);
+                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', '{3}', {4}); ",
+                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, 
+                    reporte.FILENAME, reporte.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
             }
@@ -32,7 +32,7 @@ namespace CapaControl.Control
             try
             {
                 String sComando = String.Format("UPDATE TBL_REPORTE " +
-                    "SET ID_CONFIGURACION = {1}, NOMBRE = '{2}', ESTADO = {3}, FILENAME = '{4}' " +
+                    "SET ID_CONFIGURACION = {1}, NOMBRE = '{2}', FILENAME = '{4}', ESTADO = {3}  " +
                     "WHERE ID_REPORTE = {0}; ",
                     reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.ESTADO.ToString(),
                     reporte.FILENAME);
@@ -71,7 +71,7 @@ namespace CapaControl.Control
                 String sComando = String.Format("SELECT ID_REPORTE, ID_CONFIGURACION, NOMBRE, ESTADO, FILENAME " +
                     "FROM TBL_REPORTE " +
                     "WHERE ID_REPORTE = {0}; ",
-                    reporte.ToString());
+                    reporte);
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
 
@@ -113,8 +113,8 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
                         Reporte reporteTmp = new Reporte();
-                        reporteTmp.REPORTE = int.Parse(reader.GetString(0));
-                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(int.Parse(reader.GetString(1)));
+                        reporteTmp.REPORTE = reader.GetInt32(0);
+                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
                         reporteTmp.NOMBRE = reader.GetString(2);
                         reporteTmp.ESTADO = int.Parse(reader.GetString(3));
                         reporteTmp.FILENAME = reader.GetString(4);

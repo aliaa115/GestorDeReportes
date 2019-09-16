@@ -20,8 +20,8 @@ namespace capaDato.Conexion
                 {
                     comando.CommandText = sentencia;
                     comando.ExecuteNonQuery();
-                }
                 transaccion.Commit();
+                }
             }
             catch (OdbcException ex)
             {

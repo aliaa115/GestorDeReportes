@@ -7,3 +7,12 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.
 C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CopyComplete
 C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.dll
 C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.pdb
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\CapaControl.dll
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\CapaControl.pdb
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\capaDato.dll
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\capaDato.pdb
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csprojAssemblyReference.cache
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CopyComplete
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.dll
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.pdb

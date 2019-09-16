@@ -84,10 +84,17 @@ namespace CapaDiseno.Mantenimiento
 
         private void llenarTbpDato(Reporte reporte)
         {
+
             deshabilitarCampos();
             Txt_Codigo.Text = reporte.REPORTE.ToString();
             Txt_Nombre.Text = reporte.NOMBRE;
-            Cmb_Configuracion.SelectedItem = Cmb_Configuracion.Items[reporte.CONFIGURACION.CONFIGURACION];
+            //      Cmb_Configuracion.SelectedItem = Cmb_Configuracion.Items[reporte.CONFIGURACION.CONFIGURACION];
+            ConfiguracionRptControl confControl = new ConfiguracionRptControl();
+            ConfiguracionRpt conf = new ConfiguracionRpt();
+            conf = confControl.obtenerConfiguracionRpt(reporte.CONFIGURACION.CONFIGURACION);
+            Cmb_Configuracion.Text = conf.NOMBRE;
+            Cmb_Configuracion.SelectedText = Cmb_Configuracion.Text;
+                
             Txt_Archivo.Text = reporte.FILENAME;
             Txt_Estado.Text = reporte.ESTADO.ToString();
         }
@@ -157,8 +164,9 @@ namespace CapaDiseno.Mantenimiento
             {
                 if (this.accion == "nuevo")
                 {
-                    UploadFile upload = new UploadFile(fileUpload, this.reporte.CONFIGURACION.RUTA);
-                    reporteControl.insertarReporte(this.reporte);
+                    MessageBox.Show(reporte.CONFIGURACION.RUTA);
+                    UploadFile upload = new UploadFile(fileUpload, reporte.CONFIGURACION.RUTA);
+                    reporteControl.insertarReporte(reporte);
                 }
                 else if (this.accion == "modificar")
                 {
