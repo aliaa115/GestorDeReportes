@@ -78,13 +78,13 @@ namespace CapaControl.Control
                 {
                     while (reader.Read())
                     {
-                        configuracionRptTmp.CONFIGURACION = int.Parse(reader.GetString(0));
+                        configuracionRptTmp.CONFIGURACION = reader.GetInt32(0);
                         configuracionRptTmp.NOMBRE = reader.GetString(1);
                         configuracionRptTmp.USER = reader.GetString(2);
                         configuracionRptTmp.PASSWORD = reader.GetString(3);
                         configuracionRptTmp.PUERTO = reader.GetString(4);
                         configuracionRptTmp.RUTA = reader.GetString(5);
-                        configuracionRptTmp.ESTADO = int.Parse(reader.GetString(6));
+                        configuracionRptTmp.ESTADO = reader.GetInt32(6);
                     }
                 }
             }
@@ -113,13 +113,13 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
                         ConfiguracionRpt configuracionRptTmp = new ConfiguracionRpt();
-                        configuracionRptTmp.CONFIGURACION = int.Parse(reader.GetString(0));
+                        configuracionRptTmp.CONFIGURACION = reader.GetInt32(0);
                         configuracionRptTmp.NOMBRE = reader.GetString(1);
                         configuracionRptTmp.USER = reader.GetString(2);
                         configuracionRptTmp.PASSWORD = reader.GetString(3);
                         configuracionRptTmp.PUERTO = reader.GetString(4);
                         configuracionRptTmp.RUTA = reader.GetString(5);
-                        configuracionRptTmp.ESTADO = int.Parse(reader.GetString(6));
+                        configuracionRptTmp.ESTADO = reader.GetInt32(6);
                         configuracionRptList.Add(configuracionRptTmp);
                     }
                 }

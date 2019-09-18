@@ -132,6 +132,11 @@ namespace CapaDiseno.Mantenimiento
                 {
                     configuracionRptControl.actualizarConfiguracionRpt(this.configuracionRpt);
                 }
+
+                iniciazliarTbpConsulta();
+                Tbc_Configuracion.SelectedTab = Tbp_Consulta;
+                this.configuracionRpt = new ConfiguracionRpt();
+                llenarDgv();
             }
         }
 

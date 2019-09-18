@@ -36,9 +36,10 @@
             // 
             // Btn_Configuracion
             // 
-            this.Btn_Configuracion.Location = new System.Drawing.Point(12, 12);
+            this.Btn_Configuracion.Location = new System.Drawing.Point(24, 23);
+            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Btn_Configuracion.Name = "Btn_Configuracion";
-            this.Btn_Configuracion.Size = new System.Drawing.Size(145, 57);
+            this.Btn_Configuracion.Size = new System.Drawing.Size(290, 110);
             this.Btn_Configuracion.TabIndex = 0;
             this.Btn_Configuracion.Text = "Configuracion Carpeta";
             this.Btn_Configuracion.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // Btn_Reporte
             // 
-            this.Btn_Reporte.Location = new System.Drawing.Point(12, 75);
+            this.Btn_Reporte.Location = new System.Drawing.Point(24, 144);
+            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Btn_Reporte.Name = "Btn_Reporte";
-            this.Btn_Reporte.Size = new System.Drawing.Size(145, 57);
+            this.Btn_Reporte.Size = new System.Drawing.Size(290, 110);
             this.Btn_Reporte.TabIndex = 1;
             this.Btn_Reporte.Text = "Reportes";
             this.Btn_Reporte.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // Btn_RptApp
             // 
-            this.Btn_RptApp.Location = new System.Drawing.Point(12, 138);
+            this.Btn_RptApp.Location = new System.Drawing.Point(24, 265);
+            this.Btn_RptApp.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Btn_RptApp.Name = "Btn_RptApp";
-            this.Btn_RptApp.Size = new System.Drawing.Size(145, 57);
+            this.Btn_RptApp.Size = new System.Drawing.Size(290, 110);
             this.Btn_RptApp.TabIndex = 2;
             this.Btn_RptApp.Text = "Asociar a Aplicacoin";
             this.Btn_RptApp.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@
             // 
             // Btn_RptMdl
             // 
-            this.Btn_RptMdl.Location = new System.Drawing.Point(12, 201);
+            this.Btn_RptMdl.Location = new System.Drawing.Point(24, 387);
+            this.Btn_RptMdl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Btn_RptMdl.Name = "Btn_RptMdl";
-            this.Btn_RptMdl.Size = new System.Drawing.Size(145, 57);
+            this.Btn_RptMdl.Size = new System.Drawing.Size(290, 110);
             this.Btn_RptMdl.TabIndex = 3;
             this.Btn_RptMdl.Text = "Asociar a Modulo";
             this.Btn_RptMdl.UseVisualStyleBackColor = true;
@@ -76,13 +80,14 @@
             // 
             // Frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(169, 267);
+            this.ClientSize = new System.Drawing.Size(540, 513);
             this.Controls.Add(this.Btn_RptMdl);
             this.Controls.Add(this.Btn_RptApp);
             this.Controls.Add(this.Btn_Reporte);
             this.Controls.Add(this.Btn_Configuracion);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Frm_Main";
             this.Text = "Main";
             this.ResumeLayout(false);
