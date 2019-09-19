@@ -82,10 +82,10 @@ namespace CapaControl.Control
                 {
                     while (reader.Read())
                     {
-                        reporteAppTmp.REPORTE.REPORTE = int.Parse(reader.GetString(0));
-                        reporteAppTmp.APLICACION.APLICACION = int.Parse(reader.GetString(1));
-                        reporteAppTmp.MODULO.MODULO = int.Parse(reader.GetString(2));
-                        reporteAppTmp.ESTADO = int.Parse(reader.GetString(3));
+                        reporteAppTmp.REPORTE.REPORTE = reader.GetInt32(0);
+                        reporteAppTmp.APLICACION.APLICACION = reader.GetInt32(1);
+                        reporteAppTmp.MODULO.MODULO = reader.GetInt32(2);
+                        reporteAppTmp.ESTADO = reader.GetInt32(3);
                     }
                 }
             }
@@ -116,10 +116,10 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
                         ReporteAplicacion reporteAppTmp = new ReporteAplicacion();
-                        reporteAppTmp.REPORTE.REPORTE = int.Parse(reader.GetString(0));
-                        reporteAppTmp.APLICACION.APLICACION = int.Parse(reader.GetString(1));
-                        reporteAppTmp.MODULO.MODULO = int.Parse(reader.GetString(2));
-                        reporteAppTmp.ESTADO = int.Parse(reader.GetString(3));
+                        reporteAppTmp.REPORTE.REPORTE = reader.GetInt32(0);
+                        reporteAppTmp.APLICACION.APLICACION = reader.GetInt32(1);
+                        reporteAppTmp.MODULO.MODULO = reader.GetInt32(2);
+                        reporteAppTmp.ESTADO = reader.GetInt32(3);
                         reporteAppList.Add(reporteAppTmp);
                     }
                 }

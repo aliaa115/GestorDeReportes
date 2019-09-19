@@ -27,10 +27,10 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
                         Modulo moduloTmp = new Modulo();
-                        moduloTmp.MODULO = int.Parse(reader.GetString(0));
+                        moduloTmp.MODULO = reader.GetInt32(0);
                         moduloTmp.NOMBRE= reader.GetString(1);
                         moduloTmp.DESCRIPCION = (reader.GetString(2).ToString() != null ? reader.GetString(2) : " ");
-                        moduloTmp.ESTADO = int.Parse(reader.GetString(3));
+                        moduloTmp.ESTADO = reader.GetInt32(3);
                         moduloList.Add(moduloTmp);
                     }
                 }
@@ -60,10 +60,10 @@ namespace CapaControl.Control
                 {
                     while (reader.Read())
                     {
-                        moduloTmp.MODULO = int.Parse(reader.GetString(0));
+                        moduloTmp.MODULO = reader.GetInt32(0);
                         moduloTmp.NOMBRE = reader.GetString(1);
                         moduloTmp.DESCRIPCION = (reader.GetString(2).ToString() != null ? reader.GetString(2) : " ");
-                        moduloTmp.ESTADO = int.Parse(reader.GetString(3));
+                        moduloTmp.ESTADO = reader.GetInt32(3);
                     }
                 }
             }

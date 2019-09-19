@@ -32,11 +32,11 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
                         Aplicacion aplicacionTmp = new Aplicacion();
-                        aplicacionTmp.APLICACION = int.Parse(reader.GetString(0));
-                        aplicacionTmp.MODULO = moduloControl.obtenerModulo(int.Parse(reader.GetString(1)));
+                        aplicacionTmp.APLICACION = reader.GetInt32(0);
+                        aplicacionTmp.MODULO = moduloControl.obtenerModulo(reader.GetInt32(1));
                         aplicacionTmp.NOMBRE = reader.GetString(2);
                         aplicacionTmp.DESCRIPCION = reader.GetString(3);
-                        aplicacionTmp.ESTADO = int.Parse(reader.GetString(4));
+                        aplicacionTmp.ESTADO = reader.GetInt32(4);
                         aplicacionList.Add(aplicacionTmp);
                     }
                 }
@@ -71,11 +71,11 @@ namespace CapaControl.Control
                 {
                     while (reader.Read())
                     {
-                        aplicacionTmp.APLICACION = int.Parse(reader.GetString(0));
-                        aplicacionTmp.MODULO = moduloControl.obtenerModulo(int.Parse(reader.GetString(1)));
+                        aplicacionTmp.APLICACION = reader.GetInt32(0);
+                        aplicacionTmp.MODULO = moduloControl.obtenerModulo(reader.GetInt32(1));
                         aplicacionTmp.NOMBRE = reader.GetString(2);
                         aplicacionTmp.DESCRIPCION = reader.GetString(3);
-                        aplicacionTmp.ESTADO = int.Parse(reader.GetString(4));
+                        aplicacionTmp.ESTADO = reader.GetInt32(4);
                     }
                 }
             }

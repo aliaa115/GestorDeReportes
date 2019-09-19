@@ -160,18 +160,32 @@ namespace CapaDiseno.Mantenimiento
 
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea guardar?");
+            
             if (confirmacion)
             {
-                if (this.accion == "nuevo")
+                try
                 {
-                    MessageBox.Show(reporte.CONFIGURACION.RUTA);
-                    UploadFile upload = new UploadFile(fileUpload, reporte.CONFIGURACION.RUTA);
-                    reporteControl.insertarReporte(reporte);
+                    UploadFile upload;
+                    if (this.accion == "nuevo")
+                    {
+                        reporteControl.insertarReporte(this.reporte);
+                        upload = new UploadFile(fileUpload, this.reporte.CONFIGURACION.RUTA);
+                    }
+                    else if (this.accion == "modificar")
+                    {
+                        reporteControl.actualizarReporte(this.reporte);
+                        upload = new UploadFile(fileUpload, this.reporte.CONFIGURACION.RUTA);
+                    }
                 }
-                else if (this.accion == "modificar")
+                catch
                 {
-                    reporteControl.actualizarReporte(this.reporte);
+                    MessageBox.Show("No se subio archivo.");
                 }
+
+                iniciazliarTbpConsulta();
+                Tbc_Reporte.SelectedTab = Tbp_Consulta;
+                this.reporte = new Reporte();
+                llenarDgv();
             }
         }
 
