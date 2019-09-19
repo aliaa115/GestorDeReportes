@@ -15,15 +15,16 @@ namespace CapaControl.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', {3}, '{4}'); ",
-                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.ESTADO.ToString(), 
-                    reporte.FILENAME);
+                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', '{3}', {4}); ",
+                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.FILENAME,
+                    reporte.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
             }
             catch(OdbcException ex)
             {
                 MessageBox.Show(ex.ToString(), "Error al insertar reporte");
+                throw new Exception("No se pudo insertar.");
             }
         }
 
@@ -80,10 +81,10 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
 
-                        reporteTmp.REPORTE = int.Parse(reader.GetString(0));
-                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(int.Parse(reader.GetString(1)));
+                        reporteTmp.REPORTE = reader.GetInt32(0);
+                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
                         reporteTmp.NOMBRE = reader.GetString(2);
-                        reporteTmp.ESTADO = int.Parse(reader.GetString(3));
+                        reporteTmp.ESTADO = reader.GetInt32(3);
                         reporteTmp.FILENAME = reader.GetString(4);
                     }
                 }
@@ -113,10 +114,10 @@ namespace CapaControl.Control
                     while (reader.Read())
                     {
                         Reporte reporteTmp = new Reporte();
-                        reporteTmp.REPORTE = int.Parse(reader.GetString(0));
-                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(int.Parse(reader.GetString(1)));
+                        reporteTmp.REPORTE = reader.GetInt32(0);
+                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
                         reporteTmp.NOMBRE = reader.GetString(2);
-                        reporteTmp.ESTADO = int.Parse(reader.GetString(3));
+                        reporteTmp.ESTADO = reader.GetInt32(3);
                         reporteTmp.FILENAME = reader.GetString(4);
                         reporteList.Add(reporteTmp);
                     }

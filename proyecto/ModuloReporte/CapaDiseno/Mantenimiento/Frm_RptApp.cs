@@ -131,6 +131,11 @@ namespace CapaDiseno.Mantenimiento
                 {
                     reporteAppControl.actualizarReporteApp(this.reporteApp);
                 }
+
+                iniciazliarTbpConsulta();
+                Tbc_RptApp.SelectedTab = Tbp_Consulta;
+                this.reporteApp = new ReporteAplicacion();
+                llenarDgv();
             }
         }
 

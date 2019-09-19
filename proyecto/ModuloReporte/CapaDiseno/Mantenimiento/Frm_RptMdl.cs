@@ -129,6 +129,11 @@ namespace CapaDiseno.Mantenimiento
                 {
                     reporteMdlControl.actualizarReporteMdl(this.reporteMdl);
                 }
+
+                iniciazliarTbpConsulta();
+                Tbc_RptMdl.SelectedTab = Tbp_Consulta;
+                this.reporteMdl = new ReporteModulo();
+                llenarDgv();
             }
         }
 
@@ -149,6 +154,14 @@ namespace CapaDiseno.Mantenimiento
             }
         }
 
+        private void Btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            iniciazliarTbpConsulta();
+            Tbc_RptMdl.SelectedTab = Tbp_Consulta;
+            this.reporteMdl = new ReporteModulo();
+            llenarDgv();
+        }
+
         /*
          * Seleccionar registro.
          */
@@ -162,5 +175,6 @@ namespace CapaDiseno.Mantenimiento
             llenarTbpDato(this.reporteMdl);
             Tbc_RptMdl.SelectedTab = Tbp_Datos;
         }
+
     }
 }
