@@ -105,9 +105,25 @@ namespace CapaDiseno.Mantenimiento
         private void llenarTbpDato(ReporteAplicacion reporteApp)
         {
             deshabilitarCampos();
-            Cmb_Reporte.SelectedItem = Cmb_Reporte.Items[reporteApp.REPORTE.REPORTE];
-            Cmb_Modulo.SelectedItem = Cmb_Modulo.Items[reporteApp.MODULO.MODULO];
-            Cmb_Aplicacion.SelectedItem = Cmb_Aplicacion.Items[reporteApp.APLICACION.APLICACION];
+
+            /*ConfiguracionRptControl confControl = new ConfiguracionRptControl();
+            ConfiguracionRpt conf = new ConfiguracionRpt();
+            conf = confControl.obtenerConfiguracionRpt(reporteApp.REPORTE.CONFIGURACION.CONFIGURACION);
+            */
+
+            ReporteAplicacionControl reporteAplicacionCont = new ReporteAplicacionControl();
+            ReporteAplicacion reporteAplicacion = new ReporteAplicacion();
+
+            reporteAplicacion = reporteAplicacionCont.obtenerReporteApp(reporteApp.APLICACION.APLICACION, reporteApp.MODULO.MODULO);
+
+            Cmb_Reporte.Text = reporteAplicacion.REPORTE.NOMBRE;
+            Cmb_Reporte.SelectedText = Cmb_Reporte.Text;
+
+            Cmb_Modulo.Text = reporteAplicacion.MODULO.NOMBRE;
+            Cmb_Modulo.SelectedText = Cmb_Modulo.Text;
+
+            Cmb_Aplicacion.SelectedText = reporteAplicacion.APLICACION.NOMBRE;
+
             Txt_Estado.Text = reporteApp.ESTADO.ToString();
         }
 
@@ -189,7 +205,17 @@ namespace CapaDiseno.Mantenimiento
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
             String codigoApp = Dgv_Consulta.Rows[fila].Cells[1].Value.ToString();
             String codigoMdl = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
-            this.reporteApp = reporteAppControl.obtenerReporteApp(int.Parse(codigoApp), Int32.Parse(codigoMdl));
+            int codApp = 0, codMod = 0;
+            foreach (ReporteAplicacion reporteAppTmp in reporteAppControl.obtenerAllReporteApp())
+            {
+                if (codigoApp == reporteAppTmp.APLICACION.NOMBRE && codigoMdl == reporteAppTmp.MODULO.NOMBRE)
+                {
+                    codApp = reporteAppTmp.APLICACION.APLICACION;
+                    codMod = reporteAppTmp.MODULO.MODULO;
+                    break;
+                }
+            }
+            this.reporteApp = reporteAppControl.obtenerReporteApp(codApp, codMod);
             llenarTbpDato(this.reporteApp);
             Tbc_RptApp.SelectedTab = Tbp_Datos;
         }

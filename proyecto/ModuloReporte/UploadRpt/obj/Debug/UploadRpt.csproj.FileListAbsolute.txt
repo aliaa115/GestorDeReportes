@@ -76,3 +76,83 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\UploadRpt\bin\Debug\stdole.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.pdb
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe.config
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControl.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDato.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\FlashControlV71.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\stdole.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControl.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDato.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.exe.config
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Modulo.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.UploadFile.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Properties.Resources.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.GenerateResource.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.CopyComplete
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe.config
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CapaControl.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\capaDato.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.exe
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.Windows.Forms.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.Shared.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportSource.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\FlashControlV71.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\ShockwaveFlashObjects.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\stdole.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CapaControl.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\capaDato.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.exe.config
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Modulo.resources
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.UploadFile.resources
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Properties.Resources.resources
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.CopyComplete
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.exe
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.pdb
