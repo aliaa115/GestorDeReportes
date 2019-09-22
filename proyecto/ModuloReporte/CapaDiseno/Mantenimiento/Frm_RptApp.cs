@@ -11,6 +11,8 @@ namespace CapaDiseno.Mantenimiento
     {
         private ReporteAplicacionControl reporteAppControl = new ReporteAplicacionControl();
         private ReporteAplicacion reporteApp;
+        private AplicacionControl appCont;
+        private ModuloControl modCont;
         private string accion;
 
         public Frm_RptApp()
@@ -189,7 +191,17 @@ namespace CapaDiseno.Mantenimiento
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
             String codigoApp = Dgv_Consulta.Rows[fila].Cells[1].Value.ToString();
             String codigoMdl = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
-            this.reporteApp = reporteAppControl.obtenerReporteApp(int.Parse(codigoApp), Int32.Parse(codigoMdl));
+            int codApp = 0, codMod = 0;
+            foreach (ReporteAplicacion reporteAppTmp in reporteAppControl.obtenerAllReporteApp())
+            {
+                if(reporteAppTmp.REPORTE.NOMBRE == codigoApp && reporteAppTmp.APLICACION.NOMBRE == codigoMdl)
+                {
+                    codApp = reporteAppTmp.APLICACION.APLICACION;
+                    codMod = reporteAppTmp.REPORTE.REPORTE;
+                    break;
+                }
+            }
+            this.reporteApp = reporteAppControl.obtenerReporteApp(codApp, codMod);
             llenarTbpDato(this.reporteApp);
             Tbc_RptApp.SelectedTab = Tbp_Datos;
         }
