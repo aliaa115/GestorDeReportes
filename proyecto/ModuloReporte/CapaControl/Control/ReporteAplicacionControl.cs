@@ -10,6 +10,9 @@ namespace CapaControl.Control
     public class ReporteAplicacionControl
     {
         private Transaccion transaccion = new Transaccion();
+        private ReporteControl rep = new ReporteControl();
+        private AplicacionControl app = new AplicacionControl();
+        private ModuloControl mod = new ModuloControl();
 
         public void insertarReporteApp(ReporteAplicacion reporteApp)
         {
@@ -82,9 +85,9 @@ namespace CapaControl.Control
                 {
                     while (reader.Read())
                     {
-                        reporteAppTmp.REPORTE.REPORTE = reader.GetInt32(0);
-                        reporteAppTmp.APLICACION.APLICACION = reader.GetInt32(1);
-                        reporteAppTmp.MODULO.MODULO = reader.GetInt32(2);
+                        reporteAppTmp.REPORTE = rep.obtenerReporte(reader.GetInt32(0));
+                        reporteAppTmp.APLICACION = this.app.obtenerAplicacion( reader.GetInt32(1), reader.GetInt32(2));
+                        reporteAppTmp.MODULO = mod.obtenerModulo(reader.GetInt32(2));
                         reporteAppTmp.ESTADO = reader.GetInt32(3);
                     }
                 }

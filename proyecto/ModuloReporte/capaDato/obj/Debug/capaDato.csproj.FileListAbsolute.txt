@@ -10,3 +10,9 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\capaDato\obj\Debug\CapaDato.csproj
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\CapaDato.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\capaDato.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\capaDato.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\capaDato\bin\Debug\capaDato.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\capaDato\bin\Debug\capaDato.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\CapaDato.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\CapaDato.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\capaDato.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\capaDato\obj\Debug\capaDato.pdb

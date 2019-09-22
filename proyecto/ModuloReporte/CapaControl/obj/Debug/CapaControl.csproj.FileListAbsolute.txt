@@ -16,3 +16,21 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaControl\obj\Debug\CapaControl.
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CopyComplete
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\CapaControl.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\CapaControl.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\capaDato.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\bin\Debug\capaDato.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CopyComplete
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sistemas II\Reporte\GestorDeReportes\proyecto\ModuloReporte\CapaControl\obj\Debug\CapaControl.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\bin\Debug\CapaControl.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\bin\Debug\CapaControl.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\bin\Debug\capaDato.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\bin\Debug\capaDato.pdb
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\obj\Debug\CapaControl.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\obj\Debug\CapaControl.csproj.CopyComplete
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\obj\Debug\CapaControl.dll
+\\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaControl\obj\Debug\CapaControl.pdb
