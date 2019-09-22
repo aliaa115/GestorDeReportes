@@ -92,7 +92,9 @@ namespace CapaDiseno.Mantenimiento
             ConfiguracionRptControl confControl = new ConfiguracionRptControl();
             ConfiguracionRpt conf = new ConfiguracionRpt();
             conf = confControl.obtenerConfiguracionRpt(reporte.CONFIGURACION.CONFIGURACION);
+
             Cmb_Configuracion.Text = conf.NOMBRE;
+
             Cmb_Configuracion.SelectedText = Cmb_Configuracion.Text;
                 
             Txt_Archivo.Text = reporte.FILENAME;
