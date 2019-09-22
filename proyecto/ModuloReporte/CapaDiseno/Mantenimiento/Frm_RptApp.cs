@@ -11,8 +11,6 @@ namespace CapaDiseno.Mantenimiento
     {
         private ReporteAplicacionControl reporteAppControl = new ReporteAplicacionControl();
         private ReporteAplicacion reporteApp;
-        private AplicacionControl appCont;
-        private ModuloControl modCont;
         private string accion;
 
         public Frm_RptApp()
@@ -107,12 +105,25 @@ namespace CapaDiseno.Mantenimiento
         private void llenarTbpDato(ReporteAplicacion reporteApp)
         {
             deshabilitarCampos();
-            ConfiguracionRptControl confControl = new ConfiguracionRptControl();
+
+            /*ConfiguracionRptControl confControl = new ConfiguracionRptControl();
             ConfiguracionRpt conf = new ConfiguracionRpt();
             conf = confControl.obtenerConfiguracionRpt(reporteApp.REPORTE.CONFIGURACION.CONFIGURACION);
-            Cmb_Reporte.SelectedItem = Cmb_Reporte.Items[reporteApp.REPORTE.REPORTE];
-            Cmb_Modulo.SelectedItem = Cmb_Modulo.Items[reporteApp.MODULO.MODULO];
-            Cmb_Aplicacion.SelectedItem = Cmb_Aplicacion.Items[reporteApp.APLICACION.APLICACION];
+            */
+
+            ReporteAplicacionControl reporteAplicacionCont = new ReporteAplicacionControl();
+            ReporteAplicacion reporteAplicacion = new ReporteAplicacion();
+
+            reporteAplicacion = reporteAplicacionCont.obtenerReporteApp(reporteApp.APLICACION.APLICACION, reporteApp.MODULO.MODULO);
+
+            Cmb_Reporte.Text = reporteAplicacion.REPORTE.NOMBRE;
+            Cmb_Reporte.SelectedText = Cmb_Reporte.Text;
+
+            Cmb_Modulo.Text = reporteAplicacion.MODULO.NOMBRE;
+            Cmb_Modulo.SelectedText = Cmb_Modulo.Text;
+
+            Cmb_Aplicacion.SelectedText = reporteAplicacion.APLICACION.NOMBRE;
+
             Txt_Estado.Text = reporteApp.ESTADO.ToString();
         }
 
@@ -197,10 +208,10 @@ namespace CapaDiseno.Mantenimiento
             int codApp = 0, codMod = 0;
             foreach (ReporteAplicacion reporteAppTmp in reporteAppControl.obtenerAllReporteApp())
             {
-                if(reporteAppTmp.REPORTE.NOMBRE == codigoApp && reporteAppTmp.APLICACION.NOMBRE == codigoMdl)
+                if (codigoApp == reporteAppTmp.APLICACION.NOMBRE && codigoMdl == reporteAppTmp.MODULO.NOMBRE)
                 {
                     codApp = reporteAppTmp.APLICACION.APLICACION;
-                    codMod = reporteAppTmp.REPORTE.REPORTE;
+                    codMod = reporteAppTmp.MODULO.MODULO;
                     break;
                 }
             }
