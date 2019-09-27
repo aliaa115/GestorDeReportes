@@ -37,8 +37,6 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaDiseno\bin\Debug\CrystalDecisi
 C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaDiseno\bin\Debug\stdole.dll
 C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.Frm_Main.resources
 C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.Procesos.Frm_VistaReporte.resources
-\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaDiseno.exe.config
-\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaDiseno.exe
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaDiseno.pdb
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaControl.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\capaDato.dll
@@ -74,7 +72,6 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.Pr
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.csproj.GenerateResource.cache
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.csproj.CopyComplete
-\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.exe
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.pdb
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\ManejoArchivo.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\ManejoArchivo.pdb
@@ -160,3 +157,6 @@ C:\Users\Conny\Documents\Carrera U\Ingenieria\8. Octavo Semestre\Analisis de Sis
 \\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.csproj.CopyComplete
 \\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.exe
 \\Mac\Home\Documents\Analisis de Sistemas II\reporteador\ModuloReporte\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.pdb
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaDiseno.dll.config
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaDiseno.dll
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\obj\Debug\CapaDiseno.dll
