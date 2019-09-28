@@ -60,7 +60,7 @@ namespace CapaControl.Control
             }
         }
 
-        public ReporteModulo obtenerReporteMdl(int modulo)
+        public ReporteModulo obtenerReporteMdl(int modulo, int reporte)
         {
             ReporteModulo reporteMdlTmp = new ReporteModulo();
             ModuloControl moduloControl = new ModuloControl();
@@ -71,8 +71,9 @@ namespace CapaControl.Control
                 String sComando = String.Format("SELECT ID_REPORTE, ID_MODULO, ESTADO " +
                     "FROM TBL_RPT_MDL " +
                     "WHERE ID_MODULO = {0} " +
+                    " AND ID_REPORTE = {1} " +
                     " AND ESTADO <> 0; ",
-                    modulo.ToString());
+                    modulo.ToString(), reporte.ToString());
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
 
