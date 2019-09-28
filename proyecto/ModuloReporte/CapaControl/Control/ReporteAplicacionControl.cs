@@ -135,7 +135,6 @@ namespace CapaControl.Control
 
             return reporteAppList;
         }
-
         public List<ReporteAplicacion> obtenerAllReporteApp()
         {
             List<ReporteAplicacion> reporteAppList = new List<ReporteAplicacion>();

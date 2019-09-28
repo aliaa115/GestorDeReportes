@@ -5,6 +5,7 @@ using capaDato.Entity;
 using CapaControl.Control;
 using CapaDiseno.Dialogos;
 using CapaDiseno.Procesos;
+using CapaDiseno;
 
 namespace CapaDiseno.Mantenimiento
 {
@@ -233,6 +234,9 @@ namespace CapaDiseno.Mantenimiento
             string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.FILENAME;
             Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
             frmVistaRpt.Show();
+            
+            //ImplrimirReporte imp = new ImplrimirReporte(4, 2);
+            
         }
     }
 }
