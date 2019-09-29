@@ -94,6 +94,7 @@
     <Compile Include="Procesos\Frm_VistaReporte.Designer.cs">
       <DependentUpon>Frm_VistaReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\ReportesModulo.cs" />
     <Compile Include="Procesos\UploadFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
