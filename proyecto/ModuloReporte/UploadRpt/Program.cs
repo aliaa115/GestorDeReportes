@@ -19,7 +19,8 @@ namespace UploadRpt
             //Application.Run(new Frm_Reporte());
             //Application.Run(new Frm_RptApp());
             //Application.Run(new Frm_RptMdl());
-            Application.Run(new Frm_Main());
+            //Application.Run(new Frm_Main());
+            Application.Run(new Modulo());
         }
     }
 }
