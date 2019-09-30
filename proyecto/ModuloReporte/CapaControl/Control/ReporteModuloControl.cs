@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using capaDato.Conexion;
-using capaDato.Entity;
+using capaDatoRpt.Conexion;
+using capaDatoRpt.Entity;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace CapaControl.Control
+namespace CapaControlRpt.Control
 {
     public class ReporteModuloControl
     {
@@ -94,6 +94,43 @@ namespace CapaControl.Control
             }
 
             return reporteMdlTmp;
+        }
+
+        public List<ReporteModulo> obtenerAllReporteMdlByMdl(int codModulo)
+        {
+            List<ReporteModulo> reporteMdlList = new List<ReporteModulo>();
+            ModuloControl moduloControl = new ModuloControl();
+            ReporteControl reporteControl = new ReporteControl();
+
+            try
+            {
+                String sComando = String.Format("SELECT ID_REPORTE, ID_MODULO, ESTADO " +
+                    "FROM TBL_RPT_MDL " +
+                    "WHERE ID_MODULO = {0} " +
+                    " AND ESTADO <> 0; ",
+                    codModulo.ToString());
+
+                OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ReporteModulo reporteMdlTmp = new ReporteModulo();
+                        reporteMdlTmp.REPORTE = reporteControl.obtenerReporte(reader.GetInt32(0));
+                        reporteMdlTmp.MODULO = moduloControl.obtenerModulo(reader.GetInt32(1));
+                        reporteMdlTmp.ESTADO = reader.GetInt32(2);
+                        reporteMdlList.Add(reporteMdlTmp);
+                    }
+                }
+            }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al obtener reporte modulo.");
+                return null;
+            }
+
+            return reporteMdlList;
         }
 
         public List<ReporteModulo> obtenerAllReporteMdl()

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using capaDato.Entity;
-using CapaControl.Control;
-using CapaDiseno.Dialogos;
+using capaDatoRpt.Entity;
+using CapaControlRpt.Control;
+using CapaDisenoRpt.Dialogos;
 using System.Collections.Generic;
 
-namespace CapaDiseno.Mantenimiento
+namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_RptMdl : Form
     {
@@ -172,9 +172,9 @@ namespace CapaDiseno.Mantenimiento
         private void Dgv_Consulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
-            String codigoApp = Dgv_Consulta.Rows[fila].Cells[1].Value.ToString();
+            String codigoRpt = Dgv_Consulta.Rows[fila].Cells[1].Value.ToString();
             String codigoMdl = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
-            this.reporteMdl = reporteMdlControl.obtenerReporteMdl(Int32.Parse(codigoMdl));
+            this.reporteMdl = reporteMdlControl.obtenerReporteMdl(Int32.Parse(codigoMdl), Int32.Parse(codigoRpt));
             llenarTbpDato(this.reporteMdl);
             Tbc_RptMdl.SelectedTab = Tbp_Datos;
         }

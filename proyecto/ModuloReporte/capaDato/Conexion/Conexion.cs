@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Odbc;
 
-namespace capaDato.Conexion
+namespace capaDatoRpt.Conexion
 {
     public class Conexion
     {

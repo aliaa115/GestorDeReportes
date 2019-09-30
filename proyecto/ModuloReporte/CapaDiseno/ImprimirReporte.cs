@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CapaControl.Control;
-using capaDato.Entity;
-using CapaDiseno.Dialogos;
+using CapaControlRpt.Control;
+using capaDatoRpt.Entity;
+using CapaDisenoRpt.Dialogos;
 using CapaDiseno.Procesos;
 
-namespace CapaDiseno
+namespace CapaDisenoRpt
 {
     public class ImplrimirReporte
     {
-        public ImplrimirReporte(int Codmodulo, int Codaplicacion)
+        public void imprimirReporteAplicacion(int Codmodulo, int Codaplicacion)
         {
 
             ReporteAplicacionControl datos = new ReporteAplicacionControl();
-            ReporteControl reporteControl = new ReporteControl();
 
             ReporteAplicacion repApp = datos.obtenerReporteApp(Codmodulo, Codaplicacion);
             Reporte rpt = repApp.REPORTE;
@@ -25,6 +21,25 @@ namespace CapaDiseno
             Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
             frmVistaRpt.Show();
 
+        }
+
+        public void imprimirReporteModulo(int codModulo, int codReporte)
+        {
+            ReporteModuloControl reporteMdlControl = new ReporteModuloControl();
+
+            try
+            {
+                ReporteModulo reporteMdl = reporteMdlControl.obtenerReporteMdl(codModulo, codReporte);
+                Reporte rpt = reporteMdl.REPORTE;
+
+                string pathFile = rpt.CONFIGURACION.RUTA + rpt.FILENAME;
+                Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
+                frmVistaRpt.Show();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.ToString() + "Error en impresion, no se pudo obtener reporte.");
+            }
         }
     }
 }

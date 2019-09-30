@@ -1,4 +1,4 @@
-﻿namespace CapaDiseno.Mantenimiento
+﻿namespace CapaDisenoRpt.Mantenimiento
 {
     partial class Frm_ConfiguracionRpt
     {
@@ -11,7 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected override void  Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -276,7 +276,7 @@
             // 
             // Btn_Nuevo
             // 
-            this.Btn_Nuevo.BackgroundImage = global::CapaDiseno.Properties.Resources.add_file;
+            this.Btn_Nuevo.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.add_file;
             this.Btn_Nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Nuevo.Location = new System.Drawing.Point(257, 12);
             this.Btn_Nuevo.Name = "Btn_Nuevo";
@@ -289,7 +289,7 @@
             // 
             // Btn_Modificar
             // 
-            this.Btn_Modificar.BackgroundImage = global::CapaDiseno.Properties.Resources.edit_file;
+            this.Btn_Modificar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.edit_file;
             this.Btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Modificar.Location = new System.Drawing.Point(338, 12);
             this.Btn_Modificar.Name = "Btn_Modificar";
@@ -302,7 +302,7 @@
             // 
             // Btn_Guardar
             // 
-            this.Btn_Guardar.BackgroundImage = global::CapaDiseno.Properties.Resources.save_filepng;
+            this.Btn_Guardar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.save_filepng;
             this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Guardar.Location = new System.Drawing.Point(419, 12);
             this.Btn_Guardar.Name = "Btn_Guardar";
@@ -315,7 +315,7 @@
             // 
             // Btn_Borrar
             // 
-            this.Btn_Borrar.BackgroundImage = global::CapaDiseno.Properties.Resources.delete_files;
+            this.Btn_Borrar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.delete_files;
             this.Btn_Borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Borrar.Location = new System.Drawing.Point(500, 12);
             this.Btn_Borrar.Name = "Btn_Borrar";
@@ -328,7 +328,7 @@
             // 
             // Btn_Cancelar
             // 
-            this.Btn_Cancelar.BackgroundImage = global::CapaDiseno.Properties.Resources.cancel_file;
+            this.Btn_Cancelar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.cancel_file;
             this.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Cancelar.Location = new System.Drawing.Point(581, 12);
             this.Btn_Cancelar.Name = "Btn_Cancelar";

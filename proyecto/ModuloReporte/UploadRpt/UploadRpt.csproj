@@ -91,17 +91,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaControl\CapaControl.csproj">
+    <ProjectReference Include="..\CapaControl\CapaControlRpt.csproj">
       <Project>{3d6bc2ff-ae19-4a40-9de3-f7571777a063}</Project>
-      <Name>CapaControl</Name>
+      <Name>CapaControlRpt</Name>
     </ProjectReference>
-    <ProjectReference Include="..\capaDato\CapaDato.csproj">
+    <ProjectReference Include="..\capaDato\CapaDatoRpt.csproj">
       <Project>{ebc9fe30-64a2-45bc-991a-3d6ef8b6c4a9}</Project>
-      <Name>CapaDato</Name>
+      <Name>CapaDatoRpt</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CapaDiseno\CapaDiseno.csproj">
+    <ProjectReference Include="..\CapaDiseno\CapaDisenoRpt.csproj">
       <Project>{0eae89fd-467e-4270-8ae7-7a0d7f43abca}</Project>
-      <Name>CapaDiseno</Name>
+      <Name>CapaDisenoRpt</Name>
     </ProjectReference>
     <ProjectReference Include="..\ManejoArchivo\ManejoArchivo.csproj">
       <Project>{6e68d095-94c0-43de-9c0f-578b871788ee}</Project>

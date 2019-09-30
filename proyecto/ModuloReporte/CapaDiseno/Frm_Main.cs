@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDiseno.Mantenimiento;
+using CapaDisenoRpt.Mantenimiento;
+using CapaDisenoRpt;
 
-namespace CapaDiseno
+namespace CapaDisenoRpt
 {
     public partial class Frm_Main : Form
     {
