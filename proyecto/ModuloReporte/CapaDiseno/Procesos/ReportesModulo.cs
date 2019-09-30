@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using capaDato.Entity;
-using CapaControl.Control;
+using capaDatoRpt.Entity;
+using CapaControlRpt.Control;
 
 /**Cristhian de Leon 0901 15 6167
  * 
  * Clase para impresion de reportes desde app y mdl.
 */
-namespace CapaDiseno.Procesos
+namespace CapaDisenoRpt.Procesos
 {
     public class ReportesModulo
     {
@@ -28,7 +28,7 @@ namespace CapaDiseno.Procesos
             {
                 List<ReporteModulo> reporteMdlList = reporteMdlControl.obtenerAllReporteMdlByMdl(mdl);
 
-                foreach (ReporteModulo rptMdl in reporteMdlList)
+                foreach (ReporteModulo rptMdl in reporteMdlList) 
                 {
                     ToolStripMenuItem itemTmp = new ToolStripMenuItem();
                     itemTmp.Name = rptMdl.REPORTE.REPORTE.ToString();

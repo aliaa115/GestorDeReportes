@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using capaDato.Entity;
-using CapaControl.Control;
-using CapaDiseno.Dialogos;
+using capaDatoRpt.Entity;
+using CapaControlRpt.Control;
+using CapaDisenoRpt.Dialogos;
 using System.Collections.Generic;
 
-namespace CapaDiseno.Mantenimiento
+namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_RptApp : Form
     {

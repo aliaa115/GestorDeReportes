@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using CapaControl.Control;
-using capaDato.Entity;
-using CapaDiseno.Dialogos;
+using CapaControlRpt.Control;
+using capaDatoRpt.Entity;
+using CapaDisenoRpt.Dialogos;
 using CapaDiseno.Procesos;
 
-namespace CapaDiseno
+namespace CapaDisenoRpt
 {
     public class ImplrimirReporte
     {

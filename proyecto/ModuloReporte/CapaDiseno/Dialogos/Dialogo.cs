@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CapaDiseno.Dialogos
+namespace CapaDisenoRpt.Dialogos
 {
     public class Dialogo
     {

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using capaDato.Entity;
-using CapaControl.Control;
-using CapaDiseno.Dialogos;
+using capaDatoRpt.Entity;
+using CapaControlRpt.Control;
+using CapaDisenoRpt.Dialogos;
+using CapaDisenoRpt;
 
-namespace CapaDiseno.Mantenimiento
+namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_ConfiguracionRpt : Form
     {
@@ -15,6 +16,7 @@ namespace CapaDiseno.Mantenimiento
         public Frm_ConfiguracionRpt()
         {
             InitializeComponent();
+            this.Txt_Codigo.Enabled = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
         }
@@ -75,7 +77,7 @@ namespace CapaDiseno.Mantenimiento
 
         private void habilitarCampos()
         {
-            Txt_Codigo.Enabled = true;
+            Txt_Codigo.Enabled = false;
             Txt_Nombre.Enabled = true;
             Txt_Usuario.Enabled = true;
             Txt_Contrasena.Enabled = true;
@@ -102,9 +104,11 @@ namespace CapaDiseno.Mantenimiento
 
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
+            int n = Dgv_Consulta.RowCount-1;
             iniciazliarTbpConsulta();
             this.configuracionRpt = new ConfiguracionRpt();
             Tbc_Configuracion.SelectedTab = Tbp_Datos;
+            this.Txt_Codigo.Text = n+"";
             this.accion = "nuevo";
         }
 

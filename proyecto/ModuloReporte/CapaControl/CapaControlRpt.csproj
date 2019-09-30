@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBC9FE30-64A2-45BC-991A-3D6EF8B6C4A9}</ProjectGuid>
+    <ProjectGuid>{3D6BC2FF-AE19-4A40-9DE3-F7571777A063}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>capaDato</RootNamespace>
-    <AssemblyName>capaDato</AssemblyName>
+    <RootNamespace>CapaControlRpt</RootNamespace>
+    <AssemblyName>CapaControlRpt</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="capaDatoRpt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\capaDato\bin\Debug\capaDatoRpt.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -42,15 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion\Conexion.cs" />
-    <Compile Include="Conexion\Transaccion.cs" />
-    <Compile Include="Entity\Aplicacion.cs" />
-    <Compile Include="Entity\ConfiguracionRpt.cs" />
-    <Compile Include="Entity\Modulo.cs" />
+    <Compile Include="Control\AplicacionControl.cs" />
+    <Compile Include="Control\ConfiguracionRptControl.cs" />
+    <Compile Include="Control\ModuloControl.cs" />
+    <Compile Include="Control\ReporteAplicacionControl.cs" />
+    <Compile Include="Control\ReporteModuloControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entity\Reporte.cs" />
-    <Compile Include="Entity\ReporteAplicacion.cs" />
-    <Compile Include="Entity\ReporteModulo.cs" />
+    <Compile Include="Control\ReporteControl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

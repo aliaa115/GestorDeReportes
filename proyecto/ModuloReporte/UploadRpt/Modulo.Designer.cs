@@ -41,8 +41,8 @@
             this.Tool_Rpt});
             this.Mst_Menu.Location = new System.Drawing.Point(0, 0);
             this.Mst_Menu.Name = "Mst_Menu";
-            this.Mst_Menu.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.Mst_Menu.Size = new System.Drawing.Size(804, 24);
+            this.Mst_Menu.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.Mst_Menu.Size = new System.Drawing.Size(1072, 26);
             this.Mst_Menu.TabIndex = 0;
             this.Mst_Menu.Text = "menuStrip1";
             // 
@@ -51,24 +51,26 @@
             this.Tool_Rpt.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Tmi_Lista});
             this.Tool_Rpt.Name = "Tool_Rpt";
-            this.Tool_Rpt.Size = new System.Drawing.Size(65, 22);
+            this.Tool_Rpt.Size = new System.Drawing.Size(82, 24);
             this.Tool_Rpt.Text = "Reportes";
             // 
             // Tmi_Lista
             // 
             this.Tmi_Lista.Name = "Tmi_Lista";
-            this.Tmi_Lista.Size = new System.Drawing.Size(180, 22);
+            this.Tmi_Lista.Size = new System.Drawing.Size(224, 26);
             this.Tmi_Lista.Text = "Lista";
             // 
             // Modulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 456);
+            this.ClientSize = new System.Drawing.Size(1072, 561);
             this.Controls.Add(this.Mst_Menu);
             this.MainMenuStrip = this.Mst_Menu;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Modulo";
             this.Text = "Modulo";
+            this.Load += new System.EventHandler(this.Modulo_Load);
             this.Mst_Menu.ResumeLayout(false);
             this.Mst_Menu.PerformLayout();
             this.ResumeLayout(false);

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using capaDato.Entity;
-using CapaControl.Control;
-using CapaDiseno.Dialogos;
+using capaDatoRpt.Entity;
+using CapaControlRpt.Control;
+using CapaDisenoRpt.Dialogos;
 using CapaDiseno.Procesos;
 using CapaDiseno;
 
-namespace CapaDiseno.Mantenimiento
+namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_Reporte : Form
     {
@@ -234,8 +234,9 @@ namespace CapaDiseno.Mantenimiento
             string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.FILENAME;
             Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
             frmVistaRpt.Show();
-            
-            //ImplrimirReporte imp = new ImplrimirReporte(4, 2);
+
+            ImplrimirReporte imp = new ImplrimirReporte();
+            imp.imprimirReporteAplicacion(4, 2);
             
         }
     }

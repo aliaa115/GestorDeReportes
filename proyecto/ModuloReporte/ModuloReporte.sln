@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadRpt", "UploadRpt\UploadRpt.csproj", "{6B9BF35A-6D9C-4A32-9C8E-D807CA2507D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDato", "capaDato\CapaDato.csproj", "{EBC9FE30-64A2-45BC-991A-3D6EF8B6C4A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatoRpt", "capaDato\CapaDatoRpt.csproj", "{EBC9FE30-64A2-45BC-991A-3D6EF8B6C4A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaControl", "CapaControl\CapaControl.csproj", "{3D6BC2FF-AE19-4A40-9DE3-F7571777A063}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaControlRpt", "CapaControl\CapaControlRpt.csproj", "{3D6BC2FF-AE19-4A40-9DE3-F7571777A063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDiseno", "CapaDiseno\CapaDiseno.csproj", "{0EAE89FD-467E-4270-8AE7-7A0D7F43ABCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDisenoRpt", "CapaDiseno\CapaDisenoRpt.csproj", "{0EAE89FD-467E-4270-8AE7-7A0D7F43ABCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManejoArchivo", "ManejoArchivo\ManejoArchivo.csproj", "{6E68D095-94C0-43DE-9C0F-578B871788EE}"
 EndProject

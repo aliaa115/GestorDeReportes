@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using CapaDiseno.Procesos;
+using CapaDisenoRpt.Procesos;
 
 namespace UploadRpt
 {
@@ -19,6 +19,11 @@ namespace UploadRpt
             {
                 Tool_Rpt.DropDownItems.Add(item);
             }
+        }
+
+        private void Modulo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

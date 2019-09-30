@@ -1,7 +1,7 @@
 ﻿using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace capaDato.Conexion
+namespace capaDatoRpt.Conexion
 {
     public class Transaccion
     {
@@ -20,7 +20,7 @@ namespace capaDato.Conexion
                 {
                     comando.CommandText = sentencia;
                     comando.ExecuteNonQuery();
-                transaccion.Commit();
+                    transaccion.Commit();
                 }
             }
             catch (OdbcException ex)
