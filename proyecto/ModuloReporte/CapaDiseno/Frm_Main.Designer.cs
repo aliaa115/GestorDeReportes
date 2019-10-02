@@ -36,21 +36,26 @@
             // 
             // Btn_Configuracion
             // 
-            this.Btn_Configuracion.Location = new System.Drawing.Point(24, 23);
-            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Btn_Configuracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Configuracion.Location = new System.Drawing.Point(0, 0);
+            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Configuracion.Name = "Btn_Configuracion";
-            this.Btn_Configuracion.Size = new System.Drawing.Size(290, 110);
+            this.Btn_Configuracion.Size = new System.Drawing.Size(441, 110);
             this.Btn_Configuracion.TabIndex = 0;
             this.Btn_Configuracion.Text = "Configuracion Carpeta";
             this.Btn_Configuracion.UseVisualStyleBackColor = true;
+            this.Btn_Configuracion.Visible = false;
             this.Btn_Configuracion.Click += new System.EventHandler(this.Btn_Configuracion_Click);
             // 
             // Btn_Reporte
             // 
-            this.Btn_Reporte.Location = new System.Drawing.Point(24, 144);
-            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Btn_Reporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Reporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Reporte.Location = new System.Drawing.Point(0, 110);
+            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Reporte.Name = "Btn_Reporte";
-            this.Btn_Reporte.Size = new System.Drawing.Size(290, 110);
+            this.Btn_Reporte.Size = new System.Drawing.Size(441, 110);
             this.Btn_Reporte.TabIndex = 1;
             this.Btn_Reporte.Text = "Reportes";
             this.Btn_Reporte.UseVisualStyleBackColor = true;
@@ -58,21 +63,25 @@
             // 
             // Btn_RptApp
             // 
-            this.Btn_RptApp.Location = new System.Drawing.Point(24, 265);
-            this.Btn_RptApp.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Btn_RptApp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_RptApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_RptApp.Location = new System.Drawing.Point(0, 220);
+            this.Btn_RptApp.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_RptApp.Name = "Btn_RptApp";
-            this.Btn_RptApp.Size = new System.Drawing.Size(290, 110);
+            this.Btn_RptApp.Size = new System.Drawing.Size(441, 110);
             this.Btn_RptApp.TabIndex = 2;
-            this.Btn_RptApp.Text = "Asociar a Aplicacoin";
+            this.Btn_RptApp.Text = "Asociar a Aplicacion";
             this.Btn_RptApp.UseVisualStyleBackColor = true;
             this.Btn_RptApp.Click += new System.EventHandler(this.Btn_RptApp_Click);
             // 
             // Btn_RptMdl
             // 
-            this.Btn_RptMdl.Location = new System.Drawing.Point(24, 387);
-            this.Btn_RptMdl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Btn_RptMdl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_RptMdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_RptMdl.Location = new System.Drawing.Point(0, 330);
+            this.Btn_RptMdl.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_RptMdl.Name = "Btn_RptMdl";
-            this.Btn_RptMdl.Size = new System.Drawing.Size(290, 110);
+            this.Btn_RptMdl.Size = new System.Drawing.Size(441, 110);
             this.Btn_RptMdl.TabIndex = 3;
             this.Btn_RptMdl.Text = "Asociar a Modulo";
             this.Btn_RptMdl.UseVisualStyleBackColor = true;
@@ -82,12 +91,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 513);
+            this.ClientSize = new System.Drawing.Size(441, 442);
             this.Controls.Add(this.Btn_RptMdl);
             this.Controls.Add(this.Btn_RptApp);
             this.Controls.Add(this.Btn_Reporte);
             this.Controls.Add(this.Btn_Configuracion);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_Main";
             this.Text = "Main";
             this.ResumeLayout(false);

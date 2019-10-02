@@ -235,7 +235,7 @@ namespace CapaDiseno.Mantenimiento
             Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
             frmVistaRpt.Show();
             
-            //ImplrimirReporte imp = new ImplrimirReporte(4, 2);
+            //ImprimirReporte imp = new ImprimirReporte(4, 2);
             
         }
     }

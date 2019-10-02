@@ -123,16 +123,19 @@ namespace CapaControl.Control
                         configuracionRptList.Add(configuracionRptTmp);
                     }
                 }
+                //else
+                //{
+                //    reader.Close();
+                //    throw new Exception("No se recupero ningun registro de configuracion carpeta.");
+                //}
 
                 reader.Close();
+                return configuracionRptList;
             }
             catch (OdbcException ex)
             {
-                MessageBox.Show(ex.ToString(), "Error al obtener reporte");
-                return null;
+                throw new Exception("Error de conexion a base de datos. /n" + ex.ToString());
             }
-
-            return configuracionRptList;
         }
     }
 }

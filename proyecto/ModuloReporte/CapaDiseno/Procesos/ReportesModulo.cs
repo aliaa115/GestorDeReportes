@@ -52,7 +52,7 @@ namespace CapaDiseno.Procesos
             ToolStripMenuItem item = sender as ToolStripMenuItem;
             try
             {
-                ImplrimirReporte imprimir = new ImplrimirReporte();
+                ImprimirReporte imprimir = new ImprimirReporte();
                 imprimir.imprimirReporteModulo(codModulo, Int32.Parse(item.Name));
             }
             catch(Exception ex)

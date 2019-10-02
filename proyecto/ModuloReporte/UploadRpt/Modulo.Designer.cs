@@ -30,43 +30,36 @@
         {
             this.Mst_Menu = new System.Windows.Forms.MenuStrip();
             this.Tool_Rpt = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tmi_Lista = new System.Windows.Forms.ToolStripMenuItem();
             this.Mst_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Mst_Menu
             // 
+            this.Mst_Menu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.Mst_Menu.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.Mst_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Tool_Rpt});
             this.Mst_Menu.Location = new System.Drawing.Point(0, 0);
             this.Mst_Menu.Name = "Mst_Menu";
-            this.Mst_Menu.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.Mst_Menu.Size = new System.Drawing.Size(804, 24);
+            this.Mst_Menu.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.Mst_Menu.Size = new System.Drawing.Size(1608, 42);
             this.Mst_Menu.TabIndex = 0;
             this.Mst_Menu.Text = "menuStrip1";
             // 
             // Tool_Rpt
             // 
-            this.Tool_Rpt.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tmi_Lista});
             this.Tool_Rpt.Name = "Tool_Rpt";
-            this.Tool_Rpt.Size = new System.Drawing.Size(65, 22);
+            this.Tool_Rpt.Size = new System.Drawing.Size(128, 38);
             this.Tool_Rpt.Text = "Reportes";
-            // 
-            // Tmi_Lista
-            // 
-            this.Tmi_Lista.Name = "Tmi_Lista";
-            this.Tmi_Lista.Size = new System.Drawing.Size(180, 22);
-            this.Tmi_Lista.Text = "Lista";
             // 
             // Modulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 456);
+            this.ClientSize = new System.Drawing.Size(1608, 877);
             this.Controls.Add(this.Mst_Menu);
             this.MainMenuStrip = this.Mst_Menu;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Modulo";
             this.Text = "Modulo";
             this.Mst_Menu.ResumeLayout(false);
@@ -80,6 +73,5 @@
 
         private System.Windows.Forms.MenuStrip Mst_Menu;
         private System.Windows.Forms.ToolStripMenuItem Tool_Rpt;
-        private System.Windows.Forms.ToolStripMenuItem Tmi_Lista;
     }
 }

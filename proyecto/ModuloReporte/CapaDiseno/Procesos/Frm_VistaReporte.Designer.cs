@@ -38,16 +38,20 @@
             this.Crv_Reporte.Cursor = System.Windows.Forms.Cursors.Default;
             this.Crv_Reporte.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Crv_Reporte.Location = new System.Drawing.Point(0, 0);
+            this.Crv_Reporte.Margin = new System.Windows.Forms.Padding(6);
             this.Crv_Reporte.Name = "Crv_Reporte";
-            this.Crv_Reporte.Size = new System.Drawing.Size(1008, 601);
+            this.Crv_Reporte.Size = new System.Drawing.Size(2016, 1156);
             this.Crv_Reporte.TabIndex = 0;
+            this.Crv_Reporte.ToolPanelWidth = 400;
             // 
             // Frm_VistaReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 601);
+            this.ClientSize = new System.Drawing.Size(2016, 1156);
             this.Controls.Add(this.Crv_Reporte);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_VistaReporte";
             this.Text = "Frm_VistaReporte";
             this.ResumeLayout(false);

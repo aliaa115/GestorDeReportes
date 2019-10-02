@@ -7,7 +7,7 @@ using CapaDiseno.Procesos;
 
 namespace CapaDiseno
 {
-    public class ImplrimirReporte
+    public class ImprimirReporte
     {
         public void imprimirReporteAplicacion(int Codmodulo, int Codaplicacion)
         {
