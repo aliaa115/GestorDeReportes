@@ -9,7 +9,7 @@ namespace capaDato.Conexion
 
         public Tuple<OdbcConnection, OdbcTransaction> iniciarConexion()
         {
-            conexion = new OdbcConnection("Dsn=moduloseguridad");
+            conexion = new OdbcConnection("Dsn=seguridad");
             conexion.Open();
 
             OdbcTransaction transaccion = conexion.BeginTransaction();
