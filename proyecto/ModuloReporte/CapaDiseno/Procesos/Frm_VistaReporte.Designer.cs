@@ -1,4 +1,4 @@
-﻿namespace CapaDiseno.Procesos
+﻿namespace CapaDisenoRpt.Procesos
 {
     partial class Frm_VistaReporte
     {

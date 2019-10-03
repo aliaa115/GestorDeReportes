@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 //Cristhian de Leon 0901 15 6167
 
-namespace CapaDiseno.Mantenimiento
+namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_RptApp : Form
     {

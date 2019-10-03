@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using capaDatoRpt.Entity;
 using CapaControlRpt.Control;
 using CapaDisenoRpt.Dialogos;
-using CapaDiseno.Procesos;
-using CapaDiseno;
+using CapaDisenoRpt.Procesos;
+using CapaDisenoRpt;
 
 namespace CapaDisenoRpt.Mantenimiento
 {

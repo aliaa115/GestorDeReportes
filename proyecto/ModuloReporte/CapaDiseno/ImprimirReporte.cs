@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CapaControlRpt.Control;
 using capaDatoRpt.Entity;
 using CapaDisenoRpt.Dialogos;
-using CapaDiseno.Procesos;
+using CapaDisenoRpt.Procesos;
 
 namespace CapaDisenoRpt
 {
