@@ -5,7 +5,9 @@ using CapaControlRpt.Control;
 using CapaDisenoRpt.Dialogos;
 using System.Collections.Generic;
 
-namespace CapaDisenoRpt.Mantenimiento
+//Cristhian de Leon 0901 15 6167
+
+namespace CapaDiseno.Mantenimiento
 {
     public partial class Frm_RptApp : Form
     {
@@ -28,10 +30,13 @@ namespace CapaDisenoRpt.Mantenimiento
             foreach (ReporteAplicacion reporteAppTmp in reporteAppControl.obtenerAllReporteApp())
             {
                 Dgv_Consulta.Rows.Add();
-                Dgv_Consulta.Rows[fila].Cells[0].Value = reporteAppTmp.REPORTE.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[1].Value = reporteAppTmp.APLICACION.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteAppTmp.MODULO.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteAppTmp.ESTADO.ToString();
+                Dgv_Consulta.Rows[fila].Cells[0].Value = reporteAppTmp.REPORTE.REPORTE;
+                Dgv_Consulta.Rows[fila].Cells[1].Value = reporteAppTmp.REPORTE.NOMBRE;
+                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteAppTmp.APLICACION.APLICACION;
+                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteAppTmp.APLICACION.NOMBRE;
+                Dgv_Consulta.Rows[fila].Cells[4].Value = reporteAppTmp.MODULO.MODULO;
+                Dgv_Consulta.Rows[fila].Cells[5].Value = reporteAppTmp.MODULO.NOMBRE;
+                Dgv_Consulta.Rows[fila].Cells[6].Value = reporteAppTmp.ESTADO.ToString();
                 fila++;
             }
         }
@@ -106,15 +111,8 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             deshabilitarCampos();
 
-            /*ConfiguracionRptControl confControl = new ConfiguracionRptControl();
-            ConfiguracionRpt conf = new ConfiguracionRpt();
-            conf = confControl.obtenerConfiguracionRpt(reporteApp.REPORTE.CONFIGURACION.CONFIGURACION);
-            */
-
             ReporteAplicacionControl reporteAplicacionCont = new ReporteAplicacionControl();
-            ReporteAplicacion reporteAplicacion = new ReporteAplicacion();
-
-            reporteAplicacion = reporteAplicacionCont.obtenerReporteApp(reporteApp.APLICACION.APLICACION, reporteApp.MODULO.MODULO);
+            ReporteAplicacion reporteAplicacion = reporteAplicacionCont.obtenerReporteApp(reporteApp.APLICACION.APLICACION, reporteApp.MODULO.MODULO);
 
             Cmb_Reporte.Text = reporteAplicacion.REPORTE.NOMBRE;
             Cmb_Reporte.SelectedText = Cmb_Reporte.Text;
@@ -203,19 +201,9 @@ namespace CapaDisenoRpt.Mantenimiento
         private void seleccionarRegistro(object sender, DataGridViewCellEventArgs e)
         {
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
-            String codigoApp = Dgv_Consulta.Rows[fila].Cells[1].Value.ToString();
-            String codigoMdl = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
-            int codApp = 0, codMod = 0;
-            foreach (ReporteAplicacion reporteAppTmp in reporteAppControl.obtenerAllReporteApp())
-            {
-                if (codigoApp == reporteAppTmp.APLICACION.NOMBRE && codigoMdl == reporteAppTmp.MODULO.NOMBRE)
-                {
-                    codApp = reporteAppTmp.APLICACION.APLICACION;
-                    codMod = reporteAppTmp.MODULO.MODULO;
-                    break;
-                }
-            }
-            this.reporteApp = reporteAppControl.obtenerReporteApp(codApp, codMod);
+            String codigoApp = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
+            String codigoMdl = Dgv_Consulta.Rows[fila].Cells[4].Value.ToString();
+            this.reporteApp = reporteAppControl.obtenerReporteApp(Int32.Parse(codigoApp), Int32.Parse(codigoMdl));
             llenarTbpDato(this.reporteApp);
             Tbc_RptApp.SelectedTab = Tbp_Datos;
         }

@@ -91,13 +91,11 @@ namespace CapaDisenoRpt.Mantenimiento
             Txt_Nombre.Text = reporte.NOMBRE;
             //      Cmb_Configuracion.SelectedItem = Cmb_Configuracion.Items[reporte.CONFIGURACION.CONFIGURACION];
             ConfiguracionRptControl confControl = new ConfiguracionRptControl();
-            ConfiguracionRpt conf = new ConfiguracionRpt();
-            conf = confControl.obtenerConfiguracionRpt(reporte.CONFIGURACION.CONFIGURACION);
+            ConfiguracionRpt conf = confControl.obtenerConfiguracionRpt(reporte.CONFIGURACION.CONFIGURACION);
 
             Cmb_Configuracion.Text = conf.NOMBRE;
-
             Cmb_Configuracion.SelectedText = Cmb_Configuracion.Text;
-                
+            
             Txt_Archivo.Text = reporte.FILENAME;
             Txt_Estado.Text = reporte.ESTADO.ToString();
         }
