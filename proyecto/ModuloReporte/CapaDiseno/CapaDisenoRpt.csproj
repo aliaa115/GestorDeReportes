@@ -36,12 +36,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaControlRpt">
-      <HintPath>..\CapaControl\bin\Debug\CapaControlRpt.dll</HintPath>
-    </Reference>
-    <Reference Include="capaDatoRpt">
-      <HintPath>..\CapaControl\bin\Debug\capaDatoRpt.dll</HintPath>
-    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -171,6 +165,14 @@
     <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaControl\CapaControlRpt.csproj">
+      <Project>{3d6bc2ff-ae19-4a40-9de3-f7571777a063}</Project>
+      <Name>CapaControlRpt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaDato\CapaDatoRpt.csproj">
+      <Project>{ebc9fe30-64a2-45bc-991a-3d6ef8b6c4a9}</Project>
+      <Name>CapaDatoRpt</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManejoArchivo\ManejoArchivo.csproj">
       <Project>{6e68d095-94c0-43de-9c0f-578b871788ee}</Project>
       <Name>ManejoArchivo</Name>

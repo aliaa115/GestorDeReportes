@@ -14,7 +14,7 @@ namespace CapaDisenoRpt
 
             ReporteAplicacionControl datos = new ReporteAplicacionControl();
 
-            ReporteAplicacion repApp = datos.obtenerReporteApp(Codmodulo, Codaplicacion);
+            ReporteAplicacion repApp = datos.obtenerReporteApp(Codaplicacion, Codmodulo);
             Reporte rpt = repApp.REPORTE;
 
             string pathFile = rpt.CONFIGURACION.RUTA + rpt.FILENAME;

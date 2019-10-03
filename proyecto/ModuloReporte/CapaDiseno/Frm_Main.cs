@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using CapaDisenoRpt.Mantenimiento;
-using CapaDisenoRpt;
 
 //Cristhian de Leon 0901 15 6167
 
