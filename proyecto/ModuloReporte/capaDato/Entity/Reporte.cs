@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace capaDato.Entity
+namespace capaDatoRpt.Entity
 {
     public class Reporte
     {

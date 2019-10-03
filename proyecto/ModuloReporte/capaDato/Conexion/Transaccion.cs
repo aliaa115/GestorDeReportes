@@ -1,7 +1,7 @@
 ﻿using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace capaDato.Conexion
+namespace capaDatoRpt.Conexion
 {
     public class Transaccion
     {

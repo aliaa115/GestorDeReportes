@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
-using capaDato.Entity;
-using CapaControl.Control;
-using CapaDiseno.Dialogos;
+using capaDatoRpt.Entity;
+using CapaControlRpt.Control;
+using CapaDisenoRpt.Dialogos;
 using System.Collections.Generic;
 
 //Cristhian de Leon 0901 15 6167
 
-namespace CapaDiseno.Mantenimiento
+namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_RptApp : Form
     {

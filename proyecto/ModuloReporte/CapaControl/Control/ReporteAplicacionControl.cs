@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using capaDato.Conexion;
-using capaDato.Entity;
+using capaDatoRpt.Conexion;
+using capaDatoRpt.Entity;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace CapaControl.Control
+namespace CapaControlRpt.Control
 {
     public class ReporteAplicacionControl
     {

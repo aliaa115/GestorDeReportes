@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0EAE89FD-467E-4270-8AE7-7A0D7F43ABCA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>CapaDiseno</RootNamespace>
-    <AssemblyName>CapaDiseno</AssemblyName>
+    <RootNamespace>CapaDisenoRpt</RootNamespace>
+    <AssemblyName>CapaDisenoRpt</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -165,13 +165,13 @@
     <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaControl\CapaControl.csproj">
+    <ProjectReference Include="..\CapaControl\CapaControlRpt.csproj">
       <Project>{3d6bc2ff-ae19-4a40-9de3-f7571777a063}</Project>
-      <Name>CapaControl</Name>
+      <Name>CapaControlRpt</Name>
     </ProjectReference>
-    <ProjectReference Include="..\capaDato\CapaDato.csproj">
+    <ProjectReference Include="..\capaDato\CapaDatoRpt.csproj">
       <Project>{ebc9fe30-64a2-45bc-991a-3d6ef8b6c4a9}</Project>
-      <Name>CapaDato</Name>
+      <Name>CapaDatoRpt</Name>
     </ProjectReference>
     <ProjectReference Include="..\ManejoArchivo\ManejoArchivo.csproj">
       <Project>{6e68d095-94c0-43de-9c0f-578b871788ee}</Project>

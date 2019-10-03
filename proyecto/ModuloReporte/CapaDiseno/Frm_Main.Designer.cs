@@ -1,4 +1,4 @@
-﻿namespace CapaDiseno
+﻿namespace CapaDisenoRpt
 {
     partial class Frm_Main
     {

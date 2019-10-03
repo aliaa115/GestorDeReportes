@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using capaDato.Conexion;
-using capaDato.Entity;
+using capaDatoRpt.Conexion;
+using capaDatoRpt.Entity;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace CapaControl.Control
+namespace CapaControlRpt.Control
 {
     public class AplicacionControl
     {
@@ -35,7 +35,7 @@ namespace CapaControl.Control
                         aplicacionTmp.APLICACION = reader.GetInt32(0);
                         aplicacionTmp.MODULO = moduloControl.obtenerModulo(reader.GetInt32(1));
                         aplicacionTmp.NOMBRE = reader.GetString(2);
-                        aplicacionTmp.DESCRIPCION = reader.GetString(3);
+                        aplicacionTmp.DESCRIPCION = reader.IsDBNull(3) ? " " : reader.GetString(3);
                         aplicacionTmp.ESTADO = reader.GetInt32(4);
                         aplicacionList.Add(aplicacionTmp);
                     }
@@ -74,7 +74,7 @@ namespace CapaControl.Control
                         aplicacionTmp.APLICACION = reader.GetInt32(0);
                         aplicacionTmp.MODULO = moduloControl.obtenerModulo(reader.GetInt32(1));
                         aplicacionTmp.NOMBRE = reader.GetString(2);
-                        aplicacionTmp.DESCRIPCION = reader.GetString(3);
+                        aplicacionTmp.DESCRIPCION = reader.IsDBNull(3) ? " " : reader.GetString(3);
                         aplicacionTmp.ESTADO = reader.GetInt32(4);
                     }
                 }

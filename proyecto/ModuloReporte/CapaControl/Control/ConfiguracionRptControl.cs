@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using capaDato.Conexion;
-using capaDato.Entity;
+using capaDatoRpt.Conexion;
+using capaDatoRpt.Entity;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace CapaControl.Control
+namespace CapaControlRpt.Control
 {
     public class ConfiguracionRptControl
     {
@@ -17,7 +17,6 @@ namespace CapaControl.Control
                 String sComando = String.Format("INSERT INTO TBL_CONFIGURACION_RPT VALUES ({0}, '{1}', '{2}', '{3}', '{4}', '{5}', {6}); ",
                     configuracionRpt.CONFIGURACION.ToString(), configuracionRpt.NOMBRE, configuracionRpt.USER, configuracionRpt.PASSWORD,
                     configuracionRpt.PUERTO, configuracionRpt.RUTA, configuracionRpt.ESTADO.ToString());
-
                 this.transaccion.insertarDatos(sComando);
             }
             catch (OdbcException ex)

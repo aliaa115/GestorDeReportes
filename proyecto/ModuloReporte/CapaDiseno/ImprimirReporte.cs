@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using CapaControl.Control;
-using capaDato.Entity;
-using CapaDiseno.Dialogos;
+using CapaControlRpt.Control;
+using capaDatoRpt.Entity;
+using CapaDisenoRpt.Dialogos;
 using CapaDiseno.Procesos;
 
-namespace CapaDiseno
+namespace CapaDisenoRpt
 {
     public class ImprimirReporte
     {
@@ -14,7 +14,7 @@ namespace CapaDiseno
 
             ReporteAplicacionControl datos = new ReporteAplicacionControl();
 
-            ReporteAplicacion repApp = datos.obtenerReporteApp(Codmodulo, Codaplicacion);
+            ReporteAplicacion repApp = datos.obtenerReporteApp(Codaplicacion, Codmodulo);
             Reporte rpt = repApp.REPORTE;
 
             string pathFile = rpt.CONFIGURACION.RUTA + rpt.FILENAME;

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-using CapaDiseno.Mantenimiento;
+using CapaDisenoRpt.Mantenimiento;
 
 //Cristhian de Leon 0901 15 6167
 
-namespace CapaDiseno
+namespace CapaDisenoRpt
 {
     public partial class Frm_Main : Form
     {

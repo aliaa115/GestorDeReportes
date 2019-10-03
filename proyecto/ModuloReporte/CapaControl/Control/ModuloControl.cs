@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using capaDato.Conexion;
-using capaDato.Entity;
+using capaDatoRpt.Conexion;
+using capaDatoRpt.Entity;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace CapaControl.Control
+namespace CapaControlRpt.Control
 {
     public class ModuloControl
     {
@@ -29,7 +29,7 @@ namespace CapaControl.Control
                         Modulo moduloTmp = new Modulo();
                         moduloTmp.MODULO = reader.GetInt32(0);
                         moduloTmp.NOMBRE= reader.GetString(1);
-                        moduloTmp.DESCRIPCION = (reader.GetString(2).ToString() != null ? reader.GetString(2) : " ");
+                        moduloTmp.DESCRIPCION = reader.IsDBNull(2) ? " " : reader.GetString(2);
                         moduloTmp.ESTADO = reader.GetInt32(3);
                         moduloList.Add(moduloTmp);
                     }
@@ -62,7 +62,7 @@ namespace CapaControl.Control
                     {
                         moduloTmp.MODULO = reader.GetInt32(0);
                         moduloTmp.NOMBRE = reader.GetString(1);
-                        moduloTmp.DESCRIPCION = (reader.GetString(2).ToString() != null ? reader.GetString(2) : " ");
+                        moduloTmp.DESCRIPCION = (reader.IsDBNull(2) ? " " : reader.GetString(2));
                         moduloTmp.ESTADO = reader.GetInt32(3);
                     }
                 }

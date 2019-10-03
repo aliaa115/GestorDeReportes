@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using CapaDiseno;
+using CapaDisenoRpt;
+using capaDatoRpt.Conexion;
 
 namespace UploadRpt
 {
@@ -20,6 +21,7 @@ namespace UploadRpt
             //Application.Run(new Frm_RptApp());
             //Application.Run(new Frm_RptMdl());
             //Application.Run(new Frm_Main());
+            Conexion con = new Conexion();
             Application.Run(new Modulo());
         }
     }

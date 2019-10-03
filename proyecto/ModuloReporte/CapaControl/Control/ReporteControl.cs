@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using capaDato.Conexion;
-using capaDato.Entity;
+using capaDatoRpt.Conexion;
+using capaDatoRpt.Entity;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-namespace CapaControl.Control
+namespace CapaControlRpt.Control
 {
     public class ReporteControl
     {
@@ -15,7 +15,7 @@ namespace CapaControl.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', '{3}', {4}); ",
+                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', {4}, '{3}'); ",
                     reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.FILENAME,
                     reporte.ESTADO.ToString());
 
