@@ -20,8 +20,9 @@ namespace capaDatoRpt.Conexion
                 {
                     comando.CommandText = sentencia;
                     comando.ExecuteNonQuery();
-                    transaccion.Commit();
                 }
+
+                transaccion.Commit();
             }
             catch (OdbcException ex)
             {
