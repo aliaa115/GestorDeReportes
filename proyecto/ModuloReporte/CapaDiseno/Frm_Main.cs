@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDisenoRpt.Mantenimiento;
 using CapaDisenoRpt;
 
-namespace CapaDisenoRpt
+//Cristhian de Leon 0901 15 6167
+
+namespace CapaDiseno
 {
     public partial class Frm_Main : Form
     {
         public Frm_Main()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Btn_Configuracion_Click(object sender, EventArgs e)

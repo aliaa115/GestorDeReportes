@@ -94,8 +94,7 @@ namespace CapaControlRpt.Control
             }
             catch (OdbcException ex)
             {
-                MessageBox.Show(ex.ToString(), "Error al obtener reporte aplicacion.");
-                return null;
+                throw new Exception("No se obtuvieron registros." + ex.ToString());
             }
 
             return reporteAppTmp;
