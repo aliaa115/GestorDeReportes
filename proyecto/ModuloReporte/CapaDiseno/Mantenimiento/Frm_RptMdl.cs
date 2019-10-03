@@ -28,9 +28,11 @@ namespace CapaDisenoRpt.Mantenimiento
             foreach (ReporteModulo reporteMdlTmp in reporteMdlControl.obtenerAllReporteMdl())
             {
                 Dgv_Consulta.Rows.Add();
-                Dgv_Consulta.Rows[fila].Cells[0].Value = reporteMdlTmp.REPORTE.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[1].Value = reporteMdlTmp.MODULO.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteMdlTmp.ESTADO.ToString();
+                Dgv_Consulta.Rows[fila].Cells[0].Value = reporteMdlTmp.REPORTE.REPORTE;
+                Dgv_Consulta.Rows[fila].Cells[1].Value = reporteMdlTmp.REPORTE.NOMBRE;
+                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteMdlTmp.MODULO.MODULO;
+                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteMdlTmp.MODULO.NOMBRE;
+                Dgv_Consulta.Rows[fila].Cells[4].Value = reporteMdlTmp.ESTADO.ToString();
                 fila++;
             }
         }
@@ -89,11 +91,15 @@ namespace CapaDisenoRpt.Mantenimiento
         private void llenarTbpDato(ReporteModulo reporteMdl)
         {
             deshabilitarCampos();
+
             ConfiguracionRptControl confControl = new ConfiguracionRptControl();
-            ConfiguracionRpt conf = new ConfiguracionRpt();
-            conf = confControl.obtenerConfiguracionRpt(reporteMdl.REPORTE.CONFIGURACION.CONFIGURACION);
-            Cmb_Reporte.SelectedItem = Cmb_Reporte.Items[reporteMdl.REPORTE.REPORTE];
-            Cmb_Modulo.SelectedItem = Cmb_Modulo.Items[reporteMdl.MODULO.MODULO];
+
+            Cmb_Reporte.Text = reporteMdl.REPORTE.NOMBRE;
+            Cmb_Reporte.SelectedText = Cmb_Reporte.Text;
+
+            Cmb_Modulo.Text = reporteMdl.MODULO.NOMBRE;
+            Cmb_Modulo.SelectedText = Cmb_Modulo.Text;
+
             Txt_Estado.Text = reporteMdl.ESTADO.ToString();
         }
 
@@ -172,7 +178,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Dgv_Consulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
-            String codigoRpt = Dgv_Consulta.Rows[fila].Cells[1].Value.ToString();
+            String codigoRpt = Dgv_Consulta.Rows[fila].Cells[0].Value.ToString();
             String codigoMdl = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
             this.reporteMdl = reporteMdlControl.obtenerReporteMdl(Int32.Parse(codigoMdl), Int32.Parse(codigoRpt));
             llenarTbpDato(this.reporteMdl);
