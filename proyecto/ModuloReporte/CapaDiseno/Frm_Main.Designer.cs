@@ -1,4 +1,4 @@
-﻿namespace CapaDisenoRpt
+﻿namespace CapaDiseno
 {
     partial class Frm_Main
     {
@@ -39,9 +39,8 @@
             this.Btn_Configuracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Configuracion.Location = new System.Drawing.Point(0, 0);
-            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Configuracion.Name = "Btn_Configuracion";
-            this.Btn_Configuracion.Size = new System.Drawing.Size(441, 110);
+            this.Btn_Configuracion.Size = new System.Drawing.Size(220, 57);
             this.Btn_Configuracion.TabIndex = 0;
             this.Btn_Configuracion.Text = "Configuracion Carpeta";
             this.Btn_Configuracion.UseVisualStyleBackColor = true;
@@ -52,12 +51,11 @@
             // 
             this.Btn_Reporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_Reporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Reporte.Location = new System.Drawing.Point(0, 110);
-            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(6);
+            this.Btn_Reporte.Location = new System.Drawing.Point(0, 57);
             this.Btn_Reporte.Name = "Btn_Reporte";
-            this.Btn_Reporte.Size = new System.Drawing.Size(441, 110);
+            this.Btn_Reporte.Size = new System.Drawing.Size(220, 57);
             this.Btn_Reporte.TabIndex = 1;
-            this.Btn_Reporte.Text = "Reportes";
+            this.Btn_Reporte.Text = "Crear Reportes";
             this.Btn_Reporte.UseVisualStyleBackColor = true;
             this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
             // 
@@ -65,10 +63,9 @@
             // 
             this.Btn_RptApp.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_RptApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_RptApp.Location = new System.Drawing.Point(0, 220);
-            this.Btn_RptApp.Margin = new System.Windows.Forms.Padding(6);
+            this.Btn_RptApp.Location = new System.Drawing.Point(0, 114);
             this.Btn_RptApp.Name = "Btn_RptApp";
-            this.Btn_RptApp.Size = new System.Drawing.Size(441, 110);
+            this.Btn_RptApp.Size = new System.Drawing.Size(220, 57);
             this.Btn_RptApp.TabIndex = 2;
             this.Btn_RptApp.Text = "Asociar a Aplicacion";
             this.Btn_RptApp.UseVisualStyleBackColor = true;
@@ -78,25 +75,23 @@
             // 
             this.Btn_RptMdl.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_RptMdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_RptMdl.Location = new System.Drawing.Point(0, 330);
-            this.Btn_RptMdl.Margin = new System.Windows.Forms.Padding(6);
+            this.Btn_RptMdl.Location = new System.Drawing.Point(0, 171);
             this.Btn_RptMdl.Name = "Btn_RptMdl";
-            this.Btn_RptMdl.Size = new System.Drawing.Size(441, 110);
+            this.Btn_RptMdl.Size = new System.Drawing.Size(220, 57);
             this.Btn_RptMdl.TabIndex = 3;
-            this.Btn_RptMdl.Text = "Asociar a Modulo";
+            this.Btn_RptMdl.Text = "Asociar Reporte a Modulo";
             this.Btn_RptMdl.UseVisualStyleBackColor = true;
             this.Btn_RptMdl.Click += new System.EventHandler(this.Btn_RptMdl_Click);
             // 
             // Frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 442);
+            this.ClientSize = new System.Drawing.Size(220, 230);
             this.Controls.Add(this.Btn_RptMdl);
             this.Controls.Add(this.Btn_RptApp);
             this.Controls.Add(this.Btn_Reporte);
             this.Controls.Add(this.Btn_Configuracion);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_Main";
             this.Text = "Main";
             this.ResumeLayout(false);
