@@ -77,7 +77,7 @@
             // 
             // Btn_Cancelar
             // 
-            this.Btn_Cancelar.BackgroundImage = global::CapaDiseno.Properties.Resources.cancel_file;
+            this.Btn_Cancelar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.cancel_file;
             this.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Cancelar.Location = new System.Drawing.Point(1162, 23);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -91,7 +91,7 @@
             // 
             // Btn_Borrar
             // 
-            this.Btn_Borrar.BackgroundImage = global::CapaDiseno.Properties.Resources.delete_files;
+            this.Btn_Borrar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.delete_files;
             this.Btn_Borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Borrar.Location = new System.Drawing.Point(1000, 23);
             this.Btn_Borrar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -105,7 +105,7 @@
             // 
             // Btn_Guardar
             // 
-            this.Btn_Guardar.BackgroundImage = global::CapaDiseno.Properties.Resources.save_filepng;
+            this.Btn_Guardar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.save_filepng;
             this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Guardar.Location = new System.Drawing.Point(838, 23);
             this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -119,7 +119,7 @@
             // 
             // Btn_Modificar
             // 
-            this.Btn_Modificar.BackgroundImage = global::CapaDiseno.Properties.Resources.edit_file;
+            this.Btn_Modificar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.edit_file;
             this.Btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Modificar.Location = new System.Drawing.Point(676, 23);
             this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -133,7 +133,7 @@
             // 
             // Btn_Nuevo
             // 
-            this.Btn_Nuevo.BackgroundImage = global::CapaDiseno.Properties.Resources.add_file;
+            this.Btn_Nuevo.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.add_file;
             this.Btn_Nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Nuevo.Location = new System.Drawing.Point(514, 23);
             this.Btn_Nuevo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
