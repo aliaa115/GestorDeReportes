@@ -109,6 +109,7 @@
             this.Dgv_Consulta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dgv_Consulta.Location = new System.Drawing.Point(3, 3);
             this.Dgv_Consulta.Name = "Dgv_Consulta";
+            this.Dgv_Consulta.RowHeadersVisible = false;
             this.Dgv_Consulta.Size = new System.Drawing.Size(890, 329);
             this.Dgv_Consulta.TabIndex = 1;
             this.Dgv_Consulta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarRegistro);
