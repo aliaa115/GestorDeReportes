@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 //Cristhian de Leon 0901 15 6167
 
-namespace CapaDiseno.Procesos
+namespace CapaDisenoRpt.Procesos
 {
     public class ExportarRpt
     {

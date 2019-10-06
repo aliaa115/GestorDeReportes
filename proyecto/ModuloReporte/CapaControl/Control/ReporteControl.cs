@@ -132,5 +132,33 @@ namespace CapaControlRpt.Control
             return reporteList;
         }
 
+        public int obtenerUltimoId()
+        {
+            List<Reporte> reporteList = new List<Reporte>();
+            ConfiguracionRptControl confiControl = new ConfiguracionRptControl();
+            int rpt = 0;
+            try
+            {
+                String sComando = String.Format("SELECT ID_REPORTE FROM TBL_REPORTE; ");
+
+                OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        rpt = reader.GetInt32(0);
+                    }
+                }
+            }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al obtener reporte");
+                return 0;
+            }
+
+            return rpt;
+        }
+
     }
 }

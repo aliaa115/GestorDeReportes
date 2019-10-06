@@ -160,9 +160,6 @@ C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloRep
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe.config
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.pdb
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControl.dll
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDato.dll
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.dll
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.dll
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
@@ -183,10 +180,6 @@ C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloRep
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\stdole.dll
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControl.pdb
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDato.pdb
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.pdb
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDiseno.dll.config
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\ManejoArchivo.pdb
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.CopyComplete
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControlRpt.dll
@@ -196,3 +189,10 @@ C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloRep
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDatoRpt.pdb
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.pdb
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.dll.config
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControlRpt.dll
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDatoRpt.dll
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.dll
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaControlRpt.pdb
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\capaDatoRpt.pdb
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.pdb
+C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.dll.config

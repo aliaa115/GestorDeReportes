@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using capaDatoRpt.Entity;
 using CapaControlRpt.Control;
 using CapaDisenoRpt.Dialogos;
-using CapaDiseno.Procesos;
-using CapaDiseno;
+using CapaDisenoRpt.Procesos;
+using CapaDisenoRpt;
 
 namespace CapaDisenoRpt.Mantenimiento
 {
@@ -38,6 +38,13 @@ namespace CapaDisenoRpt.Mantenimiento
                 Dgv_Consulta.Rows[fila].Cells[4].Value = reporteTmp.ESTADO.ToString();
                 fila++;
             }
+        }
+
+        private void establecerID()
+        {
+            int reporte = reporteControl.obtenerUltimoId();
+            Txt_Codigo.Text = reporte + 1 + "";
+            Txt_Codigo.Enabled = false;
         }
 
         private void iniciazliarTbpConsulta()
@@ -142,6 +149,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
             iniciazliarTbpConsulta();
+            establecerID();
             this.reporte = new Reporte();
             Tbc_Reporte.SelectedTab = Tbp_Datos;
             this.accion = "nuevo";
