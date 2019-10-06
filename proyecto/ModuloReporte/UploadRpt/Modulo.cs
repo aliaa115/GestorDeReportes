@@ -20,10 +20,5 @@ namespace UploadRpt
                 Tool_Rpt.DropDownItems.Add(item);
             }
         }
-
-        private void Modulo_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CapaControlRpt.Control;
 using capaDatoRpt.Entity;
 using CapaDisenoRpt.Dialogos;
-using CapaDiseno.Procesos;
+using CapaDisenoRpt.Procesos;
 
 namespace CapaDisenoRpt
 {
@@ -14,7 +14,7 @@ namespace CapaDisenoRpt
 
             ReporteAplicacionControl datos = new ReporteAplicacionControl();
 
-            ReporteAplicacion repApp = datos.obtenerReporteApp(Codmodulo, Codaplicacion);
+            ReporteAplicacion repApp = datos.obtenerReporteApp(Codaplicacion, Codmodulo);
             Reporte rpt = repApp.REPORTE;
 
             string pathFile = rpt.CONFIGURACION.RUTA + rpt.FILENAME;

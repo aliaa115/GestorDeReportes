@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 
-namespace CapaDiseno.Procesos
+namespace CapaDisenoRpt.Procesos
 {
     class UploadFile
     {
