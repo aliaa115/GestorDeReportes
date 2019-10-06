@@ -328,6 +328,125 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte: ";
             // 
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // Reporte
+            // 
+            this.Reporte.HeaderText = "Reporte";
+            this.Reporte.MinimumWidth = 10;
+            this.Reporte.Name = "Reporte";
+            this.Reporte.Width = 200;
+            // 
+            // NomReporte
+            // 
+            this.NomReporte.HeaderText = "Nombre Reporte";
+            this.NomReporte.MinimumWidth = 10;
+            this.NomReporte.Name = "NomReporte";
+            this.NomReporte.Width = 200;
+            // 
+            // Aplicacion
+            // 
+            this.Aplicacion.HeaderText = "Aplicacion";
+            this.Aplicacion.MinimumWidth = 10;
+            this.Aplicacion.Name = "Aplicacion";
+            this.Aplicacion.Width = 200;
+
+            this.Btn_Cancelar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.cancel_file;
+            this.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Cancelar.Location = new System.Drawing.Point(581, 12);
+            this.Btn_Cancelar.Name = "Btn_Cancelar";
+            this.Btn_Cancelar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Cancelar.TabIndex = 4;
+            this.Btn_Cancelar.Text = "Cancelar";
+            this.Btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Cancelar.UseVisualStyleBackColor = true;
+            this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
+
+            // 
+            // NomConfiguracion
+            // 
+
+            this.NomConfiguracion.HeaderText = "Nombre Aplicacion";
+            this.NomConfiguracion.MinimumWidth = 10;
+            this.NomConfiguracion.Name = "NomConfiguracion";
+            this.NomConfiguracion.Width = 200;
+
+            this.Btn_Borrar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.delete_files;
+            this.Btn_Borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Borrar.Location = new System.Drawing.Point(500, 12);
+            this.Btn_Borrar.Name = "Btn_Borrar";
+            this.Btn_Borrar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Borrar.TabIndex = 3;
+            this.Btn_Borrar.Text = "Borrar";
+            this.Btn_Borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Borrar.UseVisualStyleBackColor = true;
+            this.Btn_Borrar.Click += new System.EventHandler(this.Btn_Borrar_Click);
+
+            // 
+            // Modulo
+            // 
+
+            this.Modulo.HeaderText = "Modulo";
+            this.Modulo.MinimumWidth = 10;
+            this.Modulo.Name = "Modulo";
+            this.Modulo.Width = 200;
+
+            this.Btn_Guardar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.save_filepng;
+            this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Guardar.Location = new System.Drawing.Point(419, 12);
+            this.Btn_Guardar.Name = "Btn_Guardar";
+            this.Btn_Guardar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Guardar.TabIndex = 2;
+            this.Btn_Guardar.Text = "Guardar";
+            this.Btn_Guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Guardar.UseVisualStyleBackColor = true;
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
+
+            // 
+            // NomModulo
+            // 
+
+            this.NomModulo.HeaderText = "Nombre Modulo";
+            this.NomModulo.MinimumWidth = 10;
+            this.NomModulo.Name = "NomModulo";
+            this.NomModulo.Width = 200;
+
+            this.Btn_Modificar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.edit_file;
+            this.Btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Modificar.Location = new System.Drawing.Point(338, 12);
+            this.Btn_Modificar.Name = "Btn_Modificar";
+            this.Btn_Modificar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Modificar.TabIndex = 1;
+            this.Btn_Modificar.Text = "Modificar";
+            this.Btn_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Modificar.UseVisualStyleBackColor = true;
+            this.Btn_Modificar.Click += new System.EventHandler(this.Btn_Modificar_Click);
+
+            // 
+            // Estado
+            // 
+
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 10;
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 200;
+
+            this.Btn_Nuevo.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.add_file;
+            this.Btn_Nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Nuevo.Location = new System.Drawing.Point(257, 12);
+            this.Btn_Nuevo.Name = "Btn_Nuevo";
+            this.Btn_Nuevo.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Nuevo.TabIndex = 0;
+            this.Btn_Nuevo.Text = "Nuevo";
+            this.Btn_Nuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Nuevo.UseVisualStyleBackColor = true;
+            this.Btn_Nuevo.Click += new System.EventHandler(this.Btn_Nuevo_Click);
+
+            // 
+=======
+>>>>>>> f0dcbd04f3cd0f7d09b9049e9ba3354c0f5d0ca2
+=======
+>>>>>>> 75bbea7a65d4606f6794388f30e1dcc606b0f550
             // Frm_RptApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
