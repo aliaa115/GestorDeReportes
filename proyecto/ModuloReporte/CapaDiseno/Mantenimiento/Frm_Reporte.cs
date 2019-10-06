@@ -40,6 +40,13 @@ namespace CapaDisenoRpt.Mantenimiento
             }
         }
 
+        private void establecerID()
+        {
+            int reporte = reporteControl.obtenerUltimoId();
+            Txt_Codigo.Text = reporte + 1 + "";
+            Txt_Codigo.Enabled = false;
+        }
+
         private void iniciazliarTbpConsulta()
         {
             habilitarCampos();
@@ -142,6 +149,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
             iniciazliarTbpConsulta();
+            establecerID();
             this.reporte = new Reporte();
             Tbc_Reporte.SelectedTab = Tbp_Datos;
             this.accion = "nuevo";

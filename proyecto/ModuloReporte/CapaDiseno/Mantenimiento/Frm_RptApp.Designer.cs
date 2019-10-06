@@ -70,17 +70,19 @@
             this.Pnl_Nav.Controls.Add(this.Btn_Nuevo);
             this.Pnl_Nav.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Nav.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Nav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_Nav.Name = "Pnl_Nav";
-            this.Pnl_Nav.Size = new System.Drawing.Size(685, 100);
+            this.Pnl_Nav.Size = new System.Drawing.Size(913, 123);
             this.Pnl_Nav.TabIndex = 2;
             // 
             // Btn_Cancelar
             // 
             this.Btn_Cancelar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.cancel_file;
             this.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Cancelar.Location = new System.Drawing.Point(581, 12);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(564, 13);
+            this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
-            this.Btn_Cancelar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Cancelar.Size = new System.Drawing.Size(99, 91);
             this.Btn_Cancelar.TabIndex = 4;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -91,9 +93,10 @@
             // 
             this.Btn_Borrar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.delete_files;
             this.Btn_Borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Borrar.Location = new System.Drawing.Point(500, 12);
+            this.Btn_Borrar.Location = new System.Drawing.Point(456, 13);
+            this.Btn_Borrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Borrar.Name = "Btn_Borrar";
-            this.Btn_Borrar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Borrar.Size = new System.Drawing.Size(99, 91);
             this.Btn_Borrar.TabIndex = 3;
             this.Btn_Borrar.Text = "Borrar";
             this.Btn_Borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -104,9 +107,10 @@
             // 
             this.Btn_Guardar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.save_filepng;
             this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Guardar.Location = new System.Drawing.Point(419, 12);
+            this.Btn_Guardar.Location = new System.Drawing.Point(348, 13);
+            this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Guardar.Name = "Btn_Guardar";
-            this.Btn_Guardar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Guardar.Size = new System.Drawing.Size(99, 91);
             this.Btn_Guardar.TabIndex = 2;
             this.Btn_Guardar.Text = "Guardar";
             this.Btn_Guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -117,9 +121,10 @@
             // 
             this.Btn_Modificar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.edit_file;
             this.Btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Modificar.Location = new System.Drawing.Point(338, 12);
+            this.Btn_Modificar.Location = new System.Drawing.Point(240, 13);
+            this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Modificar.Name = "Btn_Modificar";
-            this.Btn_Modificar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Modificar.Size = new System.Drawing.Size(99, 91);
             this.Btn_Modificar.TabIndex = 1;
             this.Btn_Modificar.Text = "Modificar";
             this.Btn_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -130,9 +135,10 @@
             // 
             this.Btn_Nuevo.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.add_file;
             this.Btn_Nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Nuevo.Location = new System.Drawing.Point(257, 12);
+            this.Btn_Nuevo.Location = new System.Drawing.Point(132, 13);
+            this.Btn_Nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Nuevo.Name = "Btn_Nuevo";
-            this.Btn_Nuevo.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Nuevo.Size = new System.Drawing.Size(99, 91);
             this.Btn_Nuevo.TabIndex = 0;
             this.Btn_Nuevo.Text = "Nuevo";
             this.Btn_Nuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -144,25 +150,28 @@
             this.Tbc_RptApp.Controls.Add(this.Tbp_Consulta);
             this.Tbc_RptApp.Controls.Add(this.Tbp_Datos);
             this.Tbc_RptApp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tbc_RptApp.Location = new System.Drawing.Point(0, 100);
+            this.Tbc_RptApp.Location = new System.Drawing.Point(0, 123);
+            this.Tbc_RptApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbc_RptApp.Name = "Tbc_RptApp";
             this.Tbc_RptApp.SelectedIndex = 0;
-            this.Tbc_RptApp.Size = new System.Drawing.Size(685, 289);
+            this.Tbc_RptApp.Size = new System.Drawing.Size(913, 356);
             this.Tbc_RptApp.TabIndex = 3;
             // 
             // Tbp_Consulta
             // 
             this.Tbp_Consulta.Controls.Add(this.Dgv_Consulta);
-            this.Tbp_Consulta.Location = new System.Drawing.Point(4, 22);
+            this.Tbp_Consulta.Location = new System.Drawing.Point(4, 25);
+            this.Tbp_Consulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Consulta.Name = "Tbp_Consulta";
-            this.Tbp_Consulta.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Tbp_Consulta.Size = new System.Drawing.Size(677, 263);
+            this.Tbp_Consulta.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbp_Consulta.Size = new System.Drawing.Size(905, 327);
             this.Tbp_Consulta.TabIndex = 0;
             this.Tbp_Consulta.Text = "Consulta";
             this.Tbp_Consulta.UseVisualStyleBackColor = true;
             // 
             // Dgv_Consulta
             // 
+            this.Dgv_Consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_Consulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_Consulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Reporte,
@@ -173,11 +182,12 @@
             this.NomModulo,
             this.Estado});
             this.Dgv_Consulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Dgv_Consulta.Location = new System.Drawing.Point(3, 3);
+            this.Dgv_Consulta.Location = new System.Drawing.Point(4, 4);
+            this.Dgv_Consulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgv_Consulta.Name = "Dgv_Consulta";
             this.Dgv_Consulta.RowHeadersVisible = false;
             this.Dgv_Consulta.RowHeadersWidth = 82;
-            this.Dgv_Consulta.Size = new System.Drawing.Size(671, 257);
+            this.Dgv_Consulta.Size = new System.Drawing.Size(897, 319);
             this.Dgv_Consulta.TabIndex = 1;
             this.Dgv_Consulta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarRegistro);
             // 
@@ -186,49 +196,42 @@
             this.Reporte.HeaderText = "Reporte";
             this.Reporte.MinimumWidth = 10;
             this.Reporte.Name = "Reporte";
-            this.Reporte.Width = 200;
             // 
             // NomReporte
             // 
             this.NomReporte.HeaderText = "Nombre Reporte";
             this.NomReporte.MinimumWidth = 10;
             this.NomReporte.Name = "NomReporte";
-            this.NomReporte.Width = 200;
             // 
             // Aplicacion
             // 
             this.Aplicacion.HeaderText = "Aplicacion";
             this.Aplicacion.MinimumWidth = 10;
             this.Aplicacion.Name = "Aplicacion";
-            this.Aplicacion.Width = 200;
             // 
             // NomConfiguracion
             // 
             this.NomConfiguracion.HeaderText = "Nombre Aplicacion";
             this.NomConfiguracion.MinimumWidth = 10;
             this.NomConfiguracion.Name = "NomConfiguracion";
-            this.NomConfiguracion.Width = 200;
             // 
             // Modulo
             // 
             this.Modulo.HeaderText = "Modulo";
             this.Modulo.MinimumWidth = 10;
             this.Modulo.Name = "Modulo";
-            this.Modulo.Width = 200;
             // 
             // NomModulo
             // 
             this.NomModulo.HeaderText = "Nombre Modulo";
             this.NomModulo.MinimumWidth = 10;
             this.NomModulo.Name = "NomModulo";
-            this.NomModulo.Width = 200;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
             this.Estado.MinimumWidth = 10;
             this.Estado.Name = "Estado";
-            this.Estado.Width = 200;
             // 
             // Tbp_Datos
             // 
@@ -241,81 +244,91 @@
             this.Tbp_Datos.Controls.Add(this.label3);
             this.Tbp_Datos.Controls.Add(this.label2);
             this.Tbp_Datos.Controls.Add(this.label1);
-            this.Tbp_Datos.Location = new System.Drawing.Point(4, 22);
+            this.Tbp_Datos.Location = new System.Drawing.Point(4, 25);
+            this.Tbp_Datos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tbp_Datos.Name = "Tbp_Datos";
-            this.Tbp_Datos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Tbp_Datos.Size = new System.Drawing.Size(896, 335);
+            this.Tbp_Datos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbp_Datos.Size = new System.Drawing.Size(905, 327);
             this.Tbp_Datos.TabIndex = 1;
             this.Tbp_Datos.Text = "Datos";
             // 
             // Txt_Estado
             // 
-            this.Txt_Estado.Location = new System.Drawing.Point(253, 176);
+            this.Txt_Estado.Location = new System.Drawing.Point(236, 183);
+            this.Txt_Estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Estado.Name = "Txt_Estado";
-            this.Txt_Estado.Size = new System.Drawing.Size(397, 20);
+            this.Txt_Estado.Size = new System.Drawing.Size(528, 22);
             this.Txt_Estado.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(197, 183);
+            this.label4.Location = new System.Drawing.Point(162, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Estado: ";
             // 
             // Cmb_Reporte
             // 
             this.Cmb_Reporte.FormattingEnabled = true;
-            this.Cmb_Reporte.Location = new System.Drawing.Point(251, 96);
+            this.Cmb_Reporte.Location = new System.Drawing.Point(234, 84);
+            this.Cmb_Reporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cmb_Reporte.Name = "Cmb_Reporte";
-            this.Cmb_Reporte.Size = new System.Drawing.Size(399, 21);
+            this.Cmb_Reporte.Size = new System.Drawing.Size(531, 24);
             this.Cmb_Reporte.TabIndex = 1;
             // 
             // Cmb_Modulo
             // 
             this.Cmb_Modulo.FormattingEnabled = true;
-            this.Cmb_Modulo.Location = new System.Drawing.Point(251, 123);
+            this.Cmb_Modulo.Location = new System.Drawing.Point(234, 117);
+            this.Cmb_Modulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cmb_Modulo.Name = "Cmb_Modulo";
-            this.Cmb_Modulo.Size = new System.Drawing.Size(399, 21);
+            this.Cmb_Modulo.Size = new System.Drawing.Size(531, 24);
             this.Cmb_Modulo.TabIndex = 2;
             this.Cmb_Modulo.SelectedIndexChanged += new System.EventHandler(this.Cmb_Modulo_SelectedIndexChanged);
             // 
             // Cmb_Aplicacion
             // 
             this.Cmb_Aplicacion.FormattingEnabled = true;
-            this.Cmb_Aplicacion.Location = new System.Drawing.Point(251, 149);
+            this.Cmb_Aplicacion.Location = new System.Drawing.Point(234, 149);
+            this.Cmb_Aplicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cmb_Aplicacion.Name = "Cmb_Aplicacion";
-            this.Cmb_Aplicacion.Size = new System.Drawing.Size(399, 21);
+            this.Cmb_Aplicacion.Size = new System.Drawing.Size(531, 24);
             this.Cmb_Aplicacion.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(181, 157);
+            this.label3.Location = new System.Drawing.Point(140, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "Aplicacion: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 130);
+            this.label2.Location = new System.Drawing.Point(162, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Modulo: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(192, 104);
+            this.label1.Location = new System.Drawing.Point(155, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte: ";
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // Reporte
             // 
@@ -432,13 +445,16 @@
             // 
 =======
 >>>>>>> f0dcbd04f3cd0f7d09b9049e9ba3354c0f5d0ca2
+=======
+>>>>>>> 75bbea7a65d4606f6794388f30e1dcc606b0f550
             // Frm_RptApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 389);
+            this.ClientSize = new System.Drawing.Size(913, 479);
             this.Controls.Add(this.Tbc_RptApp);
             this.Controls.Add(this.Pnl_Nav);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_RptApp";
             this.Text = "Asociar Reporte a Aplicacion";
             this.Pnl_Nav.ResumeLayout(false);
