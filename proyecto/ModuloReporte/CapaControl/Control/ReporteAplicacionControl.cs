@@ -171,5 +171,6 @@ namespace CapaControlRpt.Control
 
             return reporteAppList;
         }
+
     }
 }
