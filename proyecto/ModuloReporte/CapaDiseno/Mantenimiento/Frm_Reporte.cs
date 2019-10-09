@@ -82,11 +82,11 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void habilitarCampos()
         {
-            Txt_Codigo.Enabled = true;
+            Txt_Codigo.Enabled = false;//Deshabilitado ya que no se puede cambiar la llave primaria 
             Txt_Nombre.Enabled = true;
             Cmb_Configuracion.Enabled = true;
             Txt_Archivo.Enabled = true;
-            Txt_Estado.Enabled = true;
+            Txt_Estado.Enabled = false;//Deshabilitado
             Btn_SeleccionarFile.Enabled = true;
         }
 

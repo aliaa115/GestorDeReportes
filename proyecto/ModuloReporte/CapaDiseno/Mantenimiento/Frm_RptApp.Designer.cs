@@ -328,8 +328,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte: ";
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             // Reporte
             // 
             this.Reporte.HeaderText = "Reporte";
@@ -443,10 +441,6 @@
             this.Btn_Nuevo.Click += new System.EventHandler(this.Btn_Nuevo_Click);
 
             // 
-=======
->>>>>>> f0dcbd04f3cd0f7d09b9049e9ba3354c0f5d0ca2
-=======
->>>>>>> 75bbea7a65d4606f6794388f30e1dcc606b0f550
             // Frm_RptApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
