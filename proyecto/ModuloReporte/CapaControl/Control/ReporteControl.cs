@@ -15,13 +15,8 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, '{2}', " + "{4} , '{3}'); ",
-                    reporte.REPORTE.ToString(), reporte.NOMBRE, reporte.FILENAME,
+                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.FILENAME,
                     reporte.ESTADO.ToString());
-
-                this.transaccion.insertarDatos(sComando);
-            }
-            catch(OdbcException ex)
             {
                 MessageBox.Show(ex.ToString(), "Error al insertar reporte");
                 throw new Exception("No se pudo insertar.");
