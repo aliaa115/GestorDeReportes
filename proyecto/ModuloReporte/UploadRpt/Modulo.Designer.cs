@@ -40,24 +40,25 @@
             this.Tool_Rpt});
             this.Mst_Menu.Location = new System.Drawing.Point(0, 0);
             this.Mst_Menu.Name = "Mst_Menu";
-            this.Mst_Menu.Size = new System.Drawing.Size(1608, 40);
+            this.Mst_Menu.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
+            this.Mst_Menu.Size = new System.Drawing.Size(685, 24);
             this.Mst_Menu.TabIndex = 0;
             this.Mst_Menu.Text = "menuStrip1";
             // 
             // Tool_Rpt
             // 
             this.Tool_Rpt.Name = "Tool_Rpt";
-            this.Tool_Rpt.Size = new System.Drawing.Size(128, 36);
+            this.Tool_Rpt.Size = new System.Drawing.Size(65, 22);
             this.Tool_Rpt.Text = "Reportes";
+            this.Tool_Rpt.Click += new System.EventHandler(this.Tool_Rpt_Click);
             // 
             // Modulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1608, 877);
+            this.ClientSize = new System.Drawing.Size(685, 389);
             this.Controls.Add(this.Mst_Menu);
             this.MainMenuStrip = this.Mst_Menu;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Modulo";
             this.Text = "Modulo";
             this.Mst_Menu.ResumeLayout(false);

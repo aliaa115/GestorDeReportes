@@ -92,7 +92,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             deshabilitarCampos();
 
-            ConfiguracionRptControl confControl = new ConfiguracionRptControl();
+        
 
             Cmb_Reporte.Text = reporteMdl.REPORTE.NOMBRE;
             Cmb_Reporte.SelectedText = Cmb_Reporte.Text;
