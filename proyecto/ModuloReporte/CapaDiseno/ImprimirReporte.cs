@@ -17,7 +17,7 @@ namespace CapaDisenoRpt
             ReporteAplicacion repApp = datos.obtenerReporteApp(Codaplicacion, Codmodulo);
             Reporte rpt = repApp.REPORTE;
 
-            string pathFile = rpt.CONFIGURACION.RUTA + rpt.FILENAME;
+            string pathFile = rpt.FILENAME;
             Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
             frmVistaRpt.Show();
 
@@ -32,7 +32,7 @@ namespace CapaDisenoRpt
                 ReporteModulo reporteMdl = reporteMdlControl.obtenerReporteMdl(codModulo, codReporte);
                 Reporte rpt = reporteMdl.REPORTE;
 
-                string pathFile = rpt.CONFIGURACION.RUTA + rpt.FILENAME;
+                string pathFile =rpt.FILENAME;
                 Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
                 frmVistaRpt.Show();
             }
