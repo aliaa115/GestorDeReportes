@@ -33,9 +33,8 @@ namespace CapaDisenoRpt.Mantenimiento
                 Dgv_Consulta.Rows.Add();
                 Dgv_Consulta.Rows[fila].Cells[0].Value = reporteTmp.REPORTE.ToString();
                 Dgv_Consulta.Rows[fila].Cells[1].Value = reporteTmp.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteTmp.CONFIGURACION.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteTmp.FILENAME;
-                Dgv_Consulta.Rows[fila].Cells[4].Value = reporteTmp.ESTADO.ToString();
+                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteTmp.FILENAME;
+                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteTmp.ESTADO.ToString();
                 fila++;
             }
         }
@@ -53,7 +52,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
             Txt_Codigo.Text = "";
             Txt_Nombre.Text = "";
-            Cmb_Configuracion.SelectedIndex = 0;
+         
             Txt_Archivo.Text = "";
             Txt_Estado.Text = "1";
         }
@@ -63,7 +62,7 @@ namespace CapaDisenoRpt.Mantenimiento
             Reporte rptTmp = new Reporte();
             rptTmp.REPORTE = int.Parse(Txt_Codigo.Text);
             rptTmp.NOMBRE = Txt_Nombre.Text;    
-            rptTmp.CONFIGURACION = (ConfiguracionRpt)Cmb_Configuracion.SelectedItem;
+          
             rptTmp.FILENAME = Txt_Archivo.Text;
             rptTmp.ESTADO = int.Parse(Txt_Estado.Text);
             
@@ -74,7 +73,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             Txt_Codigo.Enabled = false;
             Txt_Nombre.Enabled = false;
-            Cmb_Configuracion.Enabled = false;
+         
             Txt_Archivo .Enabled = false;
             Txt_Estado.Enabled = false;
             Btn_SeleccionarFile.Enabled = false;
@@ -84,7 +83,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             Txt_Codigo.Enabled = true;
             Txt_Nombre.Enabled = true;
-            Cmb_Configuracion.Enabled = true;
+          
             Txt_Archivo.Enabled = true;
             Txt_Estado.Enabled = true;
             Btn_SeleccionarFile.Enabled = true;
@@ -100,8 +99,7 @@ namespace CapaDisenoRpt.Mantenimiento
             ConfiguracionRptControl confControl = new ConfiguracionRptControl();
             ConfiguracionRpt conf = confControl.obtenerConfiguracionRpt(reporte.CONFIGURACION.CONFIGURACION);
 
-            Cmb_Configuracion.Text = conf.NOMBRE;
-            Cmb_Configuracion.SelectedText = Cmb_Configuracion.Text;
+       
             
             Txt_Archivo.Text = reporte.FILENAME;
             Txt_Estado.Text = reporte.ESTADO.ToString();
@@ -116,9 +114,6 @@ namespace CapaDisenoRpt.Mantenimiento
             ConfiguracionRptControl configuracionControl = new ConfiguracionRptControl();
             List<ConfiguracionRpt> configuracionList = configuracionControl.obtenerAllConfiguracionRpt();
 
-            Cmb_Configuracion.ValueMember = "CONFIGURACION";
-            Cmb_Configuracion.DisplayMember = "NOMBRE";
-            Cmb_Configuracion.DataSource = configuracionList;
         }
 
         /*
