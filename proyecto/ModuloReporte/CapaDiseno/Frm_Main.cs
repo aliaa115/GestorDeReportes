@@ -14,11 +14,7 @@ namespace CapaDisenoRpt
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Btn_Configuracion_Click(object sender, EventArgs e)
-        {
-            Frm_ConfiguracionRpt frm_ConfiguracionRpt = new Frm_ConfiguracionRpt();
-            frm_ConfiguracionRpt.Show();
-        }
+      
 
         private void Btn_Reporte_Click(object sender, EventArgs e)
         {
