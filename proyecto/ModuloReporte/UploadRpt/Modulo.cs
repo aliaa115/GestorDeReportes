@@ -7,7 +7,6 @@ namespace UploadRpt
     public partial class Modulo : Form
     {
         ReportesModulo reportesModulo = new ReportesModulo(1); //Sustituir por el codigo de mdl actual.
-      
         public Modulo()
         {
             InitializeComponent();
@@ -16,16 +15,10 @@ namespace UploadRpt
 
         private void inicializar()
         {
-            foreach (ToolStripMenuItem item in reportesModulo.crearItems())
+            foreach(ToolStripMenuItem item in reportesModulo.crearItems())
             {
                 Tool_Rpt.DropDownItems.Add(item);
-
             }
-        }
-
-        private void Tool_Rpt_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\AplicacionControl.cs" />
+    <Compile Include="Control\ConfiguracionRptControl.cs" />
     <Compile Include="Control\ModuloControl.cs" />
     <Compile Include="Control\ReporteAplicacionControl.cs" />
     <Compile Include="Control\ReporteModuloControl.cs" />
