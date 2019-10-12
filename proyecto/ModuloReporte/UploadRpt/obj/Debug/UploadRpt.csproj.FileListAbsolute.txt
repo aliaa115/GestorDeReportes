@@ -154,7 +154,6 @@ C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloRep
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.UploadFile.resources
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Properties.Resources.resources
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.GenerateResource.cache
-C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.csproj.CoreCompileInputs.cache
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.exe
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.pdb
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\UploadRpt.exe.config
