@@ -15,7 +15,7 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', {4}, '{3}'); ",
+                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', '{3}', {4}); ",
                     reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.FILENAME,
                     reporte.ESTADO.ToString());
 
