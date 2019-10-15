@@ -20,5 +20,11 @@ namespace UploadRpt
                 Tool_Rpt.DropDownItems.Add(item);
             }
         }
+
+        private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Bitacora frm_Bitacora = new Frm_Bitacora();
+            frm_Bitacora.Show();
+        }
     }
 }

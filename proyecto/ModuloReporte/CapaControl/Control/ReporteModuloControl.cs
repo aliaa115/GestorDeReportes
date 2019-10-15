@@ -43,14 +43,14 @@ namespace CapaControlRpt.Control
             }
         }
 
-        public void eliminarReporteMdl(int modulo)
+        public void eliminarReporteMdl(int modulo, int reporte)
         {
             try
             {
-                String sComando = String.Format("UPDATE TBL_RPT_MDL " +
-                    "SET ID_REPORTE = 0, ESTADO = 0 " +
-                    "WHERE ID_MODULO = {0}; ",
-                    modulo.ToString());
+                String sComando = String.Format("DELETE FROM TBL_RPT_MDL " +
+                    "WHERE ID_MODULO = {0} " +
+                    " AND ID_REPORTE = {1}; ",
+                    modulo.ToString(), reporte.ToString());
 
                 this.transaccion.insertarDatos(sComando);
             }

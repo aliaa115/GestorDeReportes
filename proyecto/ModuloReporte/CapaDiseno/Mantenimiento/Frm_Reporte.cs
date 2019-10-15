@@ -174,21 +174,29 @@ namespace CapaDisenoRpt.Mantenimiento
             {
                 try
                 {
-                    UploadFile upload;
+                    UploadFile upload = new UploadFile(this.reporte.FILENAME, this.reporte.CONFIGURACION.RUTA);
                     if (this.accion == "nuevo")
                     {
                         reporteControl.insertarReporte(this.reporte);
-                        upload = new UploadFile(fileUpload, this.reporte.CONFIGURACION.RUTA);
+                        upload.insertFile(fileUpload);
                     }
                     else if (this.accion == "modificar")
                     {
                         reporteControl.actualizarReporte(this.reporte);
-                        upload = new UploadFile(fileUpload, this.reporte.CONFIGURACION.RUTA);
+                        if (fileUpload != null)
+                        {
+                            upload.modifyFile(fileUpload);
+                            MessageBox.Show("Se modifico archivo.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se modifico archivo.");
+                        }
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("No se subio archivo.");
+                    MessageBox.Show("No se subio archivo.\n" + ex.ToString());
                 }
 
                 iniciazliarTbpConsulta();
@@ -214,8 +222,10 @@ namespace CapaDisenoRpt.Mantenimiento
             if (confirmacion)
             {
                 reporteControl.eliminarReporte(this.reporte.REPORTE);
-                this.reporte = new Reporte();
+                UploadFile upload = new UploadFile(this.reporte.FILENAME, this.reporte.CONFIGURACION.RUTA);
+                upload.deleteFile();
 
+                this.reporte = new Reporte();
                 iniciazliarTbpConsulta();
                 Tbc_Reporte.SelectedTab = Tbp_Consulta;
                 llenarDgv();
@@ -237,12 +247,18 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_PreView_Click(object sender, EventArgs e)
         {
-            string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.FILENAME;
-            Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
-            frmVistaRpt.Show();
-            
-            //ImprimirReporte imp = new ImprimirReporte(4, 2);
-            
+            try
+            {
+                string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.FILENAME;
+                Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
+                frmVistaRpt.Show();
+
+                //ImprimirReporte imp = new ImprimirReporte(4, 2);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se encontro el archivo.");
+            }
         }
     }
 }

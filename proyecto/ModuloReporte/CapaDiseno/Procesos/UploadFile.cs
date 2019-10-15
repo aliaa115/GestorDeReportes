@@ -6,18 +6,62 @@ namespace CapaDisenoRpt.Procesos
 {
     class UploadFile
     {
-        public UploadFile(String file, String ruta)
+        private String ruta;
+        private String nombre;
+        public UploadFile(String nombre, String ruta)
         {
-            String[] nombre = file.Split('\\');
+            this.ruta = ruta;
+            this.nombre = nombre;
+        }
+
+        public void insertFile(String source) 
+        {
             try
             {
-                File.Copy(file, ruta + nombre[nombre.Length - 1]);
+                File.Copy(source, ruta + nombre);
                 MessageBox.Show("Archivo subido");
             }
             catch (IOException ex)
             {
-                MessageBox.Show(ex.Message, "Error al subir");
+                MessageBox.Show(ex.Message, "Error al subir.");
             }
+        }
+
+        public void modifyFile(String source)
+        {
+            try
+            {
+                if (existFile())
+                {
+                    File.Delete(ruta + nombre);
+                    File.Copy(source, ruta + nombre);
+                }
+                else
+                {
+                    File.Copy(source, ruta + nombre);
+                }
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show(ex.Message, "Error al modificar.");
+            }
+        }
+
+        public void deleteFile()
+        {
+            try
+            {
+               File.Delete(ruta + nombre);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show(ex.Message, "Error al eliminar.");
+            }
+        }
+
+        public bool existFile()
+        {
+            return File.Exists(ruta + nombre);
         }
     }
 }

@@ -53,8 +53,7 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("UPDATE TBL_RPT_APP " +
-                    "SET ID_REPORTE = 0, ESTADO = 0 " +
+                String sComando = String.Format("DELETE FROM TBL_RPT_APP " +
                     "WHERE ID_APLICACION = {0} " +
                     " AND ID_MODULO = {1}; ",
                     app.ToString(), modulo.ToString());
