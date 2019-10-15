@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using capaDatoRpt.Conexion;
 using capaDatoRpt.Entity;

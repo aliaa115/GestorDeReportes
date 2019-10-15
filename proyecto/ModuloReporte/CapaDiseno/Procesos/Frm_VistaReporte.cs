@@ -27,6 +27,9 @@ namespace CapaDisenoRpt.Procesos
             rptDoc = new ReportDocument();
             rptDoc.Load(filePath);
             Crv_Reporte.ReportSource = rptDoc;
+            Crv_Reporte.ShowExportButton = false;
+            Crv_Reporte.ShowCopyButton = false;
+            Crv_Reporte.ShowParameterPanelButton = false;
             Crv_Reporte.Refresh();
         }
 
