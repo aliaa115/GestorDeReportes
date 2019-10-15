@@ -196,3 +196,4 @@ C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloRep
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.pdb
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\bin\Debug\CapaDisenoRpt.dll.config
 C:\Users\CRISTHIAN\Documents\TMP\MdlReportes\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Frm_Bitacora.resources
+\\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\UploadRpt\obj\Debug\UploadRpt.Frm_Bitacora.resources

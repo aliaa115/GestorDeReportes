@@ -26,5 +26,10 @@ namespace UploadRpt
             Frm_Bitacora frm_Bitacora = new Frm_Bitacora();
             frm_Bitacora.Show();
         }
+
+        private void Tool_Rpt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
