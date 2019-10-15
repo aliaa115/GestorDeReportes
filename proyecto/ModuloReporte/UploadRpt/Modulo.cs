@@ -20,5 +20,10 @@ namespace UploadRpt
                 Tool_Rpt.DropDownItems.Add(item);
             }
         }
+
+        private void Tool_Rpt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
