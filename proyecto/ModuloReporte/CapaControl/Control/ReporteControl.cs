@@ -71,7 +71,8 @@ namespace CapaControlRpt.Control
             {
                 String sComando = String.Format("SELECT ID_REPORTE, ID_CONFIGURACION, NOMBRE, ESTADO, FILENAME " +
                     "FROM TBL_REPORTE " +
-                    "WHERE ID_REPORTE = {0}; ",
+                    "WHERE ID_REPORTE = {0} " +
+                    " AND ESTADO <> 0; ",
                     reporte);
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
@@ -105,7 +106,8 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("SELECT ID_REPORTE, ID_CONFIGURACION, NOMBRE, ESTADO, FILENAME " +
-                    "FROM TBL_REPORTE; ");
+                    "FROM TBL_REPORTE " +
+                    "WHERE ESTADO <> 0; ");
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
 

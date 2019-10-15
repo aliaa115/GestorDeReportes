@@ -154,7 +154,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
             if (confirmacion)
             {
-                reporteMdlControl.eliminarReporteMdl(this.reporteMdl.MODULO.MODULO);
+                reporteMdlControl.eliminarReporteMdl(this.reporteMdl.MODULO.MODULO, this.reporteMdl.REPORTE.REPORTE);
                 this.reporteMdl = new ReporteModulo();
 
                 iniciazliarTbpConsulta();
