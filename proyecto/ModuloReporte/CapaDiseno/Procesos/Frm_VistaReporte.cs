@@ -10,16 +10,35 @@ namespace CapaDisenoRpt.Procesos
     public partial class Frm_VistaReporte : Form
     {
         ReportDocument rptDoc = new ReportDocument();
-        public Frm_VistaReporte()
+        public Frm_VistaReporte(int tipoImp)
         {
-            InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            if(tipoImp == 0)
+            {
+                InitializeComponent();
+                this.StartPosition = FormStartPosition.CenterScreen;
+            }
+            else if(tipoImp == 1)
+            {
+                InitializeComponent();
+            }
         }
 
-        public Frm_VistaReporte(string filePath)
+        public Frm_VistaReporte(string filePath, int tipoImp)
         {
+
+            if (tipoImp == 0)
+            {
+                InitializeComponent();
+                this.StartPosition = FormStartPosition.CenterScreen;
+                generarRpt(filePath);
+            }
+            else if (tipoImp == 1)
+            {
+                InitializeComponent();
+
+            }
+
             InitializeComponent();
-            generarRpt(filePath);
         }
 
         private void generarRpt(string filePath)

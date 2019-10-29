@@ -250,7 +250,7 @@ namespace CapaDisenoRpt.Mantenimiento
             try
             {
                 string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.FILENAME;
-                Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile);
+                Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
                 frmVistaRpt.Show();
 
                 //ImprimirReporte imp = new ImprimirReporte(4, 2);

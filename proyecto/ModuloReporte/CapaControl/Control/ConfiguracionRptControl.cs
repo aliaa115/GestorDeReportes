@@ -32,7 +32,7 @@ namespace CapaControlRpt.Control
             {
                 String sComando = String.Format("UPDATE TBL_CONFIGURACION_RPT " +
                     "SET NOMBRE = '{1}', USER = '{2}', PASSWORD = '{3}', PUERTO = '{4}', RUTA = '{5}', ESTADO = {6} " +
-                    "WHERE ID_CONFIGURACION = {0}; ",
+                    "WHERE PK_id_configuracion  = {0}; ",
                     configuracionRpt.CONFIGURACION.ToString(), configuracionRpt.NOMBRE, configuracionRpt.USER, configuracionRpt.PASSWORD,
                     configuracionRpt.PUERTO, configuracionRpt.RUTA, configuracionRpt.ESTADO.ToString());
 
@@ -50,7 +50,7 @@ namespace CapaControlRpt.Control
             {
                 String sComando = String.Format("UPDATE TBL_CONFIGURACION_RPT " +
                     "SET ESTADO = 0 " +
-                    "WHERE ID_CONFIGURACION = {0}; ",
+                    "WHERE PK_id_configuracion  = {0}; ",
                     configuracionRpt.ToString());
 
                 this.transaccion.insertarDatos(sComando);
@@ -66,9 +66,9 @@ namespace CapaControlRpt.Control
             ConfiguracionRpt configuracionRptTmp = new ConfiguracionRpt();
             try
             {
-                String sComando = String.Format("SELECT ID_CONFIGURACION, NOMBRE, USER, PASSWORD, PUERTO, RUTA, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_configuracion , NOMBRE, USER, PASSWORD, PUERTO, RUTA, ESTADO " +
                     "FROM TBL_CONFIGURACION_RPT " +
-                    "WHERE ID_CONFIGURACION = {0} " +
+                    "WHERE PK_id_configuracion  = {0} " +
                     "AND ESTADO <> 0; ",
                     configuracionRpt.ToString());
 
@@ -102,7 +102,7 @@ namespace CapaControlRpt.Control
             List<ConfiguracionRpt> configuracionRptList = new List<ConfiguracionRpt>();
             try
             {
-                String sComando = String.Format("SELECT ID_CONFIGURACION, NOMBRE, USER, PASSWORD, PUERTO, RUTA, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_configuracion , NOMBRE, USER, PASSWORD, PUERTO, RUTA, ESTADO " +
                     "FROM TBL_CONFIGURACION_RPT " +
                     "WHERE ESTADO <> 0; ");
 
