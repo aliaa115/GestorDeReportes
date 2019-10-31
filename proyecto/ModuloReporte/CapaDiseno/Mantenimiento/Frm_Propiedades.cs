@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CapaDisenoRpt.Mantenimiento
 {
-    public partial class Frm_ConfiguracionRpt : Form
+    public partial class Frm_Propiedades : Form
     {
         string usuario;
-        public Frm_ConfiguracionRpt()
+        public Frm_Propiedades()
         {
             InitializeComponent();
             inicializarNavegador();
@@ -23,14 +23,19 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             //incializacion de navegador
             usuario = "admin";
-            string[] alias = { "Cod", "Configuracion", "Ruta", "Estado"};
+            string[] alias = { "Reporte", "Usuario", "Aplicacion", "Modulo", "Desa que se imprima sin previsualizar?", "estado" };
             navegador1.asignarAlias(alias);
             navegador1.asignarAyuda("1");
             navegador1.asignarSalida(this);
             navegador1.asignarColorFondo(Color.White);
             navegador1.asignarColorFuente(Color.Black);
-            navegador1.asignarTabla("Tbl_configuracion_rpt");
-            navegador1.asignarNombreForm("BODEGA");
+            navegador1.asignarComboConTabla("tbl_reporte", "nombre", 1);
+            navegador1.asignarComboConTabla("tbl_usuario", "PK_id_usuario", 0);
+            navegador1.asignarComboConTabla("tbl_aplicacion", "nombre_aplicacion", 1);
+            navegador1.asignarComboConTabla("tbl_modulo", "nombre_modulo", 1);
+            navegador1.asignarComboConLista(2, "si|no");
+            navegador1.asignarTabla("Tbl_propiedad_Rpt");
+            navegador1.asignarNombreForm("PROPIEDADES");
             navegador1.ObtenerIdAplicacion("1");
         }
 

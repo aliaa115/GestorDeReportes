@@ -15,9 +15,9 @@ namespace CapaDisenoRpt
         }
 
         private void Btn_Configuracion_Click(object sender, EventArgs e)
-        {
-            Frm_ConfiguracionRpt frm_ConfiguracionRpt = new Frm_ConfiguracionRpt();
-            frm_ConfiguracionRpt.Show();
+        {/*
+            Frm_ConfiguracionRpt1 frm_ConfiguracionRpt = new Frm_ConfiguracionRpt1();
+            frm_ConfiguracionRpt.Show();*/
         }
 
         private void Btn_Reporte_Click(object sender, EventArgs e)
@@ -36,6 +36,12 @@ namespace CapaDisenoRpt
         {
             Frm_RptMdl frm_RptMdl = new Frm_RptMdl();
             frm_RptMdl.Show();
+        }
+
+        private void Btn_Propiedades_Click(object sender, EventArgs e)
+        {
+            Frm_Propiedades frm_Propiedades = new Frm_Propiedades();
+            frm_Propiedades.Show();
         }
     }
 }

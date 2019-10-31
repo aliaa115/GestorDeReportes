@@ -36,6 +36,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDeDiseno">
+      <HintPath>..\..\..\..\..\Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="Mantenimiento\Frm_ConfiguracionRpt.Designer.cs">
       <DependentUpon>Frm_ConfiguracionRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Frm_Propiedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Frm_Propiedades.Designer.cs">
+      <DependentUpon>Frm_Propiedades.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\Frm_Reporte.cs">
       <SubType>Form</SubType>
@@ -104,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Frm_ConfiguracionRpt.resx">
       <DependentUpon>Frm_ConfiguracionRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Frm_Propiedades.resx">
+      <DependentUpon>Frm_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Frm_Reporte.resx">
       <DependentUpon>Frm_Reporte.cs</DependentUpon>
