@@ -16,7 +16,7 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', '{3}', {4}); ",
-                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.FILENAME,
+                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.NOMBRE_ARCHIVO,
                     reporte.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
@@ -36,7 +36,7 @@ namespace CapaControlRpt.Control
                     "SET PK_id_configuracion  = {1}, NOMBRE = '{2}', nombre_archivo = '{4}', ESTADO = {3}  " +
                     "WHERE PK_id_reporte  = {0}; ",
                     reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE,
-                    reporte.FILENAME, reporte.ESTADO.ToString());
+                    reporte.NOMBRE_ARCHIVO, reporte.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
             }
@@ -86,7 +86,7 @@ namespace CapaControlRpt.Control
                         reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
                         reporteTmp.NOMBRE = reader.GetString(2);
                         reporteTmp.ESTADO = reader.GetInt32(3);
-                        reporteTmp.FILENAME = reader.GetString(4);
+                        reporteTmp.NOMBRE_ARCHIVO = reader.GetString(4);
                     }
                 }
             }
@@ -120,7 +120,7 @@ namespace CapaControlRpt.Control
                         reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
                         reporteTmp.NOMBRE = reader.GetString(2);
                         reporteTmp.ESTADO = reader.GetInt32(3);
-                        reporteTmp.FILENAME = reader.GetString(4);
+                        reporteTmp.NOMBRE_ARCHIVO = reader.GetString(4);
                         reporteList.Add(reporteTmp);
                     }
                 }

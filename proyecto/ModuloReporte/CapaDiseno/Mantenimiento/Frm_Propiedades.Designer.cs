@@ -1,6 +1,6 @@
 ﻿namespace CapaDisenoRpt.Mantenimiento
 {
-    partial class Frm_ConfiguracionRpt
+    partial class Frm_Propiedades
     {
         /// <summary>
         /// Required designer variable.
@@ -37,18 +37,18 @@
             this.navegador1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navegador1.Location = new System.Drawing.Point(0, 0);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1180, 661);
+            this.navegador1.Size = new System.Drawing.Size(1181, 662);
             this.navegador1.TabIndex = 0;
             this.navegador1.Load += new System.EventHandler(this.Navegador1_Load);
             // 
-            // Frm_ConfiguracionRpt
+            // Frm_Propiedades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 661);
+            this.ClientSize = new System.Drawing.Size(1181, 662);
             this.Controls.Add(this.navegador1);
-            this.Name = "Frm_ConfiguracionRpt";
-            this.Text = "Frm_ConfiguracionRpt";
+            this.Name = "Frm_Propiedades";
+            this.Text = "Propiedades";
             this.ResumeLayout(false);
 
         }

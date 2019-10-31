@@ -34,7 +34,7 @@ namespace CapaDisenoRpt.Mantenimiento
                 Dgv_Consulta.Rows[fila].Cells[0].Value = reporteTmp.REPORTE.ToString();
                 Dgv_Consulta.Rows[fila].Cells[1].Value = reporteTmp.NOMBRE;
                 Dgv_Consulta.Rows[fila].Cells[2].Value = reporteTmp.CONFIGURACION.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteTmp.FILENAME;
+                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteTmp.NOMBRE_ARCHIVO;
                 Dgv_Consulta.Rows[fila].Cells[4].Value = reporteTmp.ESTADO.ToString();
                 fila++;
             }
@@ -64,7 +64,7 @@ namespace CapaDisenoRpt.Mantenimiento
             rptTmp.REPORTE = int.Parse(Txt_Codigo.Text);
             rptTmp.NOMBRE = Txt_Nombre.Text;    
             rptTmp.CONFIGURACION = (ConfiguracionRpt)Cmb_Configuracion.SelectedItem;
-            rptTmp.FILENAME = Txt_Archivo.Text;
+            rptTmp.NOMBRE_ARCHIVO = Txt_Archivo.Text;
             rptTmp.ESTADO = int.Parse(Txt_Estado.Text);
             
             return rptTmp;
@@ -103,7 +103,7 @@ namespace CapaDisenoRpt.Mantenimiento
             Cmb_Configuracion.Text = conf.NOMBRE;
             Cmb_Configuracion.SelectedText = Cmb_Configuracion.Text;
             
-            Txt_Archivo.Text = reporte.FILENAME;
+            Txt_Archivo.Text = reporte.NOMBRE_ARCHIVO;
             Txt_Estado.Text = reporte.ESTADO.ToString();
         }
 
@@ -174,7 +174,7 @@ namespace CapaDisenoRpt.Mantenimiento
             {
                 try
                 {
-                    UploadFile upload = new UploadFile(this.reporte.FILENAME, this.reporte.CONFIGURACION.RUTA);
+                    UploadFile upload = new UploadFile(this.reporte.NOMBRE_ARCHIVO, this.reporte.CONFIGURACION.RUTA);
                     if (this.accion == "nuevo")
                     {
                         reporteControl.insertarReporte(this.reporte);
@@ -222,7 +222,7 @@ namespace CapaDisenoRpt.Mantenimiento
             if (confirmacion)
             {
                 reporteControl.eliminarReporte(this.reporte.REPORTE);
-                UploadFile upload = new UploadFile(this.reporte.FILENAME, this.reporte.CONFIGURACION.RUTA);
+                UploadFile upload = new UploadFile(this.reporte.NOMBRE_ARCHIVO, this.reporte.CONFIGURACION.RUTA);
                 upload.deleteFile();
 
                 this.reporte = new Reporte();
@@ -249,7 +249,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             try
             {
-                string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.FILENAME;
+                string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.NOMBRE_ARCHIVO;
                 Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
                 frmVistaRpt.Show();
 

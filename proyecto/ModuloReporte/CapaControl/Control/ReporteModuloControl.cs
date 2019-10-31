@@ -31,8 +31,8 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("UPDATE TBL_RPT_MDL " +
-                    "SET ID_REPORTE = {0}, ESTADO = {2} " +
-                    "WHERE ID_MODULO = {1}; ",
+                    "SET PK_id_reporte = {0}, ESTADO = {2} " +
+                    "WHERE PK_id_Modulo = {1}; ",
                     reporteMdl.REPORTE.REPORTE.ToString(), reporteMdl.MODULO.MODULO.ToString(), reporteMdl.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
@@ -48,8 +48,8 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("DELETE FROM TBL_RPT_MDL " +
-                    "WHERE ID_MODULO = {0} " +
-                    " AND ID_REPORTE = {1}; ",
+                    "WHERE PK_id_Modulo = {0} " +
+                    " AND PK_id_reporte = {1}; ",
                     modulo.ToString(), reporte.ToString());
 
                 this.transaccion.insertarDatos(sComando);
@@ -68,10 +68,10 @@ namespace CapaControlRpt.Control
 
             try
             {
-                String sComando = String.Format("SELECT ID_REPORTE, ID_MODULO, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte, PK_id_Modulo, ESTADO " +
                     "FROM TBL_RPT_MDL " +
-                    "WHERE ID_MODULO = {0} " +
-                    " AND ID_REPORTE = {1} " +
+                    "WHERE PK_id_Modulo = {0} " +
+                    " AND PK_id_reporte = {1} " +
                     " AND ESTADO <> 0; ",
                     modulo.ToString(), reporte.ToString());
 
@@ -104,9 +104,9 @@ namespace CapaControlRpt.Control
 
             try
             {
-                String sComando = String.Format("SELECT ID_REPORTE, ID_MODULO, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte, PK_id_Modulo, ESTADO " +
                     "FROM TBL_RPT_MDL " +
-                    "WHERE ID_MODULO = {0} " +
+                    "WHERE PK_id_Modulo = {0} " +
                     " AND ESTADO <> 0; ",
                     codModulo.ToString());
 
@@ -141,7 +141,7 @@ namespace CapaControlRpt.Control
 
             try
             {
-                String sComando = String.Format("SELECT ID_REPORTE, ID_MODULO, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte, PK_id_Modulo, ESTADO " +
                     "FROM TBL_RPT_MDL " +
                     "WHERE ESTADO <> 0; ");
 

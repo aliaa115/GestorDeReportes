@@ -36,7 +36,7 @@ namespace CapaControlRpt.Control
             {
                 String sComando = String.Format("UPDATE TBL_RPT_APP " +
                     "SET PK_id_reporte  = {0}, ESTADO = {3} " +
-                    "WHERE ID_APLICACION = {1} " +
+                    "WHERE PK_id_aplicacion = {1} " +
                     " AND PK_id_MODULO = {2}; ",
                     reporteApp.REPORTE.REPORTE.ToString(), reporteApp.APLICACION.APLICACION.ToString(),
                     reporteApp.MODULO.MODULO.ToString(), reporteApp.ESTADO.ToString());
@@ -54,7 +54,7 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("DELETE FROM TBL_RPT_APP " +
-                    "WHERE ID_APLICACION = {0} " +
+                    "WHERE PK_id_aplicacion = {0} " +
                     " AND PK_id_MODULO = {1}; ",
                     app.ToString(), modulo.ToString());
 
@@ -71,9 +71,9 @@ namespace CapaControlRpt.Control
             ReporteAplicacion reporteAppTmp = new ReporteAplicacion();
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte , ID_APLICACION, PK_id_MODULO, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte , PK_id_aplicacion, PK_id_MODULO, ESTADO " +
                     "FROM TBL_RPT_APP " +
-                    "WHERE ID_APLICACION = {0} " +
+                    "WHERE PK_id_aplicacion = {0} " +
                     " AND PK_id_MODULO = {1}" +
                     " AND ESTADO <> 0; ",
                     app.ToString(), modulo.ToString());
@@ -104,7 +104,7 @@ namespace CapaControlRpt.Control
             List<ReporteAplicacion> reporteAppList = new List<ReporteAplicacion>();
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte , ID_APLICACION, PK_id_MODULO, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte , PK_id_aplicacion, PK_id_MODULO, ESTADO " +
                     "FROM TBL_RPT_APP" +
                     "WHERE PK_id_MODULO = {0} " +
                     " AND ESTADO <> 0; ",
@@ -142,7 +142,7 @@ namespace CapaControlRpt.Control
 
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte , ID_APLICACION, PK_id_MODULO, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte , PK_id_aplicacion, PK_id_MODULO, ESTADO " +
                     "FROM TBL_RPT_APP " +
                     "WHERE ESTADO <> 0; ");
 

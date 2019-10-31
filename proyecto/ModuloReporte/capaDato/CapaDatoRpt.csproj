@@ -50,6 +50,8 @@
     <Compile Include="Entity\Aplicacion.cs" />
     <Compile Include="Entity\ConfiguracionRpt.cs" />
     <Compile Include="Entity\Modulo.cs" />
+    <Compile Include="Entity\PropiedadReporte.cs" />
+    <Compile Include="Entity\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\Reporte.cs" />
     <Compile Include="Entity\ReporteAplicacion.cs" />

@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using capaDatoRpt.Conexion;
 using capaDatoRpt.Entity;
@@ -15,9 +14,8 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_CONFIGURACION_RPT VALUES ({0}, '{1}', '{2}', '{3}', '{4}', '{5}', {6}); ",
-                    configuracionRpt.CONFIGURACION.ToString(), configuracionRpt.NOMBRE, configuracionRpt.USER, configuracionRpt.PASSWORD,
-                    configuracionRpt.PUERTO, configuracionRpt.RUTA, configuracionRpt.ESTADO.ToString());
+                String sComando = String.Format("INSERT INTO TBL_CONFIGURACION_RPT VALUES ({0}, '{1}', '{2}', {3}); ",
+                    configuracionRpt.CONFIGURACION.ToString(), configuracionRpt.NOMBRE, configuracionRpt.RUTA, configuracionRpt.ESTADO.ToString());
                 this.transaccion.insertarDatos(sComando);
             }
             catch (OdbcException ex)
@@ -31,10 +29,9 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("UPDATE TBL_CONFIGURACION_RPT " +
-                    "SET NOMBRE = '{1}', USER = '{2}', PASSWORD = '{3}', PUERTO = '{4}', RUTA = '{5}', ESTADO = {6} " +
+                    "SET NOMBRE = '{1}', ruta = '{2}', estado = '{3}'" +
                     "WHERE PK_id_configuracion  = {0}; ",
-                    configuracionRpt.CONFIGURACION.ToString(), configuracionRpt.NOMBRE, configuracionRpt.USER, configuracionRpt.PASSWORD,
-                    configuracionRpt.PUERTO, configuracionRpt.RUTA, configuracionRpt.ESTADO.ToString());
+                    configuracionRpt.CONFIGURACION.ToString(), configuracionRpt.NOMBRE, configuracionRpt.RUTA, configuracionRpt.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
             }
@@ -66,7 +63,7 @@ namespace CapaControlRpt.Control
             ConfiguracionRpt configuracionRptTmp = new ConfiguracionRpt();
             try
             {
-                String sComando = String.Format("SELECT PK_id_configuracion , NOMBRE, USER, PASSWORD, PUERTO, RUTA, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_configuracion , NOMBRE, RUTA, ESTADO " +
                     "FROM TBL_CONFIGURACION_RPT " +
                     "WHERE PK_id_configuracion  = {0} " +
                     "AND ESTADO <> 0; ",
@@ -80,11 +77,8 @@ namespace CapaControlRpt.Control
                     {
                         configuracionRptTmp.CONFIGURACION = reader.GetInt32(0);
                         configuracionRptTmp.NOMBRE = reader.GetString(1);
-                        configuracionRptTmp.USER = reader.GetString(2);
-                        configuracionRptTmp.PASSWORD = reader.GetString(3);
-                        configuracionRptTmp.PUERTO = reader.GetString(4);
-                        configuracionRptTmp.RUTA = reader.GetString(5);
-                        configuracionRptTmp.ESTADO = reader.GetInt32(6);
+                        configuracionRptTmp.RUTA = reader.GetString(2);
+                        configuracionRptTmp.ESTADO = reader.GetInt32(3);
                     }
                 }
             }
@@ -102,7 +96,7 @@ namespace CapaControlRpt.Control
             List<ConfiguracionRpt> configuracionRptList = new List<ConfiguracionRpt>();
             try
             {
-                String sComando = String.Format("SELECT PK_id_configuracion , NOMBRE, USER, PASSWORD, PUERTO, RUTA, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_configuracion , NOMBRE, RUTA, ESTADO " +
                     "FROM TBL_CONFIGURACION_RPT " +
                     "WHERE ESTADO <> 0; ");
 
@@ -115,11 +109,8 @@ namespace CapaControlRpt.Control
                         ConfiguracionRpt configuracionRptTmp = new ConfiguracionRpt();
                         configuracionRptTmp.CONFIGURACION = reader.GetInt32(0);
                         configuracionRptTmp.NOMBRE = reader.GetString(1);
-                        configuracionRptTmp.USER = reader.GetString(2);
-                        configuracionRptTmp.PASSWORD = reader.GetString(3);
-                        configuracionRptTmp.PUERTO = reader.GetString(4);
-                        configuracionRptTmp.RUTA = reader.GetString(5);
-                        configuracionRptTmp.ESTADO = reader.GetInt32(6);
+                        configuracionRptTmp.RUTA = reader.GetString(2);
+                        configuracionRptTmp.ESTADO = reader.GetInt32(3);
                         configuracionRptList.Add(configuracionRptTmp);
                     }
                 }
