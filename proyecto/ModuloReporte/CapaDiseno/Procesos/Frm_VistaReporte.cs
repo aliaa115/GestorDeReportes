@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.Shared;
+using System.Drawing.Printing;
 
 //Cristhian de Leon 0901 15 6167
 
@@ -23,7 +23,7 @@ namespace CapaDisenoRpt.Procesos
             else if (tipoImp == 1)
             {
                 InitializeComponent();
-
+                imprimirRpt(filePath);
             }
         }
 
@@ -38,30 +38,11 @@ namespace CapaDisenoRpt.Procesos
             Crv_Reporte.Refresh();
         }
 
-        private void guardarEnSistema()
+        private void imprimirRpt(string filePath)
         {
-            {
-                rptDoc = new ReportDocument();
-                DiskFileDestinationOptions dest = new DiskFileDestinationOptions();
-                rptDoc.FileName = "pruebas";
-                dest.DiskFileName = @"C:\tmp\pruebas.pdf";
-
-                PdfFormatOptions formatOpt = new PdfFormatOptions();
-                formatOpt.FirstPageNumber = 0;
-                formatOpt.LastPageNumber = 10;
-                formatOpt.UsePageRange = false;
-                formatOpt.CreateBookmarksFromGroupTree = false;
-                formatOpt.PrintOnLoad = false;
-
-                ExportOptions ex = new ExportOptions();
-                ex.ExportDestinationType = ExportDestinationType.DiskFile;
-                ex.ExportDestinationOptions = dest;
-                ex.ExportFormatType = ExportFormatType.PortableDocFormat;
-                ex.ExportFormatOptions = formatOpt;
-                //rptDoc.Export(ex);
-                //rptDoc.ExportToDisk(ExportFormatType.PortableDocFormat, @"D:\tmp\reportes\prueba.pdf");
-                MessageBox.Show("Exported");
-            }
+            rptDoc = new ReportDocument();
+            rptDoc.Load(filePath);
+            rptDoc.PrintToPrinter(1,false, 0, 0);
         }
     }
 }   
