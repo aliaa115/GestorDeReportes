@@ -4,6 +4,7 @@ using capaDatoRpt.Entity;
 using CapaControlRpt.Control;
 using CapaDisenoRpt.Dialogos;
 using System.Collections.Generic;
+using CapaDatos;
 
 //Cristhian de Leon 0901 15 6167
 
@@ -17,6 +18,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private PropiedadReporte propiedadReporte;
         private string accion;
         private string usuario;
+        private string sidUsuario;
 
         public Frm_RptApp(string usu)
         {
@@ -153,6 +155,7 @@ namespace CapaDisenoRpt.Mantenimiento
             this.reporteApp = llenarReporteApp();
             this.propiedadReporte = llenarPropiedadRpt();
 
+            sentencia s = new sentencia();
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea guardar?");
             if (confirmacion)
@@ -172,6 +175,7 @@ namespace CapaDisenoRpt.Mantenimiento
                 Tbc_RptApp.SelectedTab = Tbp_Consulta;
                 this.reporteApp = new ReporteAplicacion();
                 llenarDgv();
+                s.insertarBitacora(sidUsuario, "Guardar reporte aplicacion", "Tbl_Aplicacion");
             }
         }
 
@@ -186,6 +190,8 @@ namespace CapaDisenoRpt.Mantenimiento
             this.reporteApp = new ReporteAplicacion();
             Tbc_RptApp.SelectedTab = Tbp_Datos;
             this.accion = "nuevo";
+            sentencia s = new sentencia(sidUsuario);
+            s.insertarBitacora(sidUsuario, "Creacion reporte aplicacion", "Tbl_Aplicacion");
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -193,6 +199,8 @@ namespace CapaDisenoRpt.Mantenimiento
             habilitarCampos();
             this.reporteApp = llenarReporteApp();
             this.accion = "modificar";
+            sentencia s = new sentencia(sidUsuario);
+            s.insertarBitacora(sidUsuario, "Modificar reporte aplicacion", "Tbl_Aplicacion");
         }
 
         private void Btn_Borrar_Click(object sender, EventArgs e)

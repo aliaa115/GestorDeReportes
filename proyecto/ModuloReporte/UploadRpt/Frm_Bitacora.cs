@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDisenoRpt;
+using CapaDatos;
+using CapaLogica;
 
 namespace UploadRpt
 {
     public partial class Frm_Bitacora : Form
     {
-        ImprimirReporte imprimir = new ImprimirReporte();
-        public Frm_Bitacora()
+        ImprimirReporte imprimir = new ImprimirReporte("idusuario");
+        logica l = new logica("idusuario")
+;        public Frm_Bitacora()
         {
             InitializeComponent();
         }

@@ -7,6 +7,13 @@ namespace CapaDisenoRpt
 {
     public class ImprimirReporte
     {
+        public string sIdUsuario;
+
+        public ImprimirReporte(string sIdUsuario)
+        {
+            this.sIdUsuario = sIdUsuario;
+        }
+
         public void imprimirReporteAplicacion(int Reporte, string usuario, int Modulo, int Aplicacion)
         {
             PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
