@@ -73,7 +73,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void habilitarCampos()
         {
-            Cmb_Reporte.Enabled = true;
+            Cmb_Reporte.Enabled = false;
             Cmb_Modulo.Enabled = true;
             Cmb_Aplicacion.Enabled = true;
             Txt_Estado.Enabled = true;
