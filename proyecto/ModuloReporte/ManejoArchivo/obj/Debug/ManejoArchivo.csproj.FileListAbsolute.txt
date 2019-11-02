@@ -10,3 +10,8 @@ C:\Users\CRISTHIAN\source\repos\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArch
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArchivo.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArchivo.dll
 \\Mac\Home\Documents\8vo semestre\037 Analisis de Sistemas II\Reporteador\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArchivo.pdb
+D:\gitRepositorio\Gestor2\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\bin\Debug\ManejoArchivo.dll
+D:\gitRepositorio\Gestor2\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\bin\Debug\ManejoArchivo.pdb
+D:\gitRepositorio\Gestor2\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArchivo.csprojAssemblyReference.cache
+D:\gitRepositorio\Gestor2\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArchivo.dll
+D:\gitRepositorio\Gestor2\GestorDeReportes\proyecto\ModuloReporte\ManejoArchivo\obj\Debug\ManejoArchivo.pdb
