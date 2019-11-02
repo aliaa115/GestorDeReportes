@@ -21,7 +21,7 @@ namespace UploadRpt
 
         private void Btn_ImpRpt_Click(object sender, EventArgs e)
         {
-            imprimir.imprimirReporteAplicacion(2, 1);
+            imprimir.imprimirReporteAplicacion(1,"admin",2, 1);
         }
     }
 }

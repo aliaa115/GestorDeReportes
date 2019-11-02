@@ -1,40 +1,70 @@
-﻿using System;
-using System.Collections.Generic;
-using CapaControlRpt.Control;
+﻿using CapaControlRpt.Control;
 using capaDatoRpt.Entity;
-using CapaDisenoRpt.Dialogos;
 using CapaDisenoRpt.Procesos;
+using System;
 
 namespace CapaDisenoRpt
 {
     public class ImprimirReporte
     {
-        public void imprimirReporteAplicacion(int Codmodulo, int Codaplicacion)
+        public void imprimirReporteAplicacion(int Reporte, string usuario, int Modulo, int Aplicacion)
         {
+            PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
+            PropiedadReporte propiedadReporte =
+                propiedadReporteControl.obtenerPropiedadPorUsuarioAplicacion(Reporte, usuario, Aplicacion, Modulo);
 
             ReporteAplicacionControl datos = new ReporteAplicacionControl();
 
-            ReporteAplicacion repApp = datos.obtenerReporteApp(Codaplicacion, Codmodulo);
+            ReporteAplicacion repApp = datos.obtenerReporteApp(Aplicacion, Modulo);
             Reporte rpt = repApp.REPORTE;
 
             string pathFile = rpt.CONFIGURACION.RUTA + rpt.NOMBRE_ARCHIVO;
-            Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
-            frmVistaRpt.Show();
+            Frm_VistaReporte frmVistaRpt;
+            switch (propiedadReporte.IMPRIMIR)
+            {
+                case 0:
+                    frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
+                    frmVistaRpt.Show();
+                    break;
+                case 1:
+                    frmVistaRpt = new Frm_VistaReporte(pathFile, 1);
+                    frmVistaRpt.Show();
+                    break;
+                default:
+                    break;
+            }
+
 
         }
 
-        public void imprimirReporteModulo(int codModulo, int codReporte)
+        public void imprimirReporteModulo(int Reporte, string usuario, int Modulo)
         {
+            PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
+            PropiedadReporte propiedadReporte =
+                propiedadReporteControl.obtenerPropiedadPorUsuarioModulo(Reporte, usuario, Modulo);
+
             ReporteModuloControl reporteMdlControl = new ReporteModuloControl();
 
             try
             {
-                ReporteModulo reporteMdl = reporteMdlControl.obtenerReporteMdl(codModulo, codReporte);
+                ReporteModulo reporteMdl = reporteMdlControl.obtenerReporteMdl(Modulo, Reporte);
                 Reporte rpt = reporteMdl.REPORTE;
 
                 string pathFile = rpt.CONFIGURACION.RUTA + rpt.NOMBRE_ARCHIVO;
-                Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
-                frmVistaRpt.Show();
+                Frm_VistaReporte frmVistaRpt;
+                switch (propiedadReporte.IMPRIMIR)
+                {
+                    case 0:
+                        frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
+                        frmVistaRpt.Show();
+                        break;
+                    case 1:
+                        frmVistaRpt = new Frm_VistaReporte(pathFile, 1);
+                        //frmVistaRpt.Show();
+                        break;
+                    default:
+                        break;
+                }
             }
             catch(Exception ex)
             {

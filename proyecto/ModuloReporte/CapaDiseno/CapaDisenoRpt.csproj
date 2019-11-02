@@ -97,6 +97,12 @@
     <Compile Include="Mantenimiento\Frm_RptMdl.Designer.cs">
       <DependentUpon>Frm_RptMdl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\Frm_PropiedadRptMdl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Frm_PropiedadRptMdl.Designer.cs">
+      <DependentUpon>Frm_PropiedadRptMdl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\ExportarRpt.cs" />
     <Compile Include="Procesos\Frm_VistaReporte.cs">
       <SubType>Form</SubType>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Frm_Propiedades.resx">
       <DependentUpon>Frm_Propiedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Frm_PropiedadRptMdl.resx">
+      <DependentUpon>Frm_PropiedadRptMdl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Frm_Reporte.resx">
       <DependentUpon>Frm_Reporte.cs</DependentUpon>

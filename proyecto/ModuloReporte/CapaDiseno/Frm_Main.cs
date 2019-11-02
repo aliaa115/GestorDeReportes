@@ -8,6 +8,7 @@ namespace CapaDisenoRpt
 {
     public partial class Frm_Main : Form
     {
+        string usuario = "admin";
         public Frm_Main()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace CapaDisenoRpt
 
         private void Btn_RptApp_Click(object sender, EventArgs e)
         {
-            Frm_RptApp frm_RptApp = new Frm_RptApp();
+            Frm_RptApp frm_RptApp = new Frm_RptApp(usuario);
             frm_RptApp.Show();
         }
 
@@ -40,8 +41,10 @@ namespace CapaDisenoRpt
 
         private void Btn_Propiedades_Click(object sender, EventArgs e)
         {
-            Frm_Propiedades frm_Propiedades = new Frm_Propiedades();
+            Frm_Propiedades frm_Propiedades = new Frm_Propiedades(usuario);
             frm_Propiedades.Show();
+            Frm_PropiedadRptMdl frm_PropiedadRptMdl = new Frm_PropiedadRptMdl();
+            frm_PropiedadRptMdl.Show();
         }
     }
 }

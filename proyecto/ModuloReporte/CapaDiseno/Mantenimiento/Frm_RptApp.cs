@@ -12,11 +12,15 @@ namespace CapaDisenoRpt.Mantenimiento
     public partial class Frm_RptApp : Form
     {
         private ReporteAplicacionControl reporteAppControl = new ReporteAplicacionControl();
+        private PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
         private ReporteAplicacion reporteApp;
+        private PropiedadReporte propiedadReporte;
         private string accion;
+        private string usuario;
 
-        public Frm_RptApp()
+        public Frm_RptApp(string usu)
         {
+            usuario = usu;
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
@@ -73,7 +77,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void habilitarCampos()
         {
-            Cmb_Reporte.Enabled = false;
+            Cmb_Reporte.Enabled = true;
             Cmb_Modulo.Enabled = true;
             Cmb_Aplicacion.Enabled = true;
             Txt_Estado.Enabled = true;
@@ -94,6 +98,21 @@ namespace CapaDisenoRpt.Mantenimiento
             llenarCmbModulo();
             llenarCmbAplicacion();
             Txt_Estado.Text = "1";
+        }
+
+        private PropiedadReporte llenarPropiedadRpt()
+        {
+            PropiedadReporte propiedadReporte = new PropiedadReporte();
+            Usuario usu = new Usuario();
+            usu.USUARIO = usuario;
+
+            propiedadReporte.USUARIO = usu;
+            propiedadReporte.REPORTE = (Reporte)Cmb_Reporte.SelectedItem;
+            propiedadReporte.MODULO = (Modulo)Cmb_Modulo.SelectedItem;
+            propiedadReporte.APLICACION = (Aplicacion)Cmb_Aplicacion.SelectedItem;
+            propiedadReporte.ESTADO = 1;
+
+            return propiedadReporte;
         }
 
         private ReporteAplicacion llenarReporteApp()
@@ -132,6 +151,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
             this.reporteApp = llenarReporteApp();
+            this.propiedadReporte = llenarPropiedadRpt();
 
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea guardar?");
@@ -140,6 +160,8 @@ namespace CapaDisenoRpt.Mantenimiento
                 if (this.accion == "nuevo")
                 {
                     reporteAppControl.insertarReporteApp(this.reporteApp);
+                    propiedadReporteControl.insertarPropiedadReporte(this.propiedadReporte);
+
                 }
                 else if (this.accion == "modificar")
                 {
