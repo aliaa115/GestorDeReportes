@@ -209,6 +209,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
             habilitarCampos();
+            Txt_Codigo.Enabled = false;
             this.reporte = llenarReporte();
             this.accion = "modificar";
         }
