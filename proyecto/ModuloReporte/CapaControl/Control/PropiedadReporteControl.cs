@@ -18,6 +18,7 @@ namespace CapaControlRpt.Control
                 String sComando = String.Format("INSERT INTO Tbl_Propiedad_Rpt VALUES ({0}, '{1}', {2}, {3}, {4}, {5}); ",
                     propiedad.REPORTE.REPORTE.ToString(), propiedad.USUARIO.USUARIO, propiedad.APLICACION.APLICACION,
                     propiedad.MODULO.MODULO.ToString(), propiedad.IMPRIMIR.ToString(), propiedad.ESTADO.ToString());
+
                 this.transaccion.insertarDatos(sComando);
             }
             catch(Exception e)
@@ -46,8 +47,8 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("UPDATE Tbl_Propiedad_Rpt " +
-                    "SET PK_id_usuario = '{1}', PK_id_aplicacion = {2}, PK_id_modulo = {3}, imprimir = {4}, estado = {5}" +
-                    "WHERE PK_id_reporte = {0}; ",
+                    "SET  imprimir = {4}, estado = {5} " +
+                    "WHERE PK_id_reporte = {0} and PK_id_usuario = '{1}' and PK_id_aplicacion = {2} and PK_id_modulo = {3}; ",
                    propiedad.REPORTE.REPORTE.ToString(), propiedad.USUARIO.USUARIO, propiedad.APLICACION.APLICACION,
                    propiedad.MODULO.MODULO.ToString(), propiedad.IMPRIMIR.ToString(), propiedad.ESTADO.ToString());
                 this.transaccion.insertarDatos(sComando);
@@ -85,7 +86,8 @@ namespace CapaControlRpt.Control
             UsuarioControl usuControl = new UsuarioControl();
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario, PK_id_aplicacion, PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt " +
+                String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario, PK_id_aplicacion, PK_id_modulo, imprimir, estado " +
+                    "FROM Tbl_Propiedad_Rpt " +
                     "WHERE PK_id_reporte={0} AND PK_id_usuario = '{1}' AND PK_id_aplicacion = {2} AND PK_id_modulo = {3} AND estado <> 0;",
                    reporte, usuario, aplicacion,modulo);
 
@@ -116,7 +118,6 @@ namespace CapaControlRpt.Control
         {
             PropiedadReporte propiedad = new PropiedadReporte();
             ReporteControl rpt = new ReporteControl();
-            Usuario usu = new Usuario();
             AplicacionControl app = new AplicacionControl();
             ModuloControl mdl = new ModuloControl();
             UsuarioControl usuControl = new UsuarioControl();
@@ -124,7 +125,7 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario,  PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt " +
-                    "WHERE PK_id_reporte={0} AND PK_id_usuario = '{1}' AND PK_id_modulo = {3} AND estado <> 0;",
+                    "WHERE PK_id_reporte={0} AND PK_id_usuario = '{1}' AND PK_id_modulo = {3};",
                    reporte, usuario, "", modulo);
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
@@ -139,6 +140,9 @@ namespace CapaControlRpt.Control
                         propiedad.IMPRIMIR = reader.GetInt32(3);
                         propiedad.ESTADO = reader.GetInt32(4);
                     }
+                }else
+                {
+                    return null;
                 }
 
             }
@@ -159,7 +163,8 @@ namespace CapaControlRpt.Control
 
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario, PK_id_aplicacion, PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt; ");
+                String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario, PK_id_aplicacion, " +
+                    "PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt; ");
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
 

@@ -34,6 +34,8 @@
             this.Chk_Impresion = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Btn_Borrar = new System.Windows.Forms.Button();
+            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.Cmb_Modulo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Cmb_Aplicacion = new System.Windows.Forms.ComboBox();
@@ -42,8 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_Usuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Btn_Borrar = new System.Windows.Forms.Button();
-            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,8 +122,35 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "PROPIEDADES DE REPORTE";
             // 
+            // Btn_Borrar
+            // 
+            this.Btn_Borrar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.delete_files;
+            this.Btn_Borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Borrar.Location = new System.Drawing.Point(339, 211);
+            this.Btn_Borrar.Name = "Btn_Borrar";
+            this.Btn_Borrar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Borrar.TabIndex = 25;
+            this.Btn_Borrar.Text = "Cancelar";
+            this.Btn_Borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Borrar.UseVisualStyleBackColor = true;
+            this.Btn_Borrar.Click += new System.EventHandler(this.Btn_Borrar_Click);
+            // 
+            // Btn_Guardar
+            // 
+            this.Btn_Guardar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.save_filepng;
+            this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Guardar.Location = new System.Drawing.Point(419, 211);
+            this.Btn_Guardar.Name = "Btn_Guardar";
+            this.Btn_Guardar.Size = new System.Drawing.Size(74, 74);
+            this.Btn_Guardar.TabIndex = 2;
+            this.Btn_Guardar.Text = "Guardar";
+            this.Btn_Guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Guardar.UseVisualStyleBackColor = true;
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
+            // 
             // Cmb_Modulo
             // 
+            this.Cmb_Modulo.Enabled = false;
             this.Cmb_Modulo.FormattingEnabled = true;
             this.Cmb_Modulo.Location = new System.Drawing.Point(94, 103);
             this.Cmb_Modulo.Name = "Cmb_Modulo";
@@ -134,6 +161,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Enabled = false;
             this.label4.Location = new System.Drawing.Point(40, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
@@ -142,15 +170,18 @@
             // 
             // Cmb_Aplicacion
             // 
+            this.Cmb_Aplicacion.Enabled = false;
             this.Cmb_Aplicacion.FormattingEnabled = true;
             this.Cmb_Aplicacion.Location = new System.Drawing.Point(94, 130);
             this.Cmb_Aplicacion.Name = "Cmb_Aplicacion";
             this.Cmb_Aplicacion.Size = new System.Drawing.Size(399, 21);
             this.Cmb_Aplicacion.TabIndex = 20;
+            this.Cmb_Aplicacion.SelectedIndexChanged += new System.EventHandler(this.Cmb_Aplicacion_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Location = new System.Drawing.Point(26, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
@@ -159,6 +190,7 @@
             // 
             // Cmb_Reporte
             // 
+            this.Cmb_Reporte.Enabled = false;
             this.Cmb_Reporte.FormattingEnabled = true;
             this.Cmb_Reporte.Location = new System.Drawing.Point(94, 157);
             this.Cmb_Reporte.Name = "Cmb_Reporte";
@@ -169,6 +201,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(37, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
@@ -186,35 +219,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Location = new System.Drawing.Point(39, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Usuario: ";
-            // 
-            // Btn_Borrar
-            // 
-            this.Btn_Borrar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.delete_files;
-            this.Btn_Borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Borrar.Location = new System.Drawing.Point(339, 211);
-            this.Btn_Borrar.Name = "Btn_Borrar";
-            this.Btn_Borrar.Size = new System.Drawing.Size(74, 74);
-            this.Btn_Borrar.TabIndex = 25;
-            this.Btn_Borrar.Text = "Cancelar";
-            this.Btn_Borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Borrar.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Guardar
-            // 
-            this.Btn_Guardar.BackgroundImage = global::CapaDisenoRpt.Properties.Resources.save_filepng;
-            this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Guardar.Location = new System.Drawing.Point(419, 211);
-            this.Btn_Guardar.Name = "Btn_Guardar";
-            this.Btn_Guardar.Size = new System.Drawing.Size(74, 74);
-            this.Btn_Guardar.TabIndex = 2;
-            this.Btn_Guardar.Text = "Guardar";
-            this.Btn_Guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Guardar.UseVisualStyleBackColor = true;
             // 
             // Frm_Propiedades
             // 
