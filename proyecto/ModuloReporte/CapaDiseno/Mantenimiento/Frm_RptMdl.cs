@@ -10,7 +10,10 @@ namespace CapaDisenoRpt.Mantenimiento
     public partial class Frm_RptMdl : Form
     {
         private ReporteModuloControl reporteMdlControl = new ReporteModuloControl();
+        private PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
         private ReporteModulo reporteMdl;
+        private PropiedadReporte propiedadReporte;
+        private string usuario;
         private string accion;
 
         public Frm_RptMdl()
@@ -58,7 +61,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void habilitarCampos()
         {
-            Cmb_Reporte.Enabled = false;
+            Cmb_Reporte.Enabled = true;
             Cmb_Modulo.Enabled = true;
             Txt_Estado.Enabled = true;
         }
@@ -78,6 +81,20 @@ namespace CapaDisenoRpt.Mantenimiento
             Txt_Estado.Text = "1";
         }
 
+        private PropiedadReporte llenarPropiedadRpt()
+        {
+            PropiedadReporte propiedadReporte = new PropiedadReporte();
+            Usuario usu = new Usuario();
+            usu.USUARIO = usuario;
+
+            propiedadReporte.USUARIO = usu;
+            propiedadReporte.REPORTE = (Reporte)Cmb_Reporte.SelectedItem;
+            propiedadReporte.MODULO = (Modulo)Cmb_Modulo.SelectedItem;
+            propiedadReporte.APLICACION = null;
+            propiedadReporte.ESTADO = 1;
+
+            return propiedadReporte;
+        }
         private ReporteModulo llenarReporteMdl()
         {
             ReporteModulo reporteMdlTmp = new ReporteModulo();
@@ -133,6 +150,7 @@ namespace CapaDisenoRpt.Mantenimiento
                 if (this.accion == "nuevo")
                 {
                     reporteMdlControl.insertarReporteMdl(this.reporteMdl);
+                    propiedadReporteControl.insertarPropiedadReporteSinApp(this.propiedadReporte);
                 }
                 else if (this.accion == "modificar")
                 {

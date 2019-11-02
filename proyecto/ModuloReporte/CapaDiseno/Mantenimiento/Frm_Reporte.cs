@@ -5,7 +5,6 @@ using capaDatoRpt.Entity;
 using CapaControlRpt.Control;
 using CapaDisenoRpt.Dialogos;
 using CapaDisenoRpt.Procesos;
-using CapaDisenoRpt;
 
 namespace CapaDisenoRpt.Mantenimiento
 {

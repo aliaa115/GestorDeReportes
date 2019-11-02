@@ -14,10 +14,12 @@ namespace CapaDisenoRpt.Procesos
     {
         private int codModulo;
         private ReporteModuloControl reporteMdlControl = new ReporteModuloControl();
+        private string usuario;
 
-        public ReportesModulo(int codModulo)
+        public ReportesModulo(int codModulo, string usu)
         {
             this.codModulo = codModulo;
+            this.usuario = usu;
         }
 
         public List<ToolStripMenuItem> llenarListaRpt(int mdl)
@@ -53,11 +55,12 @@ namespace CapaDisenoRpt.Procesos
             try
             {
                 ImprimirReporte imprimir = new ImprimirReporte();
-                imprimir.imprimirReporteModulo(codModulo, Int32.Parse(item.Name));
+                imprimir.imprimirReporteModulo( Int32.Parse(item.Name), usuario, codModulo);
             }
             catch(Exception ex)
             {
-                throw new Exception(ex.ToString() + "Error en impresion, no se obtuvo reporte asociado.");
+                MessageBox.Show(ex+"");
+                //throw new Exception(ex.ToString() + "Error en impresion, no se obtuvo reporte asociado.");
             }
         }
 

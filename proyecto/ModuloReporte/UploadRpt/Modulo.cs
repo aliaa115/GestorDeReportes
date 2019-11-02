@@ -6,7 +6,7 @@ namespace UploadRpt
 {
     public partial class Modulo : Form
     {
-        ReportesModulo reportesModulo = new ReportesModulo(1); //Sustituir por el codigo de mdl actual.
+        ReportesModulo reportesModulo = new ReportesModulo(1, "admin"); //Sustituir por el codigo de mdl actual.
         public Modulo()
         {
             InitializeComponent();
