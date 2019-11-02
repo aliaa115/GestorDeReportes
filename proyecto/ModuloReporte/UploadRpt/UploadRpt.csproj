@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDatos">
+      <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\DLL\CapaDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaLogica">
+      <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\DLL\CapaLogica.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

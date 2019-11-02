@@ -36,8 +36,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDatos">
+      <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\DLL\CapaDatos.dll</HintPath>
+    </Reference>
     <Reference Include="CapaDeDiseno">
       <HintPath>..\..\..\..\..\Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaLogica">
+      <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\CapaLogica\bin\Debug\CapaLogica.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />

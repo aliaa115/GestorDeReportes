@@ -5,22 +5,26 @@ using capaDatoRpt.Entity;
 using CapaControlRpt.Control;
 using CapaDisenoRpt.Dialogos;
 using CapaDisenoRpt.Procesos;
+using CapaDatos;
+
 
 namespace CapaDisenoRpt.Mantenimiento
 {
     public partial class Frm_Reporte : Form
     {
+        public string sIdUsuario;
         private ReporteControl reporteControl = new ReporteControl();
         private Reporte reporte;
         private string accion;
         private String fileUpload;
 
-        public Frm_Reporte()
+        public Frm_Reporte(string sIdUsuario)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
             llenarCmbConfiguracion();
+            this.sIdUsuario = sIdUsuario;
         }
 
         private void llenarDgv()
@@ -152,6 +156,9 @@ namespace CapaDisenoRpt.Mantenimiento
             this.reporte = new Reporte();
             Tbc_Reporte.SelectedTab = Tbp_Datos;
             this.accion = "nuevo";
+            sentencia s = new sentencia(sIdUsuario);
+            s.insertarBitacora(sIdUsuario,"Crecion nuevo reporte","Tbl_Reportes");
+
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
@@ -165,7 +172,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
             this.reporte = llenarReporte();
-
+            sentencia s = new sentencia(sIdUsuario);
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea guardar?");
             
@@ -202,6 +209,7 @@ namespace CapaDisenoRpt.Mantenimiento
                 Tbc_Reporte.SelectedTab = Tbp_Consulta;
                 this.reporte = new Reporte();
                 llenarDgv();
+                s.insertarBitacora(sIdUsuario,"Guardar reporte", "Tbc_Reporte");
             }
         }
 
@@ -211,13 +219,15 @@ namespace CapaDisenoRpt.Mantenimiento
             Txt_Codigo.Enabled = false;
             this.reporte = llenarReporte();
             this.accion = "modificar";
+            sentencia s = new sentencia(sIdUsuario);
+            s.insertarBitacora(sIdUsuario, "Modificar reporte", "Tbl_Reportes");
         }
 
         private void Btn_Borrar_Click(object sender, EventArgs e)
         {
             this.accion = null;
             Dialogo dialogo = new Dialogo();
-            bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea eliminar?");
+            bool confirmacion = dialogo.    dialogoSiNo("Confirmacion", "Desea eliminar?");
 
             if (confirmacion)
             {
