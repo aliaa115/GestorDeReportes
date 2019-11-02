@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CapaControlRpt.Control
 {
-    class UsuarioControl
+    public class UsuarioControl
     {
         private Transaccion transaccion = new Transaccion();
 

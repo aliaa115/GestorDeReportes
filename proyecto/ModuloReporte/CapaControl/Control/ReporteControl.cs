@@ -156,7 +156,7 @@ namespace CapaControlRpt.Control
             catch (OdbcException ex)
             {
                 MessageBox.Show(ex.ToString(), "Error al obtener reporte");
-                return 0;
+                return 1;
             }
 
             return rpt;

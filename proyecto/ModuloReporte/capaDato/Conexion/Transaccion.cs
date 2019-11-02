@@ -53,7 +53,6 @@ namespace capaDatoRpt.Conexion
                 MessageBox.Show(ex.ToString());
                 return null;
             }
-
             return reader;
         }
     }

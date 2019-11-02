@@ -41,9 +41,7 @@ namespace CapaDisenoRpt
 
         private void Btn_Propiedades_Click(object sender, EventArgs e)
         {
-            Frm_Propiedades frm_Propiedades = new Frm_Propiedades(usuario);
-            frm_Propiedades.Show();
-            Frm_PropiedadRptMdl frm_PropiedadRptMdl = new Frm_PropiedadRptMdl();
+            Frm_PropiedadRptMdl frm_PropiedadRptMdl = new Frm_PropiedadRptMdl(usuario);
             frm_PropiedadRptMdl.Show();
         }
     }
