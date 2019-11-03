@@ -1,6 +1,6 @@
 ﻿namespace CapaDisenoRpt.Mantenimiento
 {
-    partial class Frm_PropiedadRptMdl
+    partial class Frm_PropiedadRptApp
     {
         /// <summary>
         /// Required designer variable.
@@ -215,7 +215,7 @@
             // 
             this.Chk_Impresion.Appearance = System.Windows.Forms.Appearance.Button;
             this.Chk_Impresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chk_Impresion.Location = new System.Drawing.Point(257, 246);
+            this.Chk_Impresion.Location = new System.Drawing.Point(470, 246);
             this.Chk_Impresion.Name = "Chk_Impresion";
             this.Chk_Impresion.Size = new System.Drawing.Size(48, 45);
             this.Chk_Impresion.TabIndex = 43;
@@ -226,7 +226,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(163, 226);
+            this.label6.Location = new System.Drawing.Point(174, 260);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(280, 17);
             this.label6.TabIndex = 42;

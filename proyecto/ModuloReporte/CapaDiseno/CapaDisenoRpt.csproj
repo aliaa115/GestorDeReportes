@@ -79,11 +79,11 @@
     <Compile Include="Mantenimiento\Frm_ConfiguracionRpt.Designer.cs">
       <DependentUpon>Frm_ConfiguracionRpt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Frm_Propiedades.cs">
+    <Compile Include="Mantenimiento\Frm_PropiedadesApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimiento\Frm_Propiedades.Designer.cs">
-      <DependentUpon>Frm_Propiedades.cs</DependentUpon>
+    <Compile Include="Mantenimiento\Frm_PropiedadesApp.Designer.cs">
+      <DependentUpon>Frm_PropiedadesApp.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\Frm_Reporte.cs">
       <SubType>Form</SubType>
@@ -103,11 +103,11 @@
     <Compile Include="Mantenimiento\Frm_RptMdl.Designer.cs">
       <DependentUpon>Frm_RptMdl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Frm_PropiedadRptMdl.cs">
+    <Compile Include="Mantenimiento\Frm_PropiedadRptApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimiento\Frm_PropiedadRptMdl.Designer.cs">
-      <DependentUpon>Frm_PropiedadRptMdl.cs</DependentUpon>
+    <Compile Include="Mantenimiento\Frm_PropiedadRptApp.Designer.cs">
+      <DependentUpon>Frm_PropiedadRptApp.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\ExportarRpt.cs" />
     <Compile Include="Procesos\Frm_VistaReporte.cs">
@@ -126,11 +126,11 @@
     <EmbeddedResource Include="Mantenimiento\Frm_ConfiguracionRpt.resx">
       <DependentUpon>Frm_ConfiguracionRpt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\Frm_Propiedades.resx">
-      <DependentUpon>Frm_Propiedades.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimiento\Frm_PropiedadesApp.resx">
+      <DependentUpon>Frm_PropiedadesApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\Frm_PropiedadRptMdl.resx">
-      <DependentUpon>Frm_PropiedadRptMdl.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimiento\Frm_PropiedadRptApp.resx">
+      <DependentUpon>Frm_PropiedadRptApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Frm_Reporte.resx">
       <DependentUpon>Frm_Reporte.cs</DependentUpon>

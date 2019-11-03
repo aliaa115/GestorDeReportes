@@ -1,6 +1,6 @@
 ﻿namespace CapaDisenoRpt.Mantenimiento
 {
-    partial class Frm_Propiedades
+    partial class Frm_PropiedadesApp
     {
         /// <summary>
         /// Required designer variable.
