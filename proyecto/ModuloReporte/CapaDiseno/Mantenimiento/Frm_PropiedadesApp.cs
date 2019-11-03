@@ -1,11 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Collections.Generic;
+﻿using CapaControlRpt.Control;
 using capaDatoRpt.Entity;
-using CapaControlRpt.Control;
-using CapaDisenoRpt.Dialogos;
-using CapaDisenoRpt.Procesos;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace CapaDisenoRpt.Mantenimiento
 {
@@ -41,13 +39,19 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             InitializeComponent();
             usuario = usr;
+            PropiedadReporteControl propiedadControl = new PropiedadReporteControl();
+            PropiedadReporte propiedad = propiedadControl.obtenerPropiedadPorUsuarioAplicacion(usr, app, mdl);
             Txt_Usuario.Text = usr;
+            inicializarComboModulo();
+            Modulo mdlTmp = (Modulo)Cmb_Modulo.SelectedItem;
+            inicializarComboAplicacion(mdlTmp.MODULO);
+            inicializarComboReporte();
+            inicializarImprimir();
 
-            propiedad = propiedadControl.obtenerPropiedadPorUsuarioAplicacion(rpt, usr, app, mdl);
 
-            Cmb_Aplicacion.Text = propiedad.APLICACION.NOMBRE;
-            Cmb_Modulo.Text = propiedad.MODULO.NOMBRE;
             Cmb_Reporte.Text = propiedad.REPORTE.NOMBRE;
+            Cmb_Aplicacion.Text = propiedad.APLICACION == null ? "" : propiedad.APLICACION.NOMBRE;
+            Cmb_Modulo.Text = propiedad.MODULO.NOMBRE;
 
             estado = propiedad.ESTADO == 1 ? 1 : 0;
             colorCheck(estado, Chk_Estado);
@@ -64,7 +68,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             propiedad =
                 propiedadControl.obtenerPropiedadPorUsuarioAplicacion(
-                    rpt, usuario, app, mdl);
+                    usuario, app, mdl);
 
             estado = propiedad.ESTADO == 1 ? 1 : 0;
             colorCheck(estado, Chk_Estado);
@@ -76,9 +80,9 @@ namespace CapaDisenoRpt.Mantenimiento
             Modulo mdlTmp = (Modulo)Cmb_Modulo.SelectedItem;
             Reporte rptTmp = (Reporte)Cmb_Reporte.SelectedItem;
             Aplicacion appTmp = (Aplicacion)Cmb_Aplicacion.SelectedItem;
-            propiedad = 
+            propiedad =
                 propiedadControl.obtenerPropiedadPorUsuarioAplicacion(
-                    rptTmp.REPORTE,usuario,appTmp.APLICACION,mdlTmp.MODULO);
+                    usuario, appTmp.APLICACION, mdlTmp.MODULO);
 
             estado = propiedad.ESTADO == 1 ? 1 : 0;
             colorCheck(estado, Chk_Estado);
@@ -185,7 +189,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Cmb_Aplicacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-           if (inicial == 1)
+            if (inicial == 1)
             {
                 inicializarImprimir();
             }

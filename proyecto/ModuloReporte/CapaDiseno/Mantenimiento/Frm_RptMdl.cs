@@ -14,9 +14,8 @@ namespace CapaDisenoRpt.Mantenimiento
         private PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
         private ReporteModulo reporteMdl;
         private PropiedadReporte propiedadReporte;
-        private string usuario;
         private string accion;
-        public string sidUsuario;
+        public string usuario;
         
 
         public Frm_RptMdl(string sidUsuario)
@@ -25,7 +24,7 @@ namespace CapaDisenoRpt.Mantenimiento
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
             iniciazliarTbpConsulta();
-            this.sidUsuario = sidUsuario;
+            this.usuario = sidUsuario;
         }
 
         private void llenarDgv()
@@ -134,8 +133,8 @@ namespace CapaDisenoRpt.Mantenimiento
             this.reporteMdl = new ReporteModulo();
             Tbc_RptMdl.SelectedTab = Tbp_Datos;
             this.accion = "nuevo";
-            sentencia s = new sentencia(sidUsuario);
-            s.insertarBitacora(sidUsuario, "Creacion reporte modulo", "Tbl_Modulo");
+            sentencia s = new sentencia(usuario);
+            s.insertarBitacora(usuario, "Creacion reporte modulo", "Tbl_Modulo");
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -143,14 +142,15 @@ namespace CapaDisenoRpt.Mantenimiento
             habilitarCampos();
             this.reporteMdl = llenarReporteMdl();
             this.accion = "modificar";
-            sentencia s = new sentencia(sidUsuario);
-            s.insertarBitacora(sidUsuario, "Modificacion reporte modulo", "Tbl_Modulo");
+            sentencia s = new sentencia(usuario);
+            s.insertarBitacora(usuario, "Modificacion reporte modulo", "Tbl_Modulo");
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
             this.reporteMdl = llenarReporteMdl();
-            sentencia s = new sentencia(sidUsuario);
+            this.propiedadReporte = llenarPropiedadRpt();
+            sentencia s = new sentencia(usuario);
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea guardar?");
             if (confirmacion)
@@ -169,7 +169,7 @@ namespace CapaDisenoRpt.Mantenimiento
                 Tbc_RptMdl.SelectedTab = Tbp_Consulta;
                 this.reporteMdl = new ReporteModulo();
                 llenarDgv();
-                s.insertarBitacora(sidUsuario, "Guardar reporte modulo", "Tbl_Modulo");
+                s.insertarBitacora(usuario, "Guardar reporte modulo", "Tbl_Modulo");
             }
         }
 

@@ -23,7 +23,7 @@ namespace UploadRpt
 
         private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Bitacora frm_Bitacora = new Frm_Bitacora();
+            Frm_Bitacora frm_Bitacora = new Frm_Bitacora("admin");
             frm_Bitacora.Show();
         }
     }

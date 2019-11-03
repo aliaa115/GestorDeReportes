@@ -56,7 +56,7 @@ namespace CapaDisenoRpt.Mantenimiento
             PropiedadReporteControl propiedadControl = new PropiedadReporteControl();
             PropiedadReporte propiedad =
                 propiedadControl.obtenerPropiedadPorUsuarioAplicacion(
-                    rptTmp.REPORTE, usuario, appTmp.APLICACION, mdlTmp.MODULO);
+                    usuario, appTmp.APLICACION, mdlTmp.MODULO);
 
             estado = propiedad.ESTADO == 1 ? 1 : 0;
             colorCheck(estado, Chk_Estado);
