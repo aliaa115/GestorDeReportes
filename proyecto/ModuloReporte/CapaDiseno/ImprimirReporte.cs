@@ -14,11 +14,11 @@ namespace CapaDisenoRpt
             this.sIdUsuario = sIdUsuario;
         }
 
-        public void imprimirReporteAplicacion(int Reporte, string usuario, int Modulo, int Aplicacion)
+        public void imprimirReporteAplicacion(string usuario, int Modulo, int Aplicacion)
         {
             PropiedadReporteControl propiedadReporteControl = new PropiedadReporteControl();
             PropiedadReporte propiedadReporte =
-                propiedadReporteControl.obtenerPropiedadPorUsuarioAplicacion(Reporte, usuario, Aplicacion, Modulo);
+                propiedadReporteControl.obtenerPropiedadPorUsuarioAplicacion(usuario, Aplicacion, Modulo);
 
             ReporteAplicacionControl datos = new ReporteAplicacionControl();
 

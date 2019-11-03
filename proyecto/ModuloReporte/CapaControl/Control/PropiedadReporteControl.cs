@@ -31,7 +31,7 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO Tbl_Propiedad_Rpt VALUES ({0}, '{1}', {3}, {4}, {5}); ",
+                String sComando = String.Format("INSERT INTO Tbl_Propiedad_Rpt VALUES ({0}, '{1}', 0, {3}, {4}, {5}); ",
                     propiedad.REPORTE.REPORTE.ToString(), propiedad.USUARIO.USUARIO, "", propiedad.MODULO.MODULO.ToString(), 
                     propiedad.IMPRIMIR.ToString(), propiedad.ESTADO.ToString());
                 this.transaccion.insertarDatos(sComando);
@@ -76,7 +76,7 @@ namespace CapaControlRpt.Control
             }
         }
 
-        public PropiedadReporte obtenerPropiedadPorUsuarioAplicacion(int reporte, string usuario, int aplicacion, int modulo)
+        public PropiedadReporte obtenerPropiedadPorUsuarioAplicacion(string usuario, int aplicacion, int modulo)
         {
             PropiedadReporte propiedad = new PropiedadReporte();
             ReporteControl rpt = new ReporteControl();
@@ -86,10 +86,9 @@ namespace CapaControlRpt.Control
             UsuarioControl usuControl = new UsuarioControl();
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario, PK_id_aplicacion, PK_id_modulo, imprimir, estado " +
-                    "FROM Tbl_Propiedad_Rpt " +
-                    "WHERE PK_id_reporte={0} AND PK_id_usuario = '{1}' AND PK_id_aplicacion = {2} AND PK_id_modulo = {3} AND estado <> 0;",
-                   reporte, usuario, aplicacion,modulo);
+                String sComando = String.Format("SELECT * FROM Tbl_Propiedad_Rpt " +
+                    "WHERE PK_id_usuario = '{0}' AND PK_id_aplicacion = {1} AND PK_id_modulo = {2} AND estado <> 0;",
+                   usuario, aplicacion,modulo);
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
 
@@ -99,7 +98,7 @@ namespace CapaControlRpt.Control
                     {
                         propiedad.REPORTE = rpt.obtenerReporte(reader.GetInt32(0));
                         propiedad.USUARIO = usuControl.SetUsuario(reader.GetString(1));
-                        propiedad.APLICACION =  reader.IsDBNull(3) ? null : app.obtenerAplicacion(reader.GetInt32(2), reader.GetInt32(3));
+                        propiedad.APLICACION =  reader.IsDBNull(2) ? null : app.obtenerAplicacion(reader.GetInt32(2), reader.GetInt32(3));
                         propiedad.MODULO = mdl.obtenerModulo(reader.GetInt32(3));
                         propiedad.IMPRIMIR = reader.GetInt32(4);
                         propiedad.ESTADO = reader.GetInt32(5);
@@ -176,7 +175,7 @@ namespace CapaControlRpt.Control
                         propiedadTmp.REPORTE = rpt.obtenerReporte(reader.GetInt32(0));
                         propiedadTmp.USUARIO = usuControl.SetUsuario(reader.GetString(1));
                         propiedadTmp.APLICACION = reader.IsDBNull(2) ? null : app.obtenerAplicacion(reader.GetInt32(2), reader.GetInt32(3));
-                        propiedadTmp.MODULO = propiedadTmp.APLICACION.MODULO;
+                        propiedadTmp.MODULO = mdl.obtenerModulo(reader.GetInt32(3));
                         propiedadTmp.IMPRIMIR = reader.GetInt32(4);
                         propiedadTmp.ESTADO = reader.GetInt32(5);
                         propiedadList.Add(propiedadTmp);
