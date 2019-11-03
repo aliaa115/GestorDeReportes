@@ -23,7 +23,7 @@ namespace CapaDisenoRpt
 
         private void Btn_Reporte_Click(object sender, EventArgs e)
         {
-            Frm_Reporte frm_Reporte = new Frm_Reporte();
+            Frm_Reporte frm_Reporte = new Frm_Reporte(usuario);
             frm_Reporte.Show();
         }
 
@@ -35,13 +35,13 @@ namespace CapaDisenoRpt
 
         private void Btn_RptMdl_Click(object sender, EventArgs e)
         {
-            Frm_RptMdl frm_RptMdl = new Frm_RptMdl();
+            Frm_RptMdl frm_RptMdl = new Frm_RptMdl(usuario);
             frm_RptMdl.Show();
         }
 
         private void Btn_Propiedades_Click(object sender, EventArgs e)
         {
-            Frm_PropiedadRptMdl frm_PropiedadRptMdl = new Frm_PropiedadRptMdl(usuario);
+            Frm_PropiedadRptApp frm_PropiedadRptMdl = new Frm_PropiedadRptApp(usuario);
             frm_PropiedadRptMdl.Show();
         }
     }

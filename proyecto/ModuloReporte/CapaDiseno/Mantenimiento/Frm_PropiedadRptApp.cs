@@ -12,7 +12,7 @@ using CapaControlRpt.Control;
 
 namespace CapaDisenoRpt.Mantenimiento
 {
-    public partial class Frm_PropiedadRptMdl : Form
+    public partial class Frm_PropiedadRptApp : Form
     {
         int impresion = 0;
         int estado = 0;
@@ -20,7 +20,7 @@ namespace CapaDisenoRpt.Mantenimiento
         int inicial = 0;
         PropiedadReporteControl propiedadControl = new PropiedadReporteControl();
         PropiedadReporte propiedadReporte = new PropiedadReporte();
-        public Frm_PropiedadRptMdl(string usr)
+        public Frm_PropiedadRptApp(string usr)
         {
             InitializeComponent();
             usuario = usr;
@@ -215,7 +215,7 @@ namespace CapaDisenoRpt.Mantenimiento
             int app = int.Parse(aplicacion);
             int rpt = int.Parse(reporte);
 
-            Frm_Propiedades propiedades = new Frm_Propiedades(usuario,mdl,app, rpt);
+            Frm_PropiedadesApp propiedades = new Frm_PropiedadesApp(usuario,mdl,app, rpt);
             propiedades.Show();
         }
 

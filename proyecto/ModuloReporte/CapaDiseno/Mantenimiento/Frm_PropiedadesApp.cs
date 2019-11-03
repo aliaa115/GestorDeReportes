@@ -10,7 +10,7 @@ using System.Drawing;
 namespace CapaDisenoRpt.Mantenimiento
 {
 
-    public partial class Frm_Propiedades : Form
+    public partial class Frm_PropiedadesApp : Form
     {
         ReporteControl reporteControl = new ReporteControl();
         ModuloControl moduloControl = new ModuloControl();
@@ -26,7 +26,7 @@ namespace CapaDisenoRpt.Mantenimiento
         int estado = 0;
         string usuario;
         int inicial = 0;
-        public Frm_Propiedades(string usr)
+        public Frm_PropiedadesApp(string usr)
         {
             InitializeComponent();
             usuario = usr;
@@ -37,7 +37,7 @@ namespace CapaDisenoRpt.Mantenimiento
             inicializarComboReporte();
             inicializarImprimir();
         }
-        public Frm_Propiedades(string usr, int mdl, int app, int rpt)
+        public Frm_PropiedadesApp(string usr, int mdl, int app, int rpt)
         {
             InitializeComponent();
             usuario = usr;

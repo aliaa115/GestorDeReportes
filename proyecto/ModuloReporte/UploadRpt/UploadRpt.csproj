@@ -37,7 +37,7 @@
       <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\DLL\CapaDatos.dll</HintPath>
     </Reference>
     <Reference Include="CapaLogica">
-      <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\DLL\CapaLogica.dll</HintPath>
+      <HintPath>..\..\..\..\..\FORMACION\FormacionDeComponentes\Seguridad\Archivos\Seguridad\CapaLogica\bin\Debug\CapaLogica.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

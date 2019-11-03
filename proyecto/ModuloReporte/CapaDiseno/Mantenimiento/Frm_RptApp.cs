@@ -18,7 +18,6 @@ namespace CapaDisenoRpt.Mantenimiento
         private PropiedadReporte propiedadReporte;
         private string accion;
         private string usuario;
-        private string sidUsuario;
 
         public Frm_RptApp(string usu)
         {
@@ -175,7 +174,7 @@ namespace CapaDisenoRpt.Mantenimiento
                 Tbc_RptApp.SelectedTab = Tbp_Consulta;
                 this.reporteApp = new ReporteAplicacion();
                 llenarDgv();
-                s.insertarBitacora(sidUsuario, "Guardar reporte aplicacion", "Tbl_Aplicacion");
+                s.insertarBitacora(usuario, "Guardar reporte aplicacion", "Tbl_Aplicacion");
             }
         }
 
@@ -190,8 +189,8 @@ namespace CapaDisenoRpt.Mantenimiento
             this.reporteApp = new ReporteAplicacion();
             Tbc_RptApp.SelectedTab = Tbp_Datos;
             this.accion = "nuevo";
-            sentencia s = new sentencia(sidUsuario);
-            s.insertarBitacora(sidUsuario, "Creacion reporte aplicacion", "Tbl_Aplicacion");
+            sentencia s = new sentencia(usuario);
+            s.insertarBitacora(usuario, "Creacion reporte aplicacion", "Tbl_Aplicacion");
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -199,8 +198,8 @@ namespace CapaDisenoRpt.Mantenimiento
             habilitarCampos();
             this.reporteApp = llenarReporteApp();
             this.accion = "modificar";
-            sentencia s = new sentencia(sidUsuario);
-            s.insertarBitacora(sidUsuario, "Modificar reporte aplicacion", "Tbl_Aplicacion");
+            sentencia s = new sentencia(usuario);
+            s.insertarBitacora(usuario, "Modificar reporte aplicacion", "Tbl_Aplicacion");
         }
 
         private void Btn_Borrar_Click(object sender, EventArgs e)

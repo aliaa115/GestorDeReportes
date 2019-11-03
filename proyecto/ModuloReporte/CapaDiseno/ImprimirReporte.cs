@@ -27,6 +27,7 @@ namespace CapaDisenoRpt
 
             string pathFile = rpt.CONFIGURACION.RUTA + rpt.NOMBRE_ARCHIVO;
             Frm_VistaReporte frmVistaRpt;
+
             switch (propiedadReporte.IMPRIMIR)
             {
                 case 0:
