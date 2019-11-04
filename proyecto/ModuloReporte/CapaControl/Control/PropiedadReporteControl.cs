@@ -65,7 +65,7 @@ namespace CapaControlRpt.Control
             {
                 String sComando = String.Format("UPDATE Tbl_Propiedad_Rpt " +
                     "SET PK_id_usuario = '{1}', PK_id_modulo = {3}, imprimir = {4}, estado = {5}" +
-                    "WHERE PK_id_reporte = {0}; ",
+                    "WHERE PK_id_reporte = {0} AND PK_id_usuario = '{1}' AND PK_id_modulo = {3}; ",
                    propiedad.REPORTE.REPORTE.ToString(), propiedad.USUARIO.USUARIO, propiedad.APLICACION.APLICACION,
                    propiedad.MODULO.MODULO.ToString(), propiedad.IMPRIMIR.ToString(), propiedad.ESTADO.ToString());
                 this.transaccion.insertarDatos(sComando);
@@ -124,7 +124,7 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario,  PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt " +
-                    "WHERE PK_id_reporte={0} AND PK_id_usuario = '{1}' AND PK_id_modulo = {3};",
+                    "WHERE PK_id_reporte={0} AND PK_id_usuario = '{1}' AND PK_id_modulo = {3} AND estado <> 0;",
                    reporte, usuario, "", modulo);
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
@@ -163,7 +163,7 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("SELECT PK_id_reporte, PK_id_usuario, PK_id_aplicacion, " +
-                    "PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt; ");
+                    "PK_id_modulo, imprimir, estado FROM Tbl_Propiedad_Rpt;");
 
                 OdbcDataReader reader = transaccion.ConsultarDatos(sComando);
 

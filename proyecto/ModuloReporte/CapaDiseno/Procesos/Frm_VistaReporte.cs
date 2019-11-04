@@ -19,7 +19,7 @@ namespace CapaDisenoRpt.Procesos
                 InitializeComponent();
                 this.StartPosition = FormStartPosition.CenterScreen;
                 generarRpt(filePath);
-            }
+            } 
             else if (tipoImp == 1)
             {
                 InitializeComponent();

@@ -23,11 +23,26 @@ namespace CapaDisenoRpt.Mantenimiento
         public Frm_PropiedadRptApp(string usr)
         {
             InitializeComponent();
+            deshabilitarBotones();
             usuario = usr;
             llenarDgv();
             llenarTbpDato();
         }
 
+        private void habilitarBotones()
+        {
+            Btn_Borrar.Enabled = true;
+            Btn_Cancelar.Enabled = true;
+            Btn_Guardar.Enabled = true;
+            Btn_Nuevo.Enabled = false;
+        }
+        private void deshabilitarBotones()
+        {
+            Btn_Borrar.Enabled = false;
+            Btn_Cancelar.Enabled = false;
+            Btn_Guardar.Enabled = false;
+            Btn_Nuevo.Enabled = true;
+        }
         private void llenarDgv()
         {
             int fila = 0;
@@ -139,6 +154,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             PropiedadReporte propiedad = new PropiedadReporte();
             PropiedadReporteControl propiedadControl = new PropiedadReporteControl();
             UsuarioControl usuario = new UsuarioControl();
@@ -168,6 +184,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             inicializarImprimir();
             Tbc_Reporte.SelectedTab = Tbp_Consulta;
             llenarDgv();
@@ -206,7 +223,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void Dgv_Consulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
-
+            deshabilitarBotones();
             string reporte = Dgv_Consulta.Rows[fila].Cells[0].Value.ToString();
             string aplicacion = Dgv_Consulta.Rows[fila].Cells[3].Value.ToString();
             string modulo = Dgv_Consulta.Rows[fila].Cells[5].Value.ToString();
@@ -221,13 +238,18 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
-            habilitarCampos();
+            habilitarBotones();
             Tbc_Reporte.SelectedTab = Tbp_Datos;
         }
 
         private void Dgv_Consulta_CellDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
+        }
+
+        private void Btn_Borrar_Click(object sender, EventArgs e)
+        {
+            deshabilitarBotones();
         }
     }
 }
