@@ -21,12 +21,29 @@ namespace CapaDisenoRpt.Mantenimiento
         public Frm_RptMdl(string sidUsuario)
         {
             InitializeComponent();
+            deshabilitarBotones();
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
             iniciazliarTbpConsulta();
             this.usuario = sidUsuario;
         }
 
+        private void habilitarBotones()
+        {
+            Btn_Borrar.Enabled = true;
+            Btn_Cancelar.Enabled = true;
+            Btn_Guardar.Enabled = true;
+            Btn_Modificar.Enabled = true;
+            Btn_Nuevo.Enabled = false;
+        }
+        private void deshabilitarBotones()
+        {
+            Btn_Borrar.Enabled = false;
+            Btn_Cancelar.Enabled = false;
+            Btn_Guardar.Enabled = false;
+            Btn_Modificar.Enabled = false;
+            Btn_Nuevo.Enabled = true;
+        }
         private void llenarDgv()
         {
             int fila = 0;
@@ -129,6 +146,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
+            habilitarBotones();
             iniciazliarTbpConsulta();
             this.reporteMdl = new ReporteModulo();
             Tbc_RptMdl.SelectedTab = Tbp_Datos;
@@ -148,6 +166,8 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
+
+            deshabilitarBotones();
             this.reporteMdl = llenarReporteMdl();
             this.propiedadReporte = llenarPropiedadRpt();
             sentencia s = new sentencia(usuario);
@@ -175,12 +195,16 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Borrar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
+            this.propiedadReporte = llenarPropiedadRpt();
+            propiedadReporte.ESTADO = 0;
             this.accion = null;
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea eliminar?");
 
             if (confirmacion)
             {
+                propiedadReporteControl.modificarPropiedadReporteSinApp(propiedadReporte);
                 reporteMdlControl.eliminarReporteMdl(this.reporteMdl.MODULO.MODULO, this.reporteMdl.REPORTE.REPORTE);
                 this.reporteMdl = new ReporteModulo();
 
@@ -192,6 +216,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             iniciazliarTbpConsulta();
             Tbc_RptMdl.SelectedTab = Tbp_Consulta;
             this.reporteMdl = new ReporteModulo();
@@ -204,6 +229,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Dgv_Consulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            habilitarBotones();
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
             String codigoRpt = Dgv_Consulta.Rows[fila].Cells[0].Value.ToString();
             String codigoMdl = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();

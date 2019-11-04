@@ -97,7 +97,7 @@ namespace CapaDisenoRpt.Procesos
 
         private void Item_Confi_Click(object sender, EventArgs e)
         {
-            Frm_Main frm_Main = new Frm_Main();
+            Frm_Main frm_Main = new Frm_Main(usuario);
             frm_Main.Show();
         }
     }

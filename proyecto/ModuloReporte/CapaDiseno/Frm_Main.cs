@@ -8,10 +8,11 @@ namespace CapaDisenoRpt
 {
     public partial class Frm_Main : Form
     {
-        string usuario = "admin";
-        public Frm_Main()
+        string usuario;
+        public Frm_Main(string usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 

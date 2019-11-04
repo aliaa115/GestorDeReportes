@@ -350,6 +350,7 @@
             this.Btn_Borrar.Text = "Borrar";
             this.Btn_Borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Borrar.UseVisualStyleBackColor = true;
+            this.Btn_Borrar.Click += new System.EventHandler(this.Btn_Borrar_Click);
             // 
             // Btn_Guardar
             // 
@@ -377,14 +378,14 @@
             this.Btn_Nuevo.UseVisualStyleBackColor = true;
             this.Btn_Nuevo.Click += new System.EventHandler(this.Btn_Nuevo_Click);
             // 
-            // Frm_PropiedadRptMdl
+            // Frm_PropiedadRptApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Tbc_Reporte);
             this.Controls.Add(this.Pnl_Nav);
-            this.Name = "Frm_PropiedadRptMdl";
+            this.Name = "Frm_PropiedadRptApp";
             this.Text = "PropiedadRptMdl";
             this.Tbc_Reporte.ResumeLayout(false);
             this.Tbp_Consulta.ResumeLayout(false);

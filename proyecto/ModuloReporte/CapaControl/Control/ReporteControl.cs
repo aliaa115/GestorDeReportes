@@ -33,11 +33,11 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("UPDATE TBL_REPORTE " +
-                    "SET PK_id_configuracion  = {1}, NOMBRE = '{2}', nombre_archivo = '{4}', ESTADO = {3}  " +
+                    "SET PK_id_configuracion  = {1}, NOMBRE = '{2}', nombre_archivo = '{3}', ESTADO = {4}  " +
                     "WHERE PK_id_reporte  = {0}; ",
                     reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE,
                     reporte.NOMBRE_ARCHIVO, reporte.ESTADO.ToString());
-
+                 
                 this.transaccion.insertarDatos(sComando);
             }
             catch(OdbcException ex)

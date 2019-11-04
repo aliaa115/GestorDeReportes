@@ -24,6 +24,7 @@ namespace CapaDisenoRpt.Mantenimiento
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
             llenarCmbConfiguracion();
+            deshabilitarBotones();
             this.sIdUsuario = sIdUsuario;
         }
 
@@ -151,6 +152,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
+            habilitarBotones();
             iniciazliarTbpConsulta();
             establecerID();
             this.reporte = new Reporte();
@@ -163,19 +165,38 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             iniciazliarTbpConsulta();
             Tbc_Reporte.SelectedTab = Tbp_Consulta;
             this.reporte = new Reporte();
             llenarDgv();
         }
 
+        private void habilitarBotones()
+        {
+            Btn_Borrar.Enabled = true;
+            Btn_Cancelar.Enabled = true;
+            Btn_Guardar.Enabled = true;
+            Btn_Modificar.Enabled = true;
+            Btn_Nuevo.Enabled = false;
+        }
+        private void deshabilitarBotones()
+        {
+            Btn_Borrar.Enabled = false;
+            Btn_Cancelar.Enabled = false;
+            Btn_Guardar.Enabled = false;
+            Btn_Modificar.Enabled = false;
+            Btn_Nuevo.Enabled = true;
+        }
+
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             this.reporte = llenarReporte();
             sentencia s = new sentencia(sIdUsuario);
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea guardar?");
-            
+            deshabilitarBotones();
             if (confirmacion)
             {
                 try
@@ -225,6 +246,10 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Borrar_Click(object sender, EventArgs e)
         {
+            PropiedadReporteControl propiedad = new PropiedadReporteControl();
+            PropiedadReporte propiedadReporte = new PropiedadReporte();
+            propiedadReporte.APLICACION = 
+
             this.accion = null;
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.    dialogoSiNo("Confirmacion", "Desea eliminar?");
@@ -248,6 +273,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void seleccionarRegistro(object sender, DataGridViewCellEventArgs e)
         {
+            habilitarBotones();
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
             String codigoRpt = Dgv_Consulta.Rows[fila].Cells[0].Value.ToString();
             this.reporte = reporteControl.obtenerReporte(Int32.Parse(codigoRpt));

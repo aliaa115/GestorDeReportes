@@ -23,6 +23,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             usuario = usu;
             InitializeComponent();
+            deshabilitarBotones();
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
             iniciazliarTbpConsulta();
@@ -151,6 +152,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             this.reporteApp = llenarReporteApp();
             this.propiedadReporte = llenarPropiedadRpt();
 
@@ -185,6 +187,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Nuevo_Click(object sender, EventArgs e)
         {
+            habilitarBotones();
             iniciazliarTbpConsulta();
             this.reporteApp = new ReporteAplicacion();
             Tbc_RptApp.SelectedTab = Tbp_Datos;
@@ -204,12 +207,16 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Borrar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
+            propiedadReporte = llenarPropiedadRpt();
+            propiedadReporte.ESTADO = 0;
             this.accion = null;
             Dialogo dialogo = new Dialogo();
             bool confirmacion = dialogo.dialogoSiNo("Confirmacion", "Desea eliminar?");
 
             if (confirmacion)
             {
+                propiedadReporteControl.modificarPropiedadReporte(propiedadReporte);
                 reporteAppControl.eliminarReporteApp(this.reporteApp.APLICACION.APLICACION, this.reporteApp.MODULO.MODULO);
                 this.reporteApp = new ReporteAplicacion();
 
@@ -221,6 +228,7 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotones();
             iniciazliarTbpConsulta();
             Tbc_RptApp.SelectedTab = Tbp_Consulta;
             this.reporteApp = new ReporteAplicacion();
@@ -229,12 +237,30 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void seleccionarRegistro(object sender, DataGridViewCellEventArgs e)
         {
+            habilitarBotones();
             int fila = Dgv_Consulta.CurrentCell.RowIndex;
             String codigoApp = Dgv_Consulta.Rows[fila].Cells[2].Value.ToString();
             String codigoMdl = Dgv_Consulta.Rows[fila].Cells[4].Value.ToString();
             this.reporteApp = reporteAppControl.obtenerReporteApp(Int32.Parse(codigoApp), Int32.Parse(codigoMdl));
             llenarTbpDato(this.reporteApp);
             Tbc_RptApp.SelectedTab = Tbp_Datos;
+        }
+
+        private void habilitarBotones()
+        {
+            Btn_Borrar.Enabled = true;
+            Btn_Cancelar.Enabled = true;
+            Btn_Guardar.Enabled = true;
+            Btn_Modificar.Enabled = true;
+            Btn_Nuevo.Enabled = false;
+        }
+        private void deshabilitarBotones()
+        {
+            Btn_Borrar.Enabled = false;
+            Btn_Cancelar.Enabled = false;
+            Btn_Guardar.Enabled = false;
+            Btn_Modificar.Enabled = false;
+            Btn_Nuevo.Enabled = true;
         }
     }
 }
