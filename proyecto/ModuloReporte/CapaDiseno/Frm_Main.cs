@@ -15,13 +15,7 @@ namespace CapaDisenoRpt
             this.usuario = usuario;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-        private void Btn_Configuracion_Click(object sender, EventArgs e)
-        {/*
-            Frm_ConfiguracionRpt1 frm_ConfiguracionRpt = new Frm_ConfiguracionRpt1();
-            frm_ConfiguracionRpt.Show();*/
-        }
-
+        
         private void Btn_Reporte_Click(object sender, EventArgs e)
         {
             Frm_Reporte frm_Reporte = new Frm_Reporte(usuario);

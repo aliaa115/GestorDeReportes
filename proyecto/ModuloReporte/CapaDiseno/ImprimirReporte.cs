@@ -25,7 +25,7 @@ namespace CapaDisenoRpt
             ReporteAplicacion repApp = datos.obtenerReporteApp(Aplicacion, Modulo);
             Reporte rpt = repApp.REPORTE;
 
-            string pathFile = rpt.CONFIGURACION.RUTA + rpt.NOMBRE_ARCHIVO;
+            string pathFile = @"\reportes\" + rpt.NOMBRE_ARCHIVO;
             Frm_VistaReporte frmVistaRpt;
 
             switch (propiedadReporte.IMPRIMIR)
@@ -36,12 +36,10 @@ namespace CapaDisenoRpt
                     break;
                 case 1:
                     frmVistaRpt = new Frm_VistaReporte(pathFile, 1);
-                    frmVistaRpt.Show();
                     break;
                 default:
                     break;
             }
-
 
         }
 
@@ -58,7 +56,7 @@ namespace CapaDisenoRpt
                 ReporteModulo reporteMdl = reporteMdlControl.obtenerReporteMdl(Modulo, Reporte);
                 Reporte rpt = reporteMdl.REPORTE;
 
-                string pathFile = rpt.CONFIGURACION.RUTA + rpt.NOMBRE_ARCHIVO;
+                string pathFile = @"\reportes\" + rpt.NOMBRE_ARCHIVO;
                 Frm_VistaReporte frmVistaRpt;
                 switch (propiedadReporte.IMPRIMIR)
                 {

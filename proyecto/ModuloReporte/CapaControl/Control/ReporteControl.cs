@@ -15,8 +15,8 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, {1}, '{2}', '{3}', {4}); ",
-                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE, reporte.NOMBRE_ARCHIVO,
+                String sComando = String.Format("INSERT INTO TBL_REPORTE VALUES ({0}, '{1}', '{2}', {3}); ",
+                    reporte.REPORTE.ToString(), reporte.NOMBRE, reporte.NOMBRE_ARCHIVO,
                     reporte.ESTADO.ToString());
 
                 this.transaccion.insertarDatos(sComando);
@@ -33,9 +33,9 @@ namespace CapaControlRpt.Control
             try
             {
                 String sComando = String.Format("UPDATE TBL_REPORTE " +
-                    "SET PK_id_configuracion  = {1}, NOMBRE = '{2}', nombre_archivo = '{3}', ESTADO = {4}  " +
+                    "SET NOMBRE = '{1}', nombre_archivo = '{2}', ESTADO = {3}  " +
                     "WHERE PK_id_reporte  = {0}; ",
-                    reporte.REPORTE.ToString(), reporte.CONFIGURACION.CONFIGURACION.ToString(), reporte.NOMBRE,
+                    reporte.REPORTE.ToString(), reporte.NOMBRE,
                     reporte.NOMBRE_ARCHIVO, reporte.ESTADO.ToString());
                  
                 this.transaccion.insertarDatos(sComando);
@@ -66,10 +66,9 @@ namespace CapaControlRpt.Control
         public Reporte obtenerReporte(int reporte)
         {
             Reporte reporteTmp = new Reporte();
-            ConfiguracionRptControl confiControl = new ConfiguracionRptControl();
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte , PK_id_configuracion , NOMBRE, ESTADO, nombre_archivo " +
+                String sComando = String.Format("SELECT PK_id_reporte, NOMBRE, ESTADO, nombre_archivo " +
                     "FROM TBL_REPORTE " +
                     "WHERE PK_id_reporte  = {0} " +
                     " AND ESTADO <> 0; ",
@@ -83,10 +82,9 @@ namespace CapaControlRpt.Control
                     {
 
                         reporteTmp.REPORTE = reader.GetInt32(0);
-                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
-                        reporteTmp.NOMBRE = reader.GetString(2);
-                        reporteTmp.ESTADO = reader.GetInt32(3);
-                        reporteTmp.NOMBRE_ARCHIVO = reader.GetString(4);
+                        reporteTmp.NOMBRE = reader.GetString(1);
+                        reporteTmp.ESTADO = reader.GetInt32(2);
+                        reporteTmp.NOMBRE_ARCHIVO = reader.GetString(3);
                     }
                 }
             }
@@ -102,10 +100,9 @@ namespace CapaControlRpt.Control
         public List<Reporte> obtenerAllReporte()
         {
             List<Reporte> reporteList = new List<Reporte>();
-            ConfiguracionRptControl confiControl = new ConfiguracionRptControl();
             try
             {
-                String sComando = String.Format("SELECT PK_id_reporte , PK_id_configuracion , NOMBRE, nombre_archivo, ESTADO " +
+                String sComando = String.Format("SELECT PK_id_reporte, NOMBRE, nombre_archivo, ESTADO " +
                     "FROM TBL_REPORTE " +
                     "WHERE ESTADO <> 0; ");
 
@@ -117,10 +114,9 @@ namespace CapaControlRpt.Control
                     {
                         Reporte reporteTmp = new Reporte();
                         reporteTmp.REPORTE = reader.GetInt32(0);
-                        reporteTmp.CONFIGURACION = confiControl.obtenerConfiguracionRpt(reader.GetInt32(1));
-                        reporteTmp.NOMBRE = reader.GetString(2);
-                        reporteTmp.ESTADO = reader.GetInt32(3);
-                        reporteTmp.NOMBRE_ARCHIVO = reader.GetString(4);
+                        reporteTmp.NOMBRE = reader.GetString(1);
+                        reporteTmp.ESTADO = reader.GetInt32(2);
+                        reporteTmp.NOMBRE_ARCHIVO = reader.GetString(3);
                         reporteList.Add(reporteTmp);
                     }
                 }
@@ -137,7 +133,6 @@ namespace CapaControlRpt.Control
         public int obtenerUltimoId()
         {
             List<Reporte> reporteList = new List<Reporte>();
-            ConfiguracionRptControl confiControl = new ConfiguracionRptControl();
             int rpt = 0;
             try
             {

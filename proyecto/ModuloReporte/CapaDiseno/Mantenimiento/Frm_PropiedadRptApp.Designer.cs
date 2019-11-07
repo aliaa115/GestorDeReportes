@@ -109,7 +109,7 @@
             this.Dgv_Consulta.RowHeadersWidth = 82;
             this.Dgv_Consulta.Size = new System.Drawing.Size(786, 318);
             this.Dgv_Consulta.TabIndex = 2;
-            this.Dgv_Consulta.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Consulta_CellDoubleClick);
+            this.Dgv_Consulta.DoubleClick += new System.EventHandler(this.Dgv_Consulta_DoubleClick);
             // 
             // CodReporte
             // 

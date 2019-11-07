@@ -128,9 +128,7 @@ namespace CapaDisenoRpt.Mantenimiento
         private void llenarTbpDato(ReporteModulo reporteMdl)
         {
             deshabilitarCampos();
-
-            ConfiguracionRptControl confControl = new ConfiguracionRptControl();
-
+            
             Cmb_Reporte.Text = reporteMdl.REPORTE.NOMBRE;
             Cmb_Reporte.SelectedText = Cmb_Reporte.Text;
 
