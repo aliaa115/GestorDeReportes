@@ -15,7 +15,7 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO Tbl_Propiedad_Rpt VALUES ({0}, '{1}', {2}, {3}, {4}, {5}); ",
+                String sComando = String.Format("INSERT INTO Tbl_propiedad_Rpt VALUES ({0}, '{1}', {2}, {3}, {4}, {5}); ",
                     propiedad.REPORTE.REPORTE.ToString(), propiedad.USUARIO.USUARIO, propiedad.APLICACION.APLICACION,
                     propiedad.MODULO.MODULO.ToString(), propiedad.IMPRIMIR.ToString(), propiedad.ESTADO.ToString());
 
@@ -31,7 +31,7 @@ namespace CapaControlRpt.Control
         {
             try
             {
-                String sComando = String.Format("INSERT INTO Tbl_Propiedad_Rpt VALUES ({0}, '{1}', 0, {3}, {4}, {5}); ",
+                String sComando = String.Format("INSERT INTO Tbl_propiedad_Rpt VALUES ({0}, '{1}', 0, {3}, {4}, {5}); ",
                     propiedad.REPORTE.REPORTE.ToString(), propiedad.USUARIO.USUARIO, "", propiedad.MODULO.MODULO.ToString(), 
                     propiedad.IMPRIMIR.ToString(), propiedad.ESTADO.ToString());
                 this.transaccion.insertarDatos(sComando);

@@ -80,9 +80,15 @@ namespace CapaDisenoRpt.Mantenimiento
             Modulo mdlTmp = (Modulo)Cmb_Modulo.SelectedItem;
             Reporte rptTmp = (Reporte)Cmb_Reporte.SelectedItem;
             Aplicacion appTmp = (Aplicacion)Cmb_Aplicacion.SelectedItem;
+            if(appTmp == null)
             propiedad =
                 propiedadControl.obtenerPropiedadPorUsuarioAplicacion(
                     usuario, appTmp.APLICACION, mdlTmp.MODULO);
+            else
+            propiedad =
+                propiedadControl.obtenerPropiedadPorUsuarioModulo(
+                    rptTmp.REPORTE, usuario, mdlTmp.MODULO);
+            
 
             estado = propiedad.ESTADO == 1 ? 1 : 0;
             colorCheck(estado, Chk_Estado);

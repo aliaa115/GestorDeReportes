@@ -251,5 +251,21 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             deshabilitarBotones();
         }
+
+        private void Dgv_Consulta_DoubleClick(object sender, EventArgs e)
+        {
+            int fila = Dgv_Consulta.CurrentCell.RowIndex;
+            deshabilitarBotones();
+            string reporte = Dgv_Consulta.Rows[fila].Cells[0].Value.ToString();
+            string aplicacion = Dgv_Consulta.Rows[fila].Cells[3].Value.ToString();
+            string modulo = Dgv_Consulta.Rows[fila].Cells[5].Value.ToString();
+
+            int mdl = int.Parse(modulo);
+            int app = int.Parse(aplicacion);
+            int rpt = int.Parse(reporte);
+
+            Frm_PropiedadesApp propiedades = new Frm_PropiedadesApp(usuario, mdl, app, rpt);
+            propiedades.Show();
+        }
     }
 }
