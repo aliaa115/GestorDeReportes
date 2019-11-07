@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaDisenoRpt
@@ -17,7 +14,7 @@ namespace CapaDisenoRpt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Application.Run(new CapaDisenoRpt.Mantenimiento.Frm_ConfiguracionRpt());
+            Application.Run(new Mantenimiento.Frm_Reporte("Cristhian"));
             
         }
     }

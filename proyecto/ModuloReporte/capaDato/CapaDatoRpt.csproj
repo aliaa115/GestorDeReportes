@@ -48,7 +48,6 @@
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Conexion\Transaccion.cs" />
     <Compile Include="Entity\Aplicacion.cs" />
-    <Compile Include="Entity\ConfiguracionRpt.cs" />
     <Compile Include="Entity\Modulo.cs" />
     <Compile Include="Entity\PropiedadReporte.cs" />
     <Compile Include="Entity\Usuario.cs" />

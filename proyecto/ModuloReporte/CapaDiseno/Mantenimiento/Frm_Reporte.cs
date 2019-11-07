@@ -23,7 +23,6 @@ namespace CapaDisenoRpt.Mantenimiento
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             llenarDgv();
-            llenarCmbConfiguracion();
             deshabilitarBotones();
             this.sIdUsuario = sIdUsuario;
         }
@@ -37,9 +36,8 @@ namespace CapaDisenoRpt.Mantenimiento
                 Dgv_Consulta.Rows.Add();
                 Dgv_Consulta.Rows[fila].Cells[0].Value = reporteTmp.REPORTE.ToString();
                 Dgv_Consulta.Rows[fila].Cells[1].Value = reporteTmp.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteTmp.CONFIGURACION.NOMBRE;
-                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteTmp.NOMBRE_ARCHIVO;
-                Dgv_Consulta.Rows[fila].Cells[4].Value = reporteTmp.ESTADO.ToString();
+                Dgv_Consulta.Rows[fila].Cells[2].Value = reporteTmp.NOMBRE_ARCHIVO;
+                Dgv_Consulta.Rows[fila].Cells[3].Value = reporteTmp.ESTADO.ToString();
                 fila++;
             }
         }
@@ -57,7 +55,6 @@ namespace CapaDisenoRpt.Mantenimiento
 
             Txt_Codigo.Text = "";
             Txt_Nombre.Text = "";
-            Cmb_Configuracion.SelectedIndex = 0;
             Txt_Archivo.Text = "";
             Txt_Estado.Text = "1";
         }
@@ -66,8 +63,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             Reporte rptTmp = new Reporte();
             rptTmp.REPORTE = int.Parse(Txt_Codigo.Text);
-            rptTmp.NOMBRE = Txt_Nombre.Text;    
-            rptTmp.CONFIGURACION = (ConfiguracionRpt)Cmb_Configuracion.SelectedItem;
+            rptTmp.NOMBRE = Txt_Nombre.Text;
             rptTmp.NOMBRE_ARCHIVO = Txt_Archivo.Text;
             rptTmp.ESTADO = int.Parse(Txt_Estado.Text);
             
@@ -78,7 +74,6 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             Txt_Codigo.Enabled = false;
             Txt_Nombre.Enabled = false;
-            Cmb_Configuracion.Enabled = false;
             Txt_Archivo .Enabled = false;
             Txt_Estado.Enabled = false;
             Btn_SeleccionarFile.Enabled = false;
@@ -88,7 +83,6 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             Txt_Codigo.Enabled = true;
             Txt_Nombre.Enabled = true;
-            Cmb_Configuracion.Enabled = true;
             Txt_Archivo.Enabled = true;
             Txt_Estado.Enabled = true;
             Btn_SeleccionarFile.Enabled = true;
@@ -100,12 +94,7 @@ namespace CapaDisenoRpt.Mantenimiento
             deshabilitarCampos();
             Txt_Codigo.Text = reporte.REPORTE.ToString();
             Txt_Nombre.Text = reporte.NOMBRE;
-            //      Cmb_Configuracion.SelectedItem = Cmb_Configuracion.Items[reporte.CONFIGURACION.CONFIGURACION];
-            ConfiguracionRptControl confControl = new ConfiguracionRptControl();
-            ConfiguracionRpt conf = confControl.obtenerConfiguracionRpt(reporte.CONFIGURACION.CONFIGURACION);
 
-            Cmb_Configuracion.Text = conf.NOMBRE;
-            Cmb_Configuracion.SelectedText = Cmb_Configuracion.Text;
             
             Txt_Archivo.Text = reporte.NOMBRE_ARCHIVO;
             Txt_Estado.Text = reporte.ESTADO.ToString();
@@ -115,15 +104,6 @@ namespace CapaDisenoRpt.Mantenimiento
          * Llenar combobox configuracion.
          */
 
-        public void llenarCmbConfiguracion()
-        {
-            ConfiguracionRptControl configuracionControl = new ConfiguracionRptControl();
-            List<ConfiguracionRpt> configuracionList = configuracionControl.obtenerAllConfiguracionRpt();
-
-            Cmb_Configuracion.ValueMember = "CONFIGURACION";
-            Cmb_Configuracion.DisplayMember = "NOMBRE";
-            Cmb_Configuracion.DataSource = configuracionList;
-        }
 
         /*
          * Buscar archivo.
@@ -201,7 +181,7 @@ namespace CapaDisenoRpt.Mantenimiento
             {
                 try
                 {
-                    UploadFile upload = new UploadFile(this.reporte.NOMBRE_ARCHIVO, this.reporte.CONFIGURACION.RUTA);
+                    UploadFile upload = new UploadFile(this.reporte.NOMBRE_ARCHIVO, @"reportes\");
                     if (this.accion == "nuevo")
                     {
                         reporteControl.insertarReporte(this.reporte);
@@ -246,9 +226,6 @@ namespace CapaDisenoRpt.Mantenimiento
 
         private void Btn_Borrar_Click(object sender, EventArgs e)
         {
-            PropiedadReporteControl propiedad = new PropiedadReporteControl();
-            PropiedadReporte propiedadReporte = new PropiedadReporte();
-            propiedadReporte.APLICACION = 
 
             this.accion = null;
             Dialogo dialogo = new Dialogo();
@@ -257,7 +234,7 @@ namespace CapaDisenoRpt.Mantenimiento
             if (confirmacion)
             {
                 reporteControl.eliminarReporte(this.reporte.REPORTE);
-                UploadFile upload = new UploadFile(this.reporte.NOMBRE_ARCHIVO, this.reporte.CONFIGURACION.RUTA);
+                UploadFile upload = new UploadFile(this.reporte.NOMBRE_ARCHIVO, @"reportes\");
                 upload.deleteFile();
 
                 this.reporte = new Reporte();
@@ -285,7 +262,7 @@ namespace CapaDisenoRpt.Mantenimiento
         {
             try
             {
-                string pathFile = this.reporte.CONFIGURACION.RUTA + this.reporte.NOMBRE_ARCHIVO;
+                string pathFile = @"reportes\" + this.reporte.NOMBRE_ARCHIVO;
                 Frm_VistaReporte frmVistaRpt = new Frm_VistaReporte(pathFile, 0);
                 frmVistaRpt.Show();
 

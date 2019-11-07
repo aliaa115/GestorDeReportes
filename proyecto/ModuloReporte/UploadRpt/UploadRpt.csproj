@@ -36,6 +36,9 @@
     <Reference Include="CapaDatos">
       <HintPath>..\..\..\..\..\Análisis de Sistemas\Proyecto 2\Seguridad\DLL\CapaDatos.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDeDiseno">
+      <HintPath>..\..\..\..\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
+    </Reference>
     <Reference Include="CapaLogica">
       <HintPath>..\..\..\..\..\FORMACION\FormacionDeComponentes\Seguridad\Archivos\Seguridad\CapaLogica\bin\Debug\CapaLogica.dll</HintPath>
     </Reference>

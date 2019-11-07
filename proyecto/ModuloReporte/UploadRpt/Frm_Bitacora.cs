@@ -27,5 +27,11 @@ namespace UploadRpt
             ImprimirReporte imprimir = new ImprimirReporte(usuario);
             imprimir.imprimirReporteAplicacion(usuario,1, 1);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ImprimirReporte imprimir = new ImprimirReporte(usuario);
+            imprimir.imprimirReporteAplicacion(usuario, 1, 1);
+        }
     }
 }
